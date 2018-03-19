@@ -168,7 +168,7 @@ return [
          * Package Service Providers...
          */
 
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        //Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
         Sofa\Eloquence\BaseServiceProvider::class,
