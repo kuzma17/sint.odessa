@@ -171,7 +171,6 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
-        // Search
         Sofa\Eloquence\BaseServiceProvider::class,
 
         /*

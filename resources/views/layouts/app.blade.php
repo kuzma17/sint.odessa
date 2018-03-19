@@ -205,22 +205,6 @@
 
                     </noscript>
                     <!-- end of Top100 code -->
-
-                    <!--Openstat-->
-                    <span id="openstat2377870"></span>
-                    <script type="text/javascript">
-                        var openstat = {counter: 2377870, image: 5081, color: "ff9822", next: openstat};
-                        (function (d, t, p) {
-                            var j = d.createElement(t);
-                            j.async = true;
-                            j.type = "text/javascript";
-                            j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
-                            var s = d.getElementsByTagName(t)[0];
-                            s.parentNode.insertBefore(j, s);
-                        })(document, "script", document.location.protocol);
-                    </script>
-                    <!--/Openstat-->
-
                 </div>
             </div>
         </div>
