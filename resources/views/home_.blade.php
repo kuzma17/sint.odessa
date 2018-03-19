@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    //test
-
+    //test2
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Указатели -->
         <ol class="carousel-indicators">
