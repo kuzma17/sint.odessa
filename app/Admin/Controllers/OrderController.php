@@ -87,8 +87,14 @@ class OrderController extends Controller
             //$grid->model()->where('type_order_id', 1)->orderBy('id', 'desc');
             $grid->column('id', 'ID')->sortable();
             $grid->column('type_order.name', 'Тип услуги');
-            $grid->column('type_client.name', 'Тип клиента');
-            $grid->column('client_name', 'Клиент');
+            //$grid->column('type_client.name', 'Тип клиента');
+            $grid->column('Тип клиента')->display(function (){
+                return $this['user']['profile']['type_client']['name'];
+            });
+           //$grid->column('client_name', 'Клиент');
+            $grid->column('Клиент')->display(function (){
+                return $this['user']['profile']['client_name'];
+            });
             $grid->column('status_id', 'Статус заказа')->display(function($id){
                 return '<span class="badge" style="background-color: '.Status::find($id)->color.'">'.Status::find($id)->name.'</span>';
             });
@@ -101,7 +107,7 @@ class OrderController extends Controller
 
             $grid->created_at();
             $grid->updated_at();
-            $grid->disableCreation();
+            $grid->disableCreateButton();
             $grid->actions(function($actions){
                 $actions->disableDelete();
                 $actions->disableEdit();
@@ -145,9 +151,22 @@ class OrderController extends Controller
                 $form->select('status_id', 'Статус заказа')->options(Status::all()->pluck('name', 'id'));
                 $form->display('user.name', 'ник заказчика');
                 $form->display('type_order.name', 'тип заказа');
-                $form->display('type_client.name', 'тип клиента');
-                $form->display('client_name', 'ФИО заказчика/Название компании');
-                $form->display('phone', 'телефон');
+               // $form->display('user.profile.type_client_id', 'тип клиента');
+                $form->html( function (){
+                    $val = $this->user->profile->type_client_id;
+                    return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
+                }, 'тип клиента');
+
+                //$form->display('client_name', 'ФИО заказчика/Название компании');
+                $form->html( function (){
+                    $val = $this->user->profile->client_name;
+                    return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
+                }, 'ФИО заказчика/Название компании');
+                //$form->display('phone', 'телефон');
+                $form->html( function (){
+                    $val = $this->user->profile->phone;
+                    return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
+                }, 'телефон');
                 $form->display('comment', 'комментарий');
 
                 $form->display('created_at', 'Created At');
@@ -158,20 +177,22 @@ class OrderController extends Controller
                 $form->display('delivery_house', 'дом');
                 $form->display('delivery_house_block', 'корпус');
                 $form->display('delivery_office', 'квартира');
-            })->tab('Реквизиты компании', function(Form $form){
-                $form->display('type_payment.name', 'Тип расчета');
-                $form->display('company_full', 'Полное наименование компании');
-                $form->display('edrpou', 'код ЕДРПОУ');
-                $form->display('inn', 'код ИНН');
-                $form->display('code_index', 'почтовый индекс');
-                $form->display('region', 'область');
-                $form->display('area', 'район');
-                $form->display('city', 'город');
-                $form->display('street', 'улица');
-                $form->display('house', 'дом');
-                $form->display('house_block', 'корпус');
-                $form->display('office', 'номер офиса, квартиры');
-            })->tab('История', function(Form $form){
+            })
+                //->tab('Реквизиты компании', function(Form $form){
+                //$form->display('type_payment.name', 'Тип расчета');
+                //$form->display('company_full', 'Полное наименование компании');
+                //$form->display('edrpou', 'код ЕДРПОУ');
+                //$form->display('inn', 'код ИНН');
+                //$form->display('code_index', 'почтовый индекс');
+                //$form->display('region', 'область');
+                //$form->display('area', 'район');
+                //$form->display('city', 'город');
+                //$form->display('street', 'улица');
+                //$form->display('house', 'дом');
+                //$form->display('house_block', 'корпус');
+                //$form->display('office', 'номер офиса, квартиры');
+            //})
+                ->tab('История', function(Form $form){
                 $form->html(function($form){
                     $histories = History::where('order_id', $form->model()->id)->get();
                     return view('admin.history', ['histories' => $histories]);
