@@ -30,6 +30,7 @@
                             @if(isset($order->delivery_office)) кв.{{ $order->delivery_office }} @endif
                         </td></tr>
                     <tr><td >E-mail</td><td>{{ $user->email }}</td></tr>
+                    <tr><td >Офис обслуживания</td><td>{{ $user->profile->service_office->name or '' }}</td></tr>
                     @if( $user->profile->type_client_id == 2 )
                         <tr><td >Форма оплаты</td><td>{{ $order->type_payment->name }}</td></tr>
                         @if( $order->type_payment_id == 2 ||  $order->type_payment_id == 3)

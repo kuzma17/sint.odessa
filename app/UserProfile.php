@@ -33,6 +33,10 @@ class UserProfile extends Model
         return $this->belongsTo('App\Status');
     }
 
+    public function service_office(){
+        return $this->belongsTo(Office::class, 'office_id', 'id');
+    }
+
     //public function avatar(){
        // return $this->hasManyThrough('App\UserAvatar', 'App\User', 'id', 'user_id');
         //return $this->user()->avatar();

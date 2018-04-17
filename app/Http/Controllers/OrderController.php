@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\ActRepair;
 use App\History;
 use App\Notifications\CreatedOrder;
+use App\Office;
 use App\Order;
 use App\TypeOrder;
 use App\User;
@@ -35,11 +36,12 @@ class OrderController extends Controller
     public function add_order(Request $request){
         $user = Auth::user();
         $type_order = TypeOrder::all();
+        $offices = Office::all();
 
         if($request->isMethod('post')){
 
             if($request->input('all_order')){
-                return view('order.order', ['order'=>$request, 'user' => $user, 'type_order' => $type_order]);
+                return view('order.order', ['order'=>$request, 'user' => $user, 'type_order' => $type_order, 'offices' => $offices]);
             }
 
             $list_validate = [
@@ -92,6 +94,9 @@ class OrderController extends Controller
             $user->email = $request->input('order_email');
             $profile->phone = $request->input('order_phone');
 
+            $order->office_id = $request->input('service_office');
+            $profile->office_id = $request->input('service_office');
+
             $order->delivery_town = $request->input('order_delivery_town');
             $profile->delivery_town = $request->input('order_delivery_town');
 
@@ -143,7 +148,7 @@ class OrderController extends Controller
             Session::flash('ok_message', 'Ваш заказ успешно создан и будет обработан в ближайшее время.');
             return redirect('/user/order/'.$order->id);
         }else {
-            return view('order.order', ['user' => $user, 'type_order' => $type_order]);
+            return view('order.order', ['user' => $user, 'type_order' => $type_order, 'offices' => $offices]);
         }
     }
 

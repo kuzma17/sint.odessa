@@ -125,6 +125,16 @@
                     @endif
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Офис обслуживания<span class="red">*</span></label>
+                <div class="col-md-9">
+                    <select name="service_office" class="form-control" autofocus>
+                        @foreach($offices as $office)
+                            <option value="{{ $office->id }}" @if((old() && old('service_office') == $office->id) || (!old() && $order->service_office == $office->id)) selected @endif>{{ $office->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
             <div class="client_company_order" @if((old() && old('order_type_client') == 1) || (!old() && isset($order) && $order->order_type_client == 1))  style="display: none" @endif>
                 <div class="form-group{{ $errors->has('order_fio') ? ' has-error' : '' }}">
                     <label  class="col-md-3 control-label">Форма оплаты<span class="red">*</span></label>

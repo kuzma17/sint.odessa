@@ -40,4 +40,8 @@ class Order extends Model
     public function history(){
         return $this->hasMany(History::class);
     }
+
+    public function service_office(){
+        return $this->belongsTo(Office::class, 'office_id', 'id');
+    }
 }

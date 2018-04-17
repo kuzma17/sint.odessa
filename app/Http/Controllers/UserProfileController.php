@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Office;
 use App\Settings;
 use App\User;
 use App\UserAvatar;
@@ -26,6 +27,7 @@ class UserProfileController extends Controller
 
     public function edit(Request $request){
         $user = Auth::user();
+        $offices = Office::all();
         //$profile = $user->profile;
         if($request->isMethod('post')) {
 
@@ -72,6 +74,7 @@ class UserProfileController extends Controller
             //$user->email = $request->input('email');
             $profile->type_client_id = $request->input('type_client');
             $profile->phone = $request->input('phone');
+            $profile->office_id = $request->input('service_office');
             $profile->delivery_town = $request->input('delivery_town');
             $profile->delivery_street = $request->input('delivery_street');
             $profile->delivery_house = $request->input('delivery_house');
@@ -106,7 +109,7 @@ class UserProfileController extends Controller
                 //return $this->profile();
                 return redirect('/user?act=save');
         }else {
-                return view('user.edit_profile', ['user' => $user]);
+                return view('user.edit_profile', ['user' => $user, 'offices' => $offices]);
         }
     }
 

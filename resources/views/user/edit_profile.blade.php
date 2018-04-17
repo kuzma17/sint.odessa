@@ -100,6 +100,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Офис обслуживания<span class="red">*</span></label>
+                    <div class="col-md-9">
+                        <select name="service_office" class="form-control" autofocus>
+                            @foreach($offices as $office)
+                                <option value="{{ $office->id }}" @if(isset($user->profile) && $office->id == $user->profile->office_id) selected @endif>{{ $office->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
                 <div class="client_company" @if($user->is_person(old('type_client'))) style="display: none" @endif>
                     <div class="form-group{{ $errors->has('fio') ? ' has-error' : '' }}">
                         <label for="phone" class="col-md-3 control-label">Предпочтительная форма оплаты<span class="red">*</span></label>

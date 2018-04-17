@@ -18,6 +18,7 @@
                     {{ $user->profile->delivery_house or '' }} {{ $user->profile->delivery_house_block or '' }}
                     @if(isset($user->profile->delivery_office)) кв.{{ $user->profile->delivery_office }} @endif </td></tr>
             <tr><td >E-mail:</td><td>{{ $user->email or '' }}</td></tr>
+            <tr><td >Офис обслуживания</td><td>{{ $user->profile->service_office->name or ''}}</td></tr>
             @if(isset($user->profile) && $user->profile->type_client_id == 2 )
                 <tr><td >Предпочтительная форма оплаты:</td><td>{{ $user->profile->type_payment->name or '' }}</td></tr>
                 @if(isset($user->profile) && $user->profile->type_payment_id == 2 ||  $user->profile->type_payment_id == 3)

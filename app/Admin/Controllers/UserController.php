@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Office;
 use App\TypeClient;
 use App\TypePayment;
 use App\User;
@@ -129,6 +130,7 @@ class UserController extends Controller
                 $form->password('password', 'Пароль');
                 $form->select('profile.type_client_id', 'тип клиента')->options(TypeClient::all()->pluck('name', 'id'));
                 $form->mobile('profile.phone', 'Телефон');
+                $form->select('profile.office_id', 'офис обслуживания')->options(Office::all()->pluck('name', 'id'));
                 //$form->text('address', 'Адрес доставки');
                 $form->display('created_at', 'Created At');
                 $form->display('updated_at', 'Updated At');

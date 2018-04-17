@@ -138,6 +138,10 @@ class OrderRepairController extends Controller
                     $val = $this->user->profile->phone;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'телефон');
+                $form->html( function (){
+                    $val = $this->user->profile->service_office->name;
+                    return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
+                }, 'офис обслуживания');
                 $form->display('comment', 'комментарий');
 
                 $form->display('created_at', 'Created At');
