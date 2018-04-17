@@ -138,12 +138,16 @@ class OrderRepairController extends Controller
                     $val = $this->user->profile->phone;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'телефон');
-                $form->display('address', 'адрес доставки');
                 $form->display('comment', 'комментарий');
 
                 $form->display('created_at', 'Created At');
                 $form->display('updated_at', 'Updated At');
-
+            })->tab('Адрес доставки', function(Form $form){
+                $form->display('delivery_town', 'город, населенный пункт');
+                $form->display('delivery_street', 'улицаt');
+                $form->display('delivery_house', 'дом');
+                $form->display('delivery_house_block', 'корпус');
+                $form->display('delivery_office', 'квартира');
             })
               //  ->tab('Реквизиты компании', function(Form $form){
              //   $form->display('type_payment.name', 'Тип расчета');
@@ -160,12 +164,12 @@ class OrderRepairController extends Controller
               //  $form->display('office', 'номер офиса, квартиры');
             //})
                 ->tab('Параметры ремонта', function (Form $form) {
-                $form->select('act_repair.status_repair_id', 'Статус ремонта')->options(StatusRepairs::all()->pluck('name', 'id'));
-                $form->text('act_repair.device', 'ремонтируемое устройство');
-                $form->text('act_repair.set_device', 'комплектация');
-                $form->textarea('act_repair.text_defect', 'описание деффекта');
-                $form->textarea('act_repair.diagnostic', 'диагностика');
-                $form->text('act_repair.cost', 'стоимость');
+                $form->select('act_repair.status_repair_id', 'Статус ремонта')->options(StatusRepairs::all()->pluck('name', 'id'))->rules('required');
+                $form->text('act_repair.device', 'ремонтируемое устройство')->rules('required');
+                $form->text('act_repair.set_device', 'комплектация')->rules('required');
+                $form->textarea('act_repair.text_defect', 'описание деффекта')->rules('required');
+                $form->textarea('act_repair.diagnostic', 'диагностика')->rules('required');
+                $form->text('act_repair.cost', 'стоимость')->rules('required');
                 $form->textarea('act_repair.comment', 'комментарий');
                 $form->select('act_repair.user_consent_id', 'Ответ заказчика')->options(UserConsent::all()->pluck('name', 'id'))->readOnly();
             })->tab('История', function(Form $form){
