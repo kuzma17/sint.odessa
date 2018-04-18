@@ -1,6 +1,6 @@
-<?php
-$menu = \App\Menu::where('active', 1)->orderBy('weight', 'asc')->get();
-?>
+@php
+    $menu = \App\Menu::where('active', 1)->orderBy('weight', 'asc')->get();
+@endphp
 <nav class="navbar navbar-default navbar-inverse" style="margin-top: 10px">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">

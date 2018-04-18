@@ -1,16 +1,8 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: kuzma
- * Date: 31.03.17
- * Time: 10:54
- */
-
-$user = Auth::user();
-$type_order = \App\TypeOrder::all();
-$offices = \App\Office::all();
-?>
-
+@php
+    $user = Auth::user();
+    $type_order = \App\TypeOrder::all();
+    $offices = \App\Office::all();
+@endphp
 <div id="orderModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content modal-order">

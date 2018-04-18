@@ -84,9 +84,9 @@
             @endif
 
                 <div class="tab-pane fade" id="tab-3">
-                    <?php
-                            $histories = \App\History::where('order_id', $order->id)->get();
-                    ?>
+                    @php
+                        $histories = \App\History::where('order_id', $order->id)->get();
+                    @endphp
                     @if(count($histories) > 0)
                         <table class="table table-striped">
                             <tbody>

@@ -73,7 +73,7 @@
             <div class="clear"></div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4" style="padding-top: 15px">
-        @if (Auth::guest())
+        @if(Auth::guest())
             <a href="{{ url('/user/order-modal') }}" class="btn btn-success btn-top" ><i class="glyphicon glyphicon-plus"></i> Заказать услугу </a>
         @else
             <a href="#" class="btn btn-success btn-top" @if(URL::current() != url('/order')) data-toggle="modal" data-target="#orderModal" @endif><i class="glyphicon glyphicon-plus"></i> Сделать заказ </a>
@@ -132,11 +132,11 @@
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 border_right">
                 <h4>Навигация</h4>
-                <?php
-                $menu = \App\Menu::where('active', 1)->orderBy('weight', 'asc')->get();
-                $i = 0;
-                ?>
                 <ul class="menu-bottom">
+                    @php
+                        $menu = \App\Menu::where('active', 1)->orderBy('weight', 'asc')->get();
+                        $i = 0;
+                    @endphp
                     @foreach($menu as $link)
                         @if($i == 5)
                 </ul>
@@ -215,9 +215,7 @@
         <div class="copyright">Copyright 2017 @ Designed by <a href="mailto:v.kuzma@mail.ru">Kuzma</a></div>
     </div>
 </div>
-
 @include('order.orderModal')
-
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
