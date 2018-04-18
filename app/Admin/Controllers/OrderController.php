@@ -84,14 +84,11 @@ class OrderController extends Controller
         return Admin::grid(Order::class, function (Grid $grid) {
 
             $grid->model()->orderBy('id', 'desc');
-            //$grid->model()->where('type_order_id', 1)->orderBy('id', 'desc');
             $grid->column('id', 'ID')->sortable();
             $grid->column('type_order.name', 'Тип услуги');
-            //$grid->column('type_client.name', 'Тип клиента');
             $grid->column('Тип клиента')->display(function (){
                 return $this['user']['profile']['type_client']['name'];
             });
-           //$grid->column('client_name', 'Клиент');
             $grid->column('Клиент')->display(function (){
                 return $this['user']['profile']['client_name'];
             });
@@ -147,22 +144,18 @@ class OrderController extends Controller
 
             $form->tab('Клиент/Компания', function(Form $form) {;
 
-                $form->text('id', 'ID');
+                $form->display('id', 'ID');
                 $form->select('status_id', 'Статус заказа')->options(Status::all()->pluck('name', 'id'));
                 $form->display('user.name', 'ник заказчика');
                 $form->display('type_order.name', 'тип заказа');
-               // $form->display('user.profile.type_client_id', 'тип клиента');
                 $form->html( function (){
                     $val = $this->user->profile->type_client_id;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'тип клиента');
-
-                //$form->display('client_name', 'ФИО заказчика/Название компании');
                 $form->html( function (){
                     $val = $this->user->profile->client_name;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'ФИО заказчика/Название компании');
-                //$form->display('phone', 'телефон');
                 $form->html( function (){
                     $val = $this->user->profile->phone;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
@@ -172,7 +165,6 @@ class OrderController extends Controller
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'офис обслуживания');
                 $form->display('comment', 'комментарий');
-
                 $form->display('created_at', 'Created At');
                 $form->display('updated_at', 'Updated At');
             })->tab('Адрес доставки', function(Form $form){
@@ -181,22 +173,7 @@ class OrderController extends Controller
                 $form->display('delivery_house', 'дом');
                 $form->display('delivery_house_block', 'корпус');
                 $form->display('delivery_office', 'квартира');
-            })
-                //->tab('Реквизиты компании', function(Form $form){
-                //$form->display('type_payment.name', 'Тип расчета');
-                //$form->display('company_full', 'Полное наименование компании');
-                //$form->display('edrpou', 'код ЕДРПОУ');
-                //$form->display('inn', 'код ИНН');
-                //$form->display('code_index', 'почтовый индекс');
-                //$form->display('region', 'область');
-                //$form->display('area', 'район');
-                //$form->display('city', 'город');
-                //$form->display('street', 'улица');
-                //$form->display('house', 'дом');
-                //$form->display('house_block', 'корпус');
-                //$form->display('office', 'номер офиса, квартиры');
-            //})
-                ->tab('История', function(Form $form){
+            })->tab('История', function(Form $form){
                 $form->html(function($form){
                     $histories = History::where('order_id', $form->model()->id)->get();
                     return view('admin.history', ['histories' => $histories]);

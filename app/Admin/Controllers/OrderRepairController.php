@@ -69,45 +69,6 @@ class OrderRepairController extends Controller
     }
 
     /**
-     * Make a grid builder.
-     *
-     * @return Grid
-     */
-    protected function grid()
-    {
-        return Admin::grid(Order::class, function (Grid $grid) {
-
-            $grid->model()->where('type_order_id', 2)->orderBy('id', 'desc');
-            $grid->column('id', 'ID')->sortable();
-            $grid->column('type_order.name', 'Тип услуги');
-            //$grid->column('type_client.name', 'Тип клиента');
-            $grid->column('Тип клиента')->display(function (){
-                return $this['user']['profile']['type_client']['name'];
-            });
-            //$grid->column('client_name', 'Клиент');
-            $grid->column('Клиент')->display(function (){
-                return $this['user']['profile']['client_name'];
-            });
-            $grid->column('status_id', 'Статус заказа')->display(function($id){
-                return '<span class="badge" style="background-color: '.Status::find($id)->color.'">'.Status::find($id)->name.'</span>';
-            });
-
-            $grid->column('act_repair.status_repair_id', 'Статус ремонта')->display(function($id = 0){
-                if($id != 0){
-                    return '<span class="badge" style="background-color: '.StatusRepairs::find($id)->color.'" >'.StatusRepairs::find($id)->name.'</span>';
-                }
-                return '';
-            });
-            $grid->created_at();
-            $grid->updated_at();
-            $grid->disableCreateButton();
-            $grid->actions(function($actions){
-                $actions->disableDelete();
-            });
-        });
-    }
-
-    /**
      * Make a form builder.
      *
      * @return Form
@@ -118,22 +79,18 @@ class OrderRepairController extends Controller
 
             $form->tab('Клиент/Компания', function(Form $form) {;
 
-                $form->text('id', 'ID');
+                $form->display('id', 'ID');
                 $form->select('status_id', 'Статус заказа')->options(Status::all()->pluck('name', 'id'));
                 $form->display('user.name', 'ник заказчика');
                 $form->display('type_order.name', 'тип заказа');
-                // $form->display('user.profile.type_client_id', 'тип клиента');
                 $form->html( function (){
                     $val = $this->user->profile->type_client_id;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'тип клиента');
-
-                //$form->display('client_name', 'ФИО заказчика/Название компании');
                 $form->html( function (){
                     $val = $this->user->profile->client_name;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'ФИО заказчика/Название компании');
-                //$form->display('phone', 'телефон');
                 $form->html( function (){
                     $val = $this->user->profile->phone;
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
@@ -143,7 +100,6 @@ class OrderRepairController extends Controller
                     return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
                 }, 'офис обслуживания');
                 $form->display('comment', 'комментарий');
-
                 $form->display('created_at', 'Created At');
                 $form->display('updated_at', 'Updated At');
             })->tab('Адрес доставки', function(Form $form){
@@ -152,22 +108,7 @@ class OrderRepairController extends Controller
                 $form->display('delivery_house', 'дом');
                 $form->display('delivery_house_block', 'корпус');
                 $form->display('delivery_office', 'квартира');
-            })
-              //  ->tab('Реквизиты компании', function(Form $form){
-             //   $form->display('type_payment.name', 'Тип расчета');
-              //  $form->display('company_full', 'Полное наименование компании');
-              //  $form->display('edrpou', 'код ЕДРПОУ');
-              //  $form->display('inn', 'код ИНН');
-             //   $form->display('code_index', 'почтовый индекс');
-              //  $form->display('region', 'область');
-              //  $form->display('area', 'район');
-              //  $form->display('city', 'город');
-             //   $form->display('street', 'улица');
-             //   $form->display('house', 'дом');
-             //   $form->display('house_block', 'корпус');
-              //  $form->display('office', 'номер офиса, квартиры');
-            //})
-                ->tab('Параметры ремонта', function (Form $form) {
+            })->tab('Параметры ремонта', function (Form $form) {
                 $form->select('act_repair.status_repair_id', 'Статус ремонта')->options(StatusRepairs::all()->pluck('name', 'id'))->rules('required');
                 $form->text('act_repair.device', 'ремонтируемое устройство')->rules('required');
                 $form->text('act_repair.set_device', 'комплектация')->rules('required');
