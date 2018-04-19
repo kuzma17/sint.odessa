@@ -94,9 +94,7 @@
 
                     <div class="col-md-9">
                         <input type="text" class="form-control" name="order_phone"
-                               value="{{ $user->profile->phone or '' }}"
-                               @if((isset($user->profile) && $user->profile->type_client_id== 1) && isset($user->profile->phone)) readonly
-                               @endif placeholder="номер мобильного телефона (050xxxxxxx)" required>
+                               value="{{ $user->profile->phone or '' }}" placeholder="номер мобильного телефона (050xxxxxxx)" required>
 
                         @if ($errors->has('order_phone'))
                             <span class="help-block">
