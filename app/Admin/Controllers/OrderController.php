@@ -85,6 +85,7 @@ class OrderController extends Controller
 
             $grid->model()->orderBy('id', 'desc');
             $grid->column('id', 'ID')->sortable();
+            $grid->column('1c_id', '1C ID')->sortable();
             $grid->column('type_order.name', 'Тип услуги');
             $grid->column('Тип клиента')->display(function (){
                 return $this['user']['profile']['type_client']['name'];
@@ -145,6 +146,7 @@ class OrderController extends Controller
             $form->tab('Клиент/Компания', function(Form $form) {;
 
                 $form->display('id', 'ID');
+                $form->display('1c_id', '1C ID');
                 $form->select('status_id', 'Статус заказа')->options(Status::all()->pluck('name', 'id'));
                 $form->display('user.name', 'ник заказчика');
                 $form->display('type_order.name', 'тип заказа');

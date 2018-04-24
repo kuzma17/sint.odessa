@@ -80,6 +80,7 @@ class OrderRepairController extends Controller
             $form->tab('Клиент/Компания', function(Form $form) {;
 
                 $form->display('id', 'ID');
+                $form->display('1c_id', '1C ID');
                 $form->select('status_id', 'Статус заказа')->options(Status::all()->pluck('name', 'id'));
                 $form->display('user.name', 'ник заказчика');
                 $form->display('type_order.name', 'тип заказа');

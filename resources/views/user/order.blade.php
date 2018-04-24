@@ -15,6 +15,7 @@
             <div class="tab-pane fade in active" id="tab-1">
                 <table class="table table-striped">
                     <tbody>
+                    <tr><td>№</td><td>{{ $order['1c_id'] or ''}}</td></tr>
                     <tr><td >Статус:</td><td>{{ $order->status->name_site }}</td></tr>
                     <tr><td width="200">Тип услуги:</td><td>{{ $order->type_order->name }}</td></tr>
                     <tr><td>Тип пользователя:</td><td>{{ $user->profile->type_client->name }}</td></tr>

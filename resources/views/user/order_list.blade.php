@@ -15,7 +15,7 @@
             <tbody>
             @foreach($orders as $order)
                 <tr class="link_order" onclick="document.location.href='{{ url('/user/order/'.$order->id) }}'">
-                    <td>{{ $order->id }}</td>
+                    <td>{{ $order['1c_id'] or ''}}</td>
                     <td>{{ $order->type_order->name }}</td>
                     <td>{{ date_format($order->created_at, "d.m.Y") }}</td>
                     <td>{{ $order->status->name_site }}</td>
