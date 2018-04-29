@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Notifications\RegisterUser;
 use App\User;
 use App\Http\Controllers\Controller;
+use Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Notification;
 
 class RegisterController extends Controller
 {
@@ -67,5 +70,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    protected function registered($user) {
+        Notification::send(Auth::user(), new RegisterUser($user)); // Send message to mail
     }
 }

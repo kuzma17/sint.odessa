@@ -2,10 +2,9 @@
 
 namespace App\Admin\Controllers;
 
-use App\ActRepair;
 use App\History;
+use App\Notifications\StatusOrder;
 use App\Order;
-
 use App\Status;
 use App\StatusRepairs;
 use App\TypeClient;
@@ -17,12 +16,11 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
-use Illuminate\Support\MessageBag;
-use Request;
 
 class OrderController extends Controller
 {
     use ModelForm;
+    protected $status;
 
     /**
      * Index interface.
@@ -181,6 +179,14 @@ class OrderController extends Controller
                     return view('admin.history', ['histories' => $histories]);
                 });
 
+            })->saving(function(Form $form){
+                $status_new = $form->status_id;
+                $status_old = Order::find($form->model()->id)->status_id;
+                $status_old_name = Status::find($status_new)->name;
+                if($status_new != $status_old){
+                    $order = $form->model();
+                    $order->notify(new StatusOrder($order, $status_old_name));
+                }
             });
         });
     }
