@@ -128,19 +128,18 @@ class OrderRepairController extends Controller
                 });
 
             })->saving(function(Form $form){
-               // $status_new = $form->status_id;
-               // $status_old = Order::find($form->model()->id)->status_id;
-              //  $status_old_name = Status::find($status_new)->name;
-               // if($status_new != $status_old){
-               //     $order = $form->model();
-                //    $order->notify(new StatusOrder($order, $status_old_name));
-              //  }
+                $order = $form->model();
+                $status_new = $form->status_id;
+                $status_old = Order::find($order->id)->status_id;
+                $status_name = Status::find($status_new)->name;
+                if($status_new != $status_old){
+                    $order->notify(new StatusOrder($order, $status_name));
+                }
 
                 $status_repair_new = $form->act_repair['status_repair_id'];
-                @$status_repair_old = ActRepair::where('order_id', $form->model()->id)->get()[0]['status_repair_id'];
+                @$status_repair_old = ActRepair::where('order_id', $order->id)->get()[0]['status_repair_id'];
                 $status_repair_name = StatusRepairs::find($status_repair_new)->name;
-                if(!isset($status_repair_old) || (isset($status_repair_old) && $status_repair_new != $status_repair_old)) {
-                    $order = $form->model();
+                if(!isset($status_repair_old) || (isset($status_repair_old) && $status_repair_new != $status_repair_old)){
                     $order->notify(new StatusOrderRepair($order, $status_repair_name));
                 }
             });

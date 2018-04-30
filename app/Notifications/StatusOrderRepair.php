@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class StatusOrderRepair extends Notification
+class StatusOrderRepair extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -45,9 +45,9 @@ class StatusOrderRepair extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Статус Вашего заказа № '.$this->order->id.' изменен')
+            ->subject('Статус ремонта Вашего заказа № '.$this->order->id.' изменен')
             ->greeting('Здравствуйте, '.$this->order->user->name.'!')
-            ->line('Статус Вашего заказа № '.$this->order->id.' изменен на "'.$this->status.'"')
+            ->line('Статус ремонта Вашего заказа № '.$this->order->id.' изменен на "'.$this->status.'"')
             ->action('Перейти на сайт', url('/'))
             ->line('Как с нами связаться:');
     }

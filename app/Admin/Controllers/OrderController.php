@@ -180,12 +180,12 @@ class OrderController extends Controller
                 });
 
             })->saving(function(Form $form){
+                $order = $form->model();
                 $status_new = $form->status_id;
-                $status_old = Order::find($form->model()->id)->status_id;
-                $status_old_name = Status::find($status_new)->name;
+                $status_old = Order::find($order->id)->status_id;
+                $status_name = Status::find($status_new)->name;
                 if($status_new != $status_old){
-                    $order = $form->model();
-                    $order->notify(new StatusOrder($order, $status_old_name));
+                    $order->notify(new StatusOrder($order, $status_name));
                 }
             });
         });
