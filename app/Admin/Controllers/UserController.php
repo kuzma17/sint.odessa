@@ -78,6 +78,7 @@ class UserController extends Controller
 
             $grid->model()->orderBy('id', 'desc');
             $grid->column('id', 'ID')->sortable();
+            $grid->column('profile.1c_id', '1C_ID')->sortable();
             $grid->column('name', 'Ник');
             $grid->column('profile.client_name', 'Имя');
             $grid->column('email','Email');
@@ -123,6 +124,7 @@ class UserController extends Controller
             $form->tab('Клиент/Компания', function(Form $form){
 
                 $form->display('id', 'ID');
+                $form->display('profile.1c_id', '1C_ID');
                 $form->text('name', 'Ник');
                 $form->text('profile.client_name', 'Имя');
                 $form->email('email','Email');
