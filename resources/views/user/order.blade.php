@@ -70,12 +70,13 @@
                     <tr><td>Подтверждение:</td><td>
                             <select name="user_consent" class="form-control" @if(!$order->act_repair->is_open()) disabled @endif>
                                 @foreach(\App\UserConsent::all() as $consent)
-                                <option value="{{ $consent->id }}" @if($consent->id == $order->act_repair->user_consent_id) selected="selected" @endif>{{ $consent->name }}</option>
+                                    <option value="0">выберите вариант ответа</option>
+                                    <option value="{{ $consent->id }}" @if($consent->id == $order->act_repair->user_consent_id) selected="selected" @endif>{{ $consent->name }}</option>
                                 @endforeach
                             </select> </td></tr>
                     <tr><td >Комментарий:</td><td><textarea class="form-control" name="comment" @if(!$order->act_repair->is_open()) readonly @endif>{{ $order->act_repair->comment or ''}}</textarea></td></tr>
                     @if($order->act_repair->is_open())
-                    <tr><td>Подтверждение:</td><td><input type="submit" class="btn btn-primary" value="Отправить"></td></tr>
+                    <tr><td>Подтверждение:</td><td><input type="submit" class="btn btn-primary" value="Отправить" disabled></td></tr>
                     @endif
                     </tbody>
                 </table>

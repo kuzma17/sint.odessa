@@ -162,7 +162,7 @@ class OrderController extends Controller
         // Save History
         $history = new History();
         $history->order_id = $order_id;
-        $history->status_info = UserConsent::find($repair->user_consent_id)->name;
+        $history->status_info = $repair->user_consent->name;
         $history->comment = $repair->comment;
         $history->save();
         // End Save History

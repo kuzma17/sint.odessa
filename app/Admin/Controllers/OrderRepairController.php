@@ -120,7 +120,12 @@ class OrderRepairController extends Controller
                 $form->textarea('act_repair.diagnostic', 'диагностика')->rules('required');
                 $form->text('act_repair.cost', 'стоимость')->rules('required');
                 $form->textarea('act_repair.comment', 'комментарий');
-                $form->select('act_repair.user_consent_id', 'Ответ заказчика')->options(UserConsent::all()->pluck('name', 'id'))->readOnly();
+                //$form->select('act_repair.user_consent_id', 'Ответ заказчика')->options(UserConsent::all()->pluck('name', 'id'))->readOnly();
+                $form->html( function (){
+                    $val = '';
+                    @$val = $this->act_repair->user_consent->name;
+                    return '<div class="box box-solid box-default no-margin"><div class="box-body">'.$val.'</div></div>';
+                }, 'Ответ заказчика');
             })->tab('История', function(Form $form){
                 $form->html(function($form){
                     $histories = History::where('order_id', $form->model()->id)->get();
