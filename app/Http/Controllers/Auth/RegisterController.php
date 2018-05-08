@@ -72,7 +72,7 @@ class RegisterController extends Controller
         ]);
     }
 
-    protected function registered($user) {
-        Notification::send(Auth::user(), new RegisterUser($user)); // Send message to mail
-    }
+    //protected function registered($user) {
+    //    Notification::send(Auth::user(), new RegisterUser($user)); // Send message to mail
+    //}
 }
