@@ -3,7 +3,6 @@
 
     <div class="rcol-sm-6 col-md-9 col-lg-9">
         <h4>Параметры профиля</h4>
-
         <table class="table table-striped">
             <tbody>
             <tr><td>Тип пользователя:</td><td>{{ $user->profile->type_client->name or ''}}</td></tr>

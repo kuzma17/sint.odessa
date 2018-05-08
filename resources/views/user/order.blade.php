@@ -2,7 +2,6 @@
 @section('profile')
     <div class="rcol-sm-6 col-md-9 col-lg-9">
         <h4>Заказ №{{ $order->id }}</h4>
-
         <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-1" data-toggle="tab">Заказ</a></li>
             @if($order->type_order_id == 2 && $order->status_id != 1 && $order->act_repair)

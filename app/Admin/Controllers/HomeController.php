@@ -51,7 +51,7 @@ class HomeController extends Controller
                         'dataArray' => json_encode( $arr_visitors, JSON_UNESCAPED_UNICODE),
                         'data1Array' => json_encode( $arr_views, JSON_UNESCAPED_UNICODE),
                     ];
-                    $chart = view('admin.charts.line', ['data' => $arr]);
+                    $chart = view('admin.charts.line2', ['id'=> 'ChartLine2', 'data' => $arr]);
 
                     $column->append((new Box('Визиты за последние 30 дней', $chart))->removable()->collapsable()->style('danger'));
 
@@ -89,7 +89,7 @@ class HomeController extends Controller
                         'labelArray' => json_encode( $arr_url, JSON_UNESCAPED_UNICODE),
                         'dataArray' => json_encode( $arr_views, JSON_UNESCAPED_UNICODE),
                     ];
-                    $chart = view('admin.charts.pie', ['data' => $arr]);
+                    $chart = view('admin.charts.pie', ['id'=> 'ChartPie', 'data' => $arr]);
 
                     $column->append((new Box('Refer', $chart))->removable()->collapsable()->style('danger'));
 
@@ -115,17 +115,17 @@ class HomeController extends Controller
                         'dataArray' => json_encode( $arr_views, JSON_UNESCAPED_UNICODE),
                     ];
 
-                    $chart = view('admin.charts.bar', ['data' => $arr]);
+                    $chart = view('admin.charts.bar', ['id'=> 'ChartBar', 'data' => $arr]);
 
                     $column->append((new Box('Наиболее посещаемые страницы', $chart))->removable()->collapsable()->style('info'));
                 });
 
                 $row->column(6, function (Column $column){
-                    $arr = \App\Http\Controllers\OrderController::count_day_orders(10);
+                    $arr = \App\Http\Controllers\OrderController::count_day_orders(30);
 
-                    $chart = view('admin.charts.bar', ['data' => $arr]);
+                    $chart1 = view('admin.charts.line', ['id'=> 'ChartLine', 'data' => $arr]);
 
-                    $column->append((new Box('Заказы за 30 дней', $chart))->removable()->collapsable()->style('info'));
+                    $column->append((new Box('Заказы за 30 дней', $chart1))->removable()->collapsable()->style('info'));
                 });
 
             });
