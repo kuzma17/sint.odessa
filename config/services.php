@@ -38,25 +38,25 @@ return [
     'facebook' => [
         'client_id' => '1706334072997949',
         'client_secret' => '62996483f087569f838ee28c48f8b3ab',
-        'redirect' => 'http://sint.odessa.ru/social/callback/facebook',
+        'redirect' => 'http://test.sint.odessa.ua/social/callback/facebook',
     ],
 
     'twitter' => [
         'client_id' => 'LZ9v30wr0ir0LrZ63eiZiIZta',
         'client_secret' => 'YsmOjZhS18xHhzFpQ0kpD3vv2j5oliS7a0GIgHGIjjMI5SXmdn',
-        'redirect' => 'http://sint.odessa.ru/social/callback/twitter',
+        'redirect' => 'http://test.sint.odessa.ua/social/callback/twitter',
     ],
 
     'google' => [
         'client_id' => '412806846123-q200ls7tbfv34olsvdth72onh8akg3e6.apps.googleusercontent.com',
         'client_secret' => 'TllOUeLkLdNFFf-sELr1r3H9',
-        'redirect' => 'http://sint.odessa.ru/social/callback/google',
+        'redirect' => 'http://test.sint.odessa.ua/social/callback/google',
     ],
 
     'github' => [
         'client_id' => '7c16f745876a83d2a47b',
         'client_secret' => 'f380526df3810dcebe0472fc48614b698863ae7c',
-        'redirect' => 'http://sint.odessa.ru/social/callback/github',
+        'redirect' => 'http://test.sint.odessa.ua/social/callback/github',
     ],
 
 ];
