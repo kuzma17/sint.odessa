@@ -68,8 +68,8 @@
                     <tr><td>Стоимость работы:</td><td>{{ $order->act_repair->cost }}</td></tr>
                     <tr><td>Подтверждение:</td><td>
                             <select name="user_consent" class="form-control" @if(!$order->act_repair->is_open()) disabled @endif>
+                                <option value="0">выберите вариант ответа</option>
                                 @foreach(\App\UserConsent::all() as $consent)
-                                    <option value="0">выберите вариант ответа</option>
                                     <option value="{{ $consent->id }}" @if($consent->id == $order->act_repair->user_consent_id) selected="selected" @endif>{{ $consent->name }}</option>
                                 @endforeach
                             </select> </td></tr>
