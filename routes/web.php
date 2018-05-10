@@ -22,8 +22,8 @@ Auth::routes();
 
 Route::post('/register_client', ['as'=>'register.client', 'uses'=>'Auth\RegisterController@createClient']);
 
-Route::get('/social/{provider}', 'SocialController@login');
-Route::get('/social/callback/{provider}', 'SocialController@callback');
+Route::get('/social/{provider}', 'Auth\LoginController@socialLogin');
+Route::get('/social/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/user', ['as'=>'user.profile', 'middleware'=>'client', 'uses'=>'UserProfileController@profile']);
 

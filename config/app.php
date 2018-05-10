@@ -172,6 +172,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
         Sofa\Eloquence\BaseServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -233,6 +234,7 @@ return [
 
         'Image' => Intervention\Image\Facades\Image::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
