@@ -58,7 +58,7 @@ class UloginController extends Controller
             }
         }
 
-        \Session::flash('error_message', $user['first_name']);
+        \Session::flash('error_message', $user['first_name'].' '.$data);
 
         return Redirect::back();
     }
