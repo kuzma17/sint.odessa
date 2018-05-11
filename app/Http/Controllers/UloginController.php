@@ -58,7 +58,7 @@ class UloginController extends Controller
             }
         }
 
-        \Session::flash('error_message', trans('interface.NotEmail'));
+        \Session::flash('error_message', $user['first_name']);
 
         return Redirect::back();
     }
