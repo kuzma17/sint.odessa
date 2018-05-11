@@ -25,6 +25,8 @@ Route::post('/register_client', ['as'=>'register.client', 'uses'=>'Auth\Register
 Route::get('/social/{provider}', 'Auth\LoginController@socialLogin');
 Route::get('/social/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
 
+Route::post('/ulogin', 'UloginController@login');
+
 Route::get('/user', ['as'=>'user.profile', 'middleware'=>'client', 'uses'=>'UserProfileController@profile']);
 
 Route::get('/user/edit', ['as'=>'user.profile.edit', 'middleware'=>'client', 'uses'=>'UserProfileController@edit']);

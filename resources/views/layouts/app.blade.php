@@ -219,6 +219,7 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
+@yield('js_ulogin')
 @if(URL::current() == url('/user/order-modal'))
     <script type="text/javascript">
         $('#orderModal').modal('show');
