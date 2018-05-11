@@ -16,6 +16,14 @@ class UloginController extends Controller
         $data = file_get_contents('http://ulogin.ru/token.php?token='.$request->get('token').'&host='.$_SERVER['HTTP_HOST']);
         $user = json_decode($data, true);
 
+       // $s = file_get_contents('http://ulogin.ru/token.php?token=' . $_POST['token'] . '&host=' . $_SERVER['HTTP_HOST']);
+        //$user = json_decode($s, true);
+        //$user['network'] - соц. сеть, через которую авторизовался пользователь
+        //$user['identity'] - уникальная строка определяющая конкретного пользователя соц. сети
+        //$user['first_name'] - имя пользователя
+        //$user['last_name'] - фамилия пользователя
+
+
         // Check exist email.
         if (isset($user['email']) && !empty($user['email'])) {
             // Find user in DB.
