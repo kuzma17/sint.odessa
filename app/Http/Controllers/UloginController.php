@@ -60,7 +60,7 @@ class UloginController extends Controller
                 // Make login user.
                 Auth::loginUsingId($newUser->id, true);
 
-                \Session::flash('ok_message', trans('interface.ActivatedSuccess'));
+                \Session::flash('ok_message', 'interface.ActivatedSuccess '.$data);
 
                 return Redirect::back();
             }
