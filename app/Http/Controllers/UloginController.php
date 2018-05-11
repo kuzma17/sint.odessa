@@ -38,7 +38,7 @@ class UloginController extends Controller
 
                 } else {
                     // Wrong status.
-                    \Session::flash('error_message', trans('interface.AccountNotActive'));
+                    \Session::flash('error_message', 'interface.AccountNotActive '.$data);
                 }
 
                 return Redirect::back();
