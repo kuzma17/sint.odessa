@@ -43,16 +43,6 @@ class User extends Authenticatable
         return $this->hasRole('manager');
     }
 
-   // public static function createBySocialProvider($providerUser)
-    //{
-     //   return self::create([
-     //       'email' => $providerUser->getEmail(),
-            //'email' => 'tw', // IF Odnoklassniki
-            //'username' => $providerUser->getNickname(),
-     //       'name' => $providerUser->getName(),
-      //  ]);
-   // }
-
     public function avatar(){
         return $this->hasOne(UserAvatar::class);
     }
