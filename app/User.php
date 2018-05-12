@@ -43,20 +43,14 @@ class User extends Authenticatable
         return $this->hasRole('manager');
     }
 
-    public static function createBySocialProvider($providerUser)
-    {
-        return self::create([
-            'email' => $providerUser->getEmail(),
+   // public static function createBySocialProvider($providerUser)
+    //{
+     //   return self::create([
+     //       'email' => $providerUser->getEmail(),
             //'email' => 'tw', // IF Odnoklassniki
             //'username' => $providerUser->getNickname(),
-            'name' => $providerUser->getName(),
-        ]);
-    }
-
-    //public static function avatar(){
-       // if($res = UserAvatar::find(Auth::user()->id)) {
-       //     return $res->avatar;
-       // }
+     //       'name' => $providerUser->getName(),
+      //  ]);
    // }
 
     public function avatar(){
@@ -65,6 +59,10 @@ class User extends Authenticatable
 
     public function profile(){
         return $this->hasOne(UserProfile::class);
+    }
+
+    public function socialAccount(){
+        return $this->hasOne(UserSocialAccount::class);
     }
 
     public function is_person($old = 0){

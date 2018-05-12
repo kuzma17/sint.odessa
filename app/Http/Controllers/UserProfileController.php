@@ -135,34 +135,9 @@ class UserProfileController extends Controller
             $image->move('upload/avatars', $saveImageName);
 
             $avatar->user()->associate($user);
-            $avatar->avatar = 'avatars/'.$saveImageName;
+            $avatar->avatar = 'http://'.$_SERVER['HTTP_HOST'].'/upload/avatars/'.$saveImageName;
             $avatar->save();
             Session::flash('ok_message', 'Ваш аватар успешно соxранен.');
-            return $this->profile();
-        }else{
-            return view('user.edit_avatar');
-        }
-    }
-
-    public function avatar_(Request $request){
-        $user = Auth::user();
-        if($request->isMethod('post')) {
-
-            $this->validate($request, [
-                'avatar'  =>  'required|image|max:100',
-            ]);
-            $image = $request->file('avatar');
-            Image::make($image->getRealPath())->resize(160, 160)->save();
-            $saveImageName = str_random(10) . '.' . $image->getClientOriginalExtension();
-
-            if($user->profile) {
-                $profile = $user->profile;;
-            }else{
-                $profile = new UserProfile();
-            }
-            $profile->avatar = $image->move('images/avatars', $saveImageName);
-            $profile->save();
-            Session::flash('ok_message', 'Ваше фото успешно соxранено.');
             return $this->profile();
         }else{
             return view('user.edit_avatar');

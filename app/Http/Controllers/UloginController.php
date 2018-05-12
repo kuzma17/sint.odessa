@@ -3,71 +3,72 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\UserSocialAccount;
 use Auth;
 use Hash;
 use Illuminate\Http\Request;
 use Redirect;
+use Session;
 
 class UloginController extends Controller
 {
     public function login(Request $request)
     {
-        // Get information about user.
+
         $data = file_get_contents('http://ulogin.ru/token.php?token='.$request->get('token').'&host='.$_SERVER['HTTP_HOST']);
         $user = json_decode($data, true);
 
-       // $s = file_get_contents('http://ulogin.ru/token.php?token=' . $_POST['token'] . '&host=' . $_SERVER['HTTP_HOST']);
-        //$user = json_decode($s, true);
-        //$user['network'] - соц. сеть, через которую авторизовался пользователь
-        //$user['identity'] - уникальная строка определяющая конкретного пользователя соц. сети
-        //$user['first_name'] - имя пользователя
-        //$user['last_name'] - фамилия пользователя
-
-
-        // Check exist email.
         if (isset($user['email']) && !empty($user['email'])) {
-            // Find user in DB.
-            $userData = User::where('email', $user['email'])->first();
 
-            // Check exist user.
+            $userData = UserSocialAccount::where('provider_user_id', $user['uid'])
+                ->where('provider', $user['network'])
+                ->first();
+
             if ($userData) {
-                // Check user status.
-                if ($userData->status) {
-                    // Make login user.
-                    Auth::loginUsingId($userData->id, true);
-
-                } else {
-                    // Wrong status.
-                    \Session::flash('error_message', 'interface.AccountNotActive '.$data);
-                }
-
-                return Redirect::back();
+                Auth::loginUsingId($userData->user_id, true);
+                Session::flash('ok_message', 'Успещная авторизация.');
+                //return Redirect::back();
+                return Redirect::route('user.profile');
             } else {
-                // Make registration new user.
 
-                // Create new user in DB.
-                $newUser = User::create([
-                    //'nik' => $user['nickname'],
-                    'name' => $user['first_name'] . ' ' . $user['last_name'],
-                    //'country' => $user['country'],
-                    'email' => $user['email'],
-                    'password' => Hash::make(str_random(8)),
-                   // 'role' => 'user',
-                    //'status' => true,
-                    //'ip' => $request->ip()
-                ]);
+                if(User::where('email', $user['email'])->first()){
+                    Session::flash('error_message', 'В базе уже есть аккаунт с email: '.$user['email'].' Попробуйте ввести другой.');
+                    return Redirect::back();
+                }else {
+                    $newUser = User::create([
+                        'name' => isset($user['nickname']) ? $user['nickname'] : $user['first_name'],
+                        'email' => $user['email'],
+                        'password' => Hash::make(str_random(8)),
+                    ]);
 
-                // Make login user.
-                Auth::loginUsingId($newUser->id, true);
+                    if (isset($user['first_name']) || isset($user['last_name']) || isset($user['phone']) || isset($user['city'])) {
+                        $user['last_name'] = isset($user['last_name']) ? $user['last_name'] : '';
+                        $newUser->profile()->create([
+                            'client_name' => $user['first_name'] . ' ' . $user['last_name'],
+                            'phone' => isset($user['phone']) ? $user['phone'] : '',
+                            'city' => isset($user['city']) ? $user['city'] : ''
+                        ]);
+                    }
 
-                \Session::flash('ok_message', 'interface.ActivatedSuccess '.$data);
+                    if (isset($user['photo'])) {
+                        $newUser->avatar()->create([
+                            'avatar' => $user['photo']
+                        ]);
+                    }
 
-                return Redirect::back();
+                    $newUser->socialAccount()->create([
+                        'provider_user_id' => $user['uid'],
+                        'provider' => $user['network']
+                    ]);
+
+                    Auth::loginUsingId($newUser->id, true);
+                    Session::flash('ok_message', 'Успещная авторизация.');
+                    //return Redirect::back();
+                    return Redirect::route('user.profile');
+                }
             }
         }
-
-        \Session::flash('error_message', $user['first_name'].' '.$data);
-
+        Session::flash('error_message', 'Произошла ошибка.');
         return Redirect::back();
     }
 }

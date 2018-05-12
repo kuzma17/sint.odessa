@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/user';
 
     /**
      * Create a new controller instance.
@@ -38,21 +38,5 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-    }
-
-    public function socialLogin($social) {
-        return Socialite::driver($social)->redirect();
-    }
-
-    public function handleProviderCallback($social){
-        $userSocial = Socialite::driver($social)->user();
-        $user = User::where(['email' => $userSocial->getEmail()])->first();
-        if ($user) {
-            Auth::login($user);
-            //return redirect()->action('HomeController@index');
-            return redirect()->intended('/');
-        } else {
-            return view('auth.register', ['name' => $userSocial->getName(),'email'=> $userSocial->getEmail()]);
-        }
     }
 }

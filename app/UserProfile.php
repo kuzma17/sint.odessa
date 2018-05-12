@@ -10,7 +10,7 @@ class UserProfile extends Model
     protected $table = 'user_profiles';
 
     protected $fillable = [
-       'user_id', 'fio', 'avatar',
+       'user_id', 'client_name', 'phone',
     ];
 
     public function user(){
@@ -42,7 +42,7 @@ class UserProfile extends Model
         //return $this->user()->avatar();
    // }
 
-    public function avatar1(){
+    public function avatar(){
         return $this->user->avatar();
      }
 }

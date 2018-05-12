@@ -11,19 +11,11 @@
 |
 */
 
-//Route::get('/', function () {
- //   return view('welcome');
-//});
 Route::get('/', 'PageController@home');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index');
-
 Route::post('/register_client', ['as'=>'register.client', 'uses'=>'Auth\RegisterController@createClient']);
-
-Route::get('/social/{provider}', 'Auth\LoginController@socialLogin');
-Route::get('/social/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
 
 Route::post('/ulogin', 'UloginController@login');
 
@@ -54,11 +46,6 @@ Route::get('/stock', ['as'=>'stock.list', 'uses'=>'StockController@listStock']);
 Route::get('/stock/{id}', ['as'=>'stock', 'uses'=>'StockController@stock']);
 Route::get('/news', ['as'=>'news', 'uses'=>'NewsController@index']);
 Route::get('/news/{id}', ['as'=>'news_id', 'uses'=>'NewsController@news']);
-
-//Route::get('/login_admin', ['as'=>'login.admin', 'uses'=>'Auth\LoginController@showLoginForm']);
-//Route::post('/login_admin', ['as'=>'login.admin.auth', 'uses'=>'Auth\LoginController@login']);
-//Route::get('/admin', ['as'=>'admin.dashboard']);
-//Route::get('/admin/logout', ['as'=>'admin.logout', 'uses'=>'Auth\LoginController@logout']);
 
 Route::post('upload-image', ['as'=>'upload_image', 'uses'=>'FileUploadController@uploader']);
 
