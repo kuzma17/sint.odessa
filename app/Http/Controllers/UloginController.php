@@ -7,6 +7,7 @@ use App\UserSocialAccount;
 use Auth;
 use Hash;
 use Illuminate\Http\Request;
+use Image;
 use Redirect;
 use Session;
 
@@ -51,9 +52,18 @@ class UloginController extends Controller
                     }
 
                     if (isset($user['photo'])) {
+
+                        $imageName = str_random(10).'.jpg';
+                        $tmp_img = '/tmp/'.$imageName;
+
+                        file_put_contents($tmp_img, file_get_contents($user['photo']));
+
+                        Image::make($tmp_img)->resize(160, 160)->save('upload/avatars/'.$imageName);
+
                         $newUser->avatar()->create([
-                            'avatar' => $user['photo']
+                            'avatar' => 'avatars/'.$imageName
                         ]);
+
                     }
 
                     $newUser->socialAccount()->create([

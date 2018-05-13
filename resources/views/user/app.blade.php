@@ -18,7 +18,7 @@
     <div class="rcol-sm-6 col-md-3 col-lg-3">
         <div class="avatar" style="width:162px; border: 1px #cccccc solid;">
             @if(isset($avatar))
-            <img src="{{ url($avatar) }}" style="width: 160px; height: 160px">
+            <img src="{{ url('/upload/'.$avatar) }}" style="width: 160px; height: 160px">
             @else
                 <img src="{{ url('/images/no_image.png') }}" style="width: 160px; height: 160px">
             @endif
