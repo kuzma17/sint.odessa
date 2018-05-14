@@ -51,7 +51,7 @@ class UloginController extends Controller
                         ]);
                     }
 
-                    if (isset($user['photo'])) {
+                    if (isset($user['photo']) && $user['network'] != 'instagram') {
 
                         $imageName = str_random(10).'.jpg';
                         $tmp_img = '/tmp/'.$imageName;
