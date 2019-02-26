@@ -13,7 +13,8 @@
         "laravel/tinker": "~1.0",
         "roave/security-advisories": "dev-master",
         "sofa/eloquence": "^5.6",
-        "spatie/laravel-analytics": "^3.5"
+        "spatie/laravel-analytics": "^3.5",
+        "kuzma17/breadcrumbs": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
@@ -65,5 +66,11 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
+    },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "packages/kuzma17/breadcrumbs/"
     }
+  ]
 }
