@@ -1,0 +1,40 @@
+[07-May-2018 09:31:38 Europe/Helsinki] PHP Fatal error:  Uncaught ErrorException: proc_get_status() has been disabled for security reasons in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1276
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_get_status...', 'phar:///opt/cpa...', 1276, Array)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(1276): proc_get_status(Resource id #283)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(705): Symfony\Component\Process\Process->updateStatus(false)
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(757): Symfony\Component\Process\Process->isRunning()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(172): Symfony\Component\Process\Process->stop(0)
+#5 [internal function]: Symfony\Component\Process\Process->__destruct()
+#6 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1276
+[07-May-2018 10:02:35 Europe/Helsinki] PHP Fatal error:  Uncaught ErrorException: proc_get_status() has been disabled for security reasons in phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php:1283
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_get_status...', 'phar:///home/cb...', 1283, Array)
+#1 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(1283): proc_get_status(Resource id #310)
+#2 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(704): Symfony\Component\Process\Process->updateStatus(false)
+#3 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(756): Symfony\Component\Process\Process->isRunning()
+#4 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(171): Symfony\Component\Process\Process->stop(0)
+#5 [internal function]: Symfony\Component\Process\Process->__destruct()
+#6 {main}
+  thrown in phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php on line 1283
+[07-May-2018 10:03:25 Europe/Helsinki] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'proc_get_status() has been disabled for security reasons' in phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php:1283
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_get_status...', 'phar:///home/cb...', 1283, Array)
+#1 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(1283): proc_get_status(Resource id #310)
+#2 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(704): Symfony\Component\Process\Process->updateStatus(false)
+#3 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(756): Symfony\Component\Process\Process->isRunning()
+#4 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(171): Symfony\Component\Process\Process->stop(0)
+#5 [internal function]: Symfony\Component\Process\Process->__destruct()
+#6 {main}
+  thrown in phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php on line 1283
+[07-May-2018 10:03:26 Europe/Helsinki] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'proc_get_status() has been disabled for security reasons' in phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php:1283
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_get_status...', 'phar:///home/cb...', 1283, Array)
+#1 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(1283): proc_get_status(Resource id #310)
+#2 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(704): Symfony\Component\Process\Process->updateStatus(false)
+#3 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(756): Symfony\Component\Process\Process->isRunning()
+#4 phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php(171): Symfony\Component\Process\Process->stop(0)
+#5 [internal function]: Symfony\Component\Process\Process->__destruct()
+#6 {main}
+  thrown in phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php on line 1283
