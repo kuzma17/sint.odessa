@@ -226,14 +226,12 @@ ul.top-menu a:hover{
 .carousel-slogan{
     position: absolute;
     z-index: 10;
-    background-color: #000000;
-    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     top: 30%;
     height: 40%;
     width: 40%;
     right: 0;
-
     font-family: SansSerif, Verdana, Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: #ffffff;
@@ -623,4 +621,8 @@ h5{
     font-weight: normal;
     text-align: center;
 
+}
+
+#OpenLayers_Control_Attribution_7{
+    bottom: 0;
 }
