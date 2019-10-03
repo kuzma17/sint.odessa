@@ -168,11 +168,11 @@ return [
          * Package Service Providers...
          */
 
-        //Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
         Sofa\Eloquence\BaseServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
+        //Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -182,6 +182,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Kuzma17\Breadcrumbs\BreadcrumbServiceProvider::class,
 
     ],
 
@@ -234,7 +236,9 @@ return [
 
         'Image' => Intervention\Image\Facades\Image::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+       // 'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
+        'Breadcrumbs' => \Kuzma17\Breadcrumbs\Facades\Breadcrumbs::class,
     ],
 
 ];

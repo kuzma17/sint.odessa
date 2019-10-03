@@ -9,12 +9,11 @@
         "encore/laravel-admin": "^1.5",
         "fideloper/proxy": "~3.3",
         "intervention/image": "^2.4",
+        "kuzma17/breadcrumbs": "dev-master",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "roave/security-advisories": "dev-master",
         "sofa/eloquence": "^5.6",
-        "spatie/laravel-analytics": "^3.5",
-        "kuzma17/breadcrumbs": "*"
+        "spatie/laravel-analytics": "^3.5"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
@@ -63,14 +62,11 @@
         ]
     },
     "config": {
+        "platform": {
+            "php": "7.0.0"
+        },
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "packages/kuzma17/breadcrumbs/"
     }
-  ]
 }
