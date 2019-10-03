@@ -38,7 +38,7 @@
 <div class="container">
     <div class="row">
         <div class="rcol-sm-12 col-md-12 col-lg-4">
-            <div class="logo"><img src="/images/logo.jpg"></div>
+            <div class="logo"><a href="{{url('/')}}"><img src="/images/logo.jpg"></a></div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4"
              style="padding-top: 10px; padding-left: 0px; color: #808080; font-family: 'Lato', sans-serif; font-size: 12px">
