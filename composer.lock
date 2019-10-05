@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "68728be0af044281c5ea2d5a40f8d2bd",
@@ -2783,9 +2783,9 @@
             "authors": [
                 {
                     "name": "Jarek Tkaczyk",
-                    "role": "Developer",
                     "email": "jarek@softonsofa.com",
-                    "homepage": "https://softonsofa.com/"
+                    "homepage": "https://softonsofa.com/",
+                    "role": "Developer"
                 }
             ],
             "description": "Flexible Searchable, Mappable, Metable, Validation and more extensions for Laravel Eloquent ORM.",
@@ -4920,8 +4920,8 @@
             "authors": [
                 {
                     "name": "Filipe Dobreira",
-                    "role": "Developer",
-                    "homepage": "https://github.com/filp"
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
                 }
             ],
             "description": "php error handling for cool kids",
