@@ -133,7 +133,7 @@
             <div class="col-sm-12 col-md-3 col-lg-3 border_right">
                 <h4>Навигация</h4>
                 <?php
-                $menu = \App\Menu::where('active', 1)->orderBy('weight', 'asc')->get();
+                $menu = \App\Menu::root()->active()->order()->get();
                 $i = 0;
                 ?>
                 <ul class="menu-bottom">

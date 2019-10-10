@@ -27,6 +27,10 @@ class Menu extends Model
             ->orderBy('weight');
     }
 
+    public function scopeRoot($query){
+        return $query->where('parent_id', 0);
+    }
+
     public static function buildTree($items){
         $grouped = $items->groupBy('parent_id');
         foreach ($items as $item) {
