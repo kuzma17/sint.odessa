@@ -73,6 +73,7 @@
             <div class="clear"></div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4" style="padding-top: 15px">
+
         @if(Auth::guest())
             <a href="{{ url('/user/order-modal') }}" class="btn btn-success btn-top" ><i class="glyphicon glyphicon-plus"></i> Заказать услугу </a>
         @else
