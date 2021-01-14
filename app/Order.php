@@ -9,6 +9,7 @@ class Order extends Model
 {
     use Notifiable;
 
+
     public function type_order(){
         return $this->belongsTo('App\TypeOrder');
     }
