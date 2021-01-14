@@ -289,3 +289,5 @@
 [03-May-2018 13:30:50] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/welcome/sint.odessa.ua/public/index.php on line 52
 [03-May-2018 13:30:50] PHP Parse error:  syntax error, unexpected T_STRING in /home/welcome/sint.odessa.ua/public/index.php on line 52
 [03-May-2018 13:37:27 Europe/Helsinki] PHP Parse error:  syntax error, unexpected '?' in /home/cboyezmz/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 233
+[05-Nov-2020 19:58:57 Europe/Helsinki] PHP Parse error:  syntax error, unexpected '?' in /home/cboyezmz/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 233
+[05-Nov-2020 19:59:22 Europe/Helsinki] PHP Parse error:  syntax error, unexpected '?' in /home/cboyezmz/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 233

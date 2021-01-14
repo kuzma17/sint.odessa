@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="/css/lightbox.min.css">
     <link href="/css/style.css" rel="stylesheet"/>
 
+	 <!-- New Year -->
+    <link href="/css/newyear.css" rel="stylesheet"/>
+    <!-- End New Year -->
+
     <script>
         window.Laravel = <?php echo json_encode([
                 'csrfToken' => csrf_token(),
@@ -38,7 +42,8 @@
 <div class="container">
     <div class="row">
         <div class="rcol-sm-12 col-md-12 col-lg-4">
-            <div class="logo"><a href="{{url('/')}}"><img src="/images/logo.jpg"></a></div>
+           <!--<div class="logo"><a href="{{url('/')}}"><img src="/images/logo.jpg"></a></div>-->
+			<div class="logo"><img src="/images/logo_snow.jpg"></div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4"
              style="padding-top: 10px; padding-left: 0px; color: #808080; font-family: 'Lato', sans-serif; font-size: 12px">
@@ -84,6 +89,9 @@
         <div class="clear"></div>
         <div class="container">
         @include('layouts.menu')
+		<!-- New Year -->
+        @include('layouts.newyear')
+        <!-- end New Year -->
         </div>
     </div>
 
@@ -221,29 +229,18 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
+
+<!-- New Year -->
+<script src="{{ asset('js/snow.js') }}"></script>
+<script src="{{ asset('js/newyear.js') }}"></script>
+<!-- End New Year -->
+
 @if(URL::current() == url('/user/order-modal'))
     <script type="text/javascript">
         $('#orderModal').modal('show');
     </script>
 @endif
 
-<!--<script type="text/javascript">
-    imageDir = "http://mvcreative.ru/example/6/2/snow/";
-    sflakesMax = 65;
-    sflakesMaxActive = 65;
-    svMaxX = 2;
-    svMaxY = 6;
-    ssnowStick = 1;
-    ssnowCollect = 0;
-    sfollowMouse = 1;
-    sflakeBottom = 0;
-    susePNG = 1;
-    sflakeTypes = 5;
-    sflakeWidth = 15;
-    sflakeHeight = 15;
-</script>
-<script type="text/javascript" src="http://mvcreative.ru/example/6/2/snow.js"></script>
--->
 <!-- BEGIN JIVOSITE CODE {literal} -->
 <script type='text/javascript'>
 (function(){ var widget_id = 'zu8O4tOtH7';var d=document;var w=window;function l(){
