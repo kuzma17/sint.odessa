@@ -1,0 +1,28 @@
+<?php
+
+return[
+    'price' => 'прайс',
+    'add_product' => 'додати товар',
+    'customers' => 'клієнти',
+    'categories' => 'категорії',
+    'attributes' => 'атрибути',
+    'attribute_values' => 'значення атрибутів',
+    'group_attributes' => 'групи атрибутів',
+    'users' => 'користувачі',
+    'tokens' => 'токени',
+    'shares' => 'акції',
+    'news' => 'новини',
+    'shares_and_news' => 'новини та акції',
+    'status_order' => 'статус замовлення',
+    'download_price' => 'скачати прайс',
+    'to_site' => 'перейти на сайт',
+    'history' => 'історія',
+    'orders' => 'замовлення',
+    'cart' => 'кошик',
+    'your_manager' => 'ваш менеджер',
+    'your_admin' => 'ваш администратор',
+    'search' => 'Пошук...',
+    'personal_area' => 'особистий кабінет',
+    'load_price' => 'завантажити прайс',
+    'log_out' => 'вихід',
+];

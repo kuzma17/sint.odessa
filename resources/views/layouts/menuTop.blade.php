@@ -88,6 +88,14 @@
                     </ul>
                 </li>
             @endif -->
+
+            <li>
+                <a href="{{ route('locale', __('main.set_lang')) }}">
+                    <div class="language">
+                        @lang('main.set_lang')
+                    </div>
+                </a>
+            </li>
         </ul>
     </div>
     </div>
