@@ -79,7 +79,7 @@
             <!--<a href="#" class="btn btn-success btn-top" @if(URL::current() != url('/order')) data-toggle="modal" data-target="#orderModal" @endif><i class="glyphicon glyphicon-plus"></i> Сделать заказ </a>-->
             @endif
             <a href="http://sint-market.com" class="btn  btn-warning btn-top" target="_blank"><i
-                        class="glyphicon glyphicon-shopping-cart"></i> Перейти в магазин</a>
+                        class="glyphicon glyphicon-shopping-cart"></i> @lang('main.go_to_store')</a>
         </div>
         <div class="clear"></div>
         <div class="container">
@@ -101,7 +101,7 @@
     <div class="container bottom">
         <div class="row">
             <div class="col-sm-12 col-md-3 col-lg-3 border_right">
-                <h4>Контакты</h4>
+                <h4>@lang('main.contacts')</h4>
 
                 <ul class="address-bottom">
                     <li><i class="glyphicon glyphicon-phone"></i> +38(050)392-392-5</li>
@@ -113,7 +113,7 @@
                 </ul>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 border_right">
-                <h4>Офисы</h4>
+                <h4>@lang('main.offices')</h4>
 
                 <ul class="address-bottom">
                     <li><i class="glyphicon glyphicon-map-marker"></i> Гл. офис: Адмиральский пр-т. 33А
@@ -131,7 +131,7 @@
                 </ul>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 border_right">
-                <h4>Навигация</h4>
+                <h4>@lang('main.navigation')</h4>
                 <?php
                 $menu = \App\Menu::root()->active()->order()->get();
                 $i = 0;

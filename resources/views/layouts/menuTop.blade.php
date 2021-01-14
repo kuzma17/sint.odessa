@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
-    <div class="rcol-sm-12 col-md-12 col-lg-12">Добро пожаловать
+    <div class="rcol-sm-12 col-md-12 col-lg-12">@lang('main.welcome')
         <ul class="top-menu">
             <li><a title="{{ config('app.name', 'Laravel') }}" href="http://sint.odessa.ua"
                    onclick="window.external.AddFavorite('http://sint.odessa.ua',
-                           '{{ config('app.name', 'Laravel') }}'); return false;" rel="sidebar"><i class="glyphicon glyphicon-heart"></i> В избранное</a></li>
-            <li><a href="{{ url('/mail') }}"><i class="glyphicon glyphicon-envelope"></i> Написать нам</a></li>
+                           '{{ config('app.name', 'Laravel') }}'); return false;" rel="sidebar"><i class="glyphicon glyphicon-heart"></i> @lang('menu.to_favorites')</a></li>
+            <li><a href="{{ url('/mail') }}"><i class="glyphicon glyphicon-envelope"></i> @lang('menu.write_to_us')</a></li>
             <!--<li><a href="{{ url('/info') }}"><i class="fa fa-info-circle"></i> Как сделать заказ</a></li>-->
-            <li><a href="{{ url('/delivery') }}"><i class="fa fa-truck" aria-hidden="true"></i> Доставка</a></li>
+            <li><a href="{{ url('/delivery') }}"><i class="fa fa-truck" aria-hidden="true"></i> @lang('menu.delivery')</a></li>
            <!-- @if (Auth::guest())
                 <li class="dropdown noclose">
                     <a id="drop1" href="" class="dropdown-toggle" data-toggle="dropdown">
