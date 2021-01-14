@@ -50,4 +50,9 @@ trait Locale
         $column = "text_" . $this->lang();
         return $this->{$column};
     }
+
+    public function getSloganAttribute(){
+        $column = "slogan_" . $this->lang();
+        return $this->{$column};
+    }
 }

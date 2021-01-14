@@ -74,7 +74,7 @@ class PageController extends Controller
         return Admin::grid(Page::class, function (Grid $grid) {
 
             $grid->column('id', 'ID')->sortable();
-            $grid->column('title', 'title');
+            $grid->column('title_ru', 'title');
             $grid->column('url', 'url');
 
             $grid->created_at();
@@ -92,9 +92,11 @@ class PageController extends Controller
         return Admin::form(Page::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('title', 'Название')->rules('required');
+            $form->text('title_ru', 'Название ru')->rules('required');
+            $form->text('title_ua', 'Название ua')->rules('required');
             $form->text('keywords', 'Ключевые слова')->rules('required');;
-            $form->ckeditor('content', 'Текст страници')->rules('required');
+            $form->ckeditor('content_ru', 'Текст страници ru')->rules('required');
+            $form->ckeditor('content_ua', 'Текст страници ua')->rules('required');
             $form->text('url', 'url');
 
             $form->display('created_at', 'Created At');
