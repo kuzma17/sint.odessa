@@ -11,18 +11,14 @@
 |
 */
 
-//Route::get('/', function () {
- //   return view('welcome');
-//});
-Route::get('/', 'PageController@home');
-
 Auth::routes();
-
-//Route::get('/home', 'HomeController@index');
 
 Route::get('locale/{locale}', ['as' => 'locale', 'uses' => 'LocaleController@changeLocal']);
 
 Route::middleware(['set_locale'])->group(function () {
+    Route::get('/', ['as'=>'home', 'uses'=>'PageController@home']);
+   // Route::get('/home', ['as' => 'home', 'uses' => 'PageController@home']);
+
     Route::post('/register_client', ['as' => 'register.client', 'uses' => 'Auth\RegisterController@createClient']);
 
     Route::get('/social/{provider}', 'SocialController@login');
@@ -47,7 +43,6 @@ Route::middleware(['set_locale'])->group(function () {
 
     Route::post('/user/order/repair_save', ['as' => 'order.repair.save', 'middleware' => 'client', 'uses' => 'OrderController@user_consent']);
 
-    Route::get('/home', ['as' => 'home', 'uses' => 'PageController@home']);
     Route::get('/contacts', ['as' => 'contacts', 'uses' => 'PageController@contacts']);
     Route::get('/mail', ['as' => 'mail', 'uses' => 'PageController@mail']);
     Route::post('/mail', ['as' => 'send.mail', 'uses' => 'PageController@send_mail']);
@@ -55,11 +50,6 @@ Route::middleware(['set_locale'])->group(function () {
     Route::get('/stock/{id}', ['as' => 'stock', 'uses' => 'StockController@stock']);
     Route::get('/news', ['as' => 'news', 'uses' => 'NewsController@index']);
     Route::get('/news/{id}', ['as' => 'news_id', 'uses' => 'NewsController@news']);
-
-//Route::get('/login_admin', ['as'=>'login.admin', 'uses'=>'Auth\LoginController@showLoginForm']);
-//Route::post('/login_admin', ['as'=>'login.admin.auth', 'uses'=>'Auth\LoginController@login']);
-//Route::get('/admin', ['as'=>'admin.dashboard']);
-//Route::get('/admin/logout', ['as'=>'admin.logout', 'uses'=>'Auth\LoginController@logout']);
 
     Route::post('/search', ['as' => 'search', 'uses' => 'SearchController@search']);
     Route::get('/search', ['as' => 'search.home', function () {
