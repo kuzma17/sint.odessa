@@ -2,13 +2,14 @@
 
 namespace App;
 
+use App\Traits\Locale;
 use Encore\Admin\Traits\AdminBuilder;
 use Encore\Admin\Traits\ModelTree;
 use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    use ModelTree, AdminBuilder;
+    use ModelTree, Locale, AdminBuilder;
 
     protected $table = 'menus';
 

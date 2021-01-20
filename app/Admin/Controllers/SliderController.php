@@ -87,7 +87,7 @@ class SliderController extends Controller
                 return '<img src="/upload/'.$img.'" style="width:200px; height:60px">';
             });
             $grid->column('url', 'url');
-            $grid->column('slogan', 'Слоган')->editable();
+            $grid->column('slogan_ru', 'Слоган')->editable();
             $grid->column('active', 'Статус')->switch($this->states);
 
             $grid->created_at();
@@ -107,7 +107,8 @@ class SliderController extends Controller
             $form->display('id', 'ID');
             $form->image('image')->resize(965, 400)->uniqueName()->move('slider')->rules('required');
             $form->text('url', 'url');
-            $form->text('slogan', 'слоган');
+            $form->text('slogan_ru', 'слоган ru');
+            $form->text('slogan_ua', 'слоган ua');
             $form->number('weight', 'номер')->default(Slider::max('weight')+1);
             $form->switch('active')->states($this->states)->default(1);
             $form->display('created_at', 'Created At');

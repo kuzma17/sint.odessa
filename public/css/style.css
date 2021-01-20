@@ -705,3 +705,10 @@ li > ul.submenu_3 a:hover{
     background-color: #FFFFFF;
     text-decoration: underline;
 }
+
+/* Language */
+.language{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 0px 4px;
+}

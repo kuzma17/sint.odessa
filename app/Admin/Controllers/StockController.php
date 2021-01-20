@@ -80,7 +80,7 @@ class StockController extends Controller
         return Admin::grid(Stock::class, function (Grid $grid) {
 
             $grid->column('id', 'ID')->sortable();
-            $grid->column('title', 'title');
+            $grid->column('title_ru', 'title');
             $grid->column('banner', 'баннер')->display(function ($img){
                 return '<img src="/upload/'.$img.'" style="width:200px; height:60px">';
             });
@@ -103,8 +103,10 @@ class StockController extends Controller
         return Admin::form(Stock::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('title', 'Название')->rules('required');
-            $form->ckeditor('content', 'Текст')->rules('required');
+            $form->text('title_ru', 'Название ru')->rules('required');
+            $form->text('title_ua', 'Название ua')->rules('required');
+            $form->ckeditor('content_ru', 'Текст ru')->rules('required');
+            $form->ckeditor('content_ua', 'Текст ua')->rules('required');
             $form->image('banner', 'баннер')->uniqueName()->move('banners');
             $form->date('from', 'Дата начала');
             $form->date('to', 'Дата окончания');

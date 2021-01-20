@@ -55,7 +55,7 @@ class MenuController extends Controller
 		                        <span class="bootstrap-switch-handle-off bootstrap-switch-danger" style="width: 40px;">OFF</span>
                                 </div>';
                 }
-                return "{$branch['id']} - {$branch['title']} <span style='position:absolute;right:50%'> {$branch['url']} </span> {$swith}";
+                return "{$branch['id']} - {$branch['title_ru']} <span style='position:absolute;right:50%'> {$branch['url']} </span> {$swith}";
             });
         });
     }
@@ -103,7 +103,7 @@ class MenuController extends Controller
         return Admin::grid(Menu::class, function (Grid $grid) {
 
             $grid->column('id', 'ID')->sortable();
-            $grid->column('title', 'title');
+            $grid->column('title_ru', 'title ru');
             $grid->column('url', 'url');
             $grid->column('weight', 'номер');
             $grid->column('active', 'Статус')->switch($this->states);
@@ -123,7 +123,8 @@ class MenuController extends Controller
         return Admin::form(Menu::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('title', 'Название')->rules('required');
+            $form->text('title_ru', 'Название ru')->rules('required');
+            $form->text('title_ua', 'Название ua')->rules('required');
             $form->text('url', 'url')->rules('required')->placeholder('Уникальное значение');
             $form->select('parent_id', 'Родитель')->options($this->getSelectMenuItems());
             $form->number('weight', 'Номер')->default(Menu::all()->max('weight'));
@@ -139,7 +140,7 @@ class MenuController extends Controller
             ->order()
             ->get()
             ->prepend(['title'=>'корень', 'id'=>0])
-            ->pluck('title', 'id');
+            ->pluck('title_ru', 'id');
     }
 
     public function release(Request $request)

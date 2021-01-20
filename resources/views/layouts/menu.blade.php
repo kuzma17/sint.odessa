@@ -48,7 +48,7 @@ $menu_list = \App\Menu::getMenu();
         <form class="navbar-form" role="search" method="post" name="search_site" action="{{ url('/search') }}">
             {{ csrf_field() }}
             <div class="input-group" style="margin-left:70px">
-                <input type="search" name="search" class="form-control" placeholder="поиск по сайту">
+                <input type="search" name="search" class="form-control" placeholder="@lang('main.site_search')">
                 <div class="input-group-btn">
                     <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
