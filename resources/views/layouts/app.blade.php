@@ -1,21 +1,102 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-        name='viewport' />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" media="screen, print">
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <title>{{ \App\Settings::first()->title }}</title>
+    <meta name="keywords"
+          content="{{ \App\Settings::first()->keywords }}@if(isset($page) && $page->keywords != ''), {{ $page->keywords }}@endif">
+
+    <link href="/css/app.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-social.css"/>
+    <link rel="stylesheet" href="/css/lightbox.min.css">
+    <link href="/css/style.css" rel="stylesheet"/>
+
+    <!-- New Year -->
+    <link href="/css/newyear.css" rel="stylesheet"/>
+    <!-- End New Year -->
+
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100689059-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-100689059-1');
+    </script>
 </head>
 <body>
-    @include('lang')
-    <div class="wrapper " id="app">
-        @yield('content_page')
+<div class="top-wrapper">
+    @include('layouts.menuTop')
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="rcol-sm-12 col-md-12 col-lg-4">
+            <div class="logo">
+                <a href="{{route('home')}}">
+                    <!--<img src="/images/{{app()->getLocale()}}_logo.jpg">-->
+                    <img src="/images/{{app()->getLocale()}}_logo_snow.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4"
+             style="padding-top: 10px; padding-left: 0px; color: #808080; font-family: 'Lato', sans-serif; font-size: 12px">
+            <div class="clear"></div>
+            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
+                @lang('main.office_admiralsky')
+            </div>
+            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
+                                                       style="color: orangered"></i> +38(067)557-65-67
+            </div>
+            <div class="clear"></div>
+            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
+                @lang('main.office_soborka')
+            </div>
+            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
+                                                       style="color: orangered"></i> +38(067)488-04-83
+            </div>
+            <div class="clear"></div>
+            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
+                @lang('main.office_dneprodoroga')
+            </div>
+            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
+                                                       style="color: orangered"></i> +38(066)290-50-02
+            </div>
+            <div class="clear"></div>
+            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
+                @lang('main.office_koroleva')
+            </div>
+            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
+                                                       style="color: orangered"></i> +38(098)879-30-48
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" style="padding-top: 15px">
+        @if (Auth::guest())
+            <!--<a href="{{ url('/user/order-modal') }}" class="btn btn-success btn-top" ><i class="glyphicon glyphicon-plus"></i> Заказать услугу </a>-->
+        @else
+            <!--<a href="#" class="btn btn-success btn-top" @if(URL::current() != url('/order')) data-toggle="modal" data-target="#orderModal" @endif><i class="glyphicon glyphicon-plus"></i> Сделать заказ </a>-->
+            @endif
+            <a href="http://sint-market.com" class="btn  btn-warning btn-top" target="_blank"><i
+                        class="glyphicon glyphicon-shopping-cart"></i> Перейти в магазин</a>
+        </div>
+        <div class="clear"></div>
+        <div class="container">
+        @include('layouts.menu')
+        <!-- New Year -->
+        @include('layouts.newyear')
+        <!-- end New Year -->
+        </div>
     </div>
 
     <div class="clear"></div>
@@ -169,6 +250,5 @@
         var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
 </script>
 <!-- {/literal} END JIVOSITE CODE -->
->>>>>>> b0f16e7e2993c9aef1ac472bda0a6be7abed9b75
 </body>
 </html>
