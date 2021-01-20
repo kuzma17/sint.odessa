@@ -50,10 +50,10 @@
             });
         }
 
-        addMarker(30.730315, 46.43711, 'Главный офис. Адмиральский пр, 33а');
-        addMarker(30.730281, 46.482146, 'пл. Соборная 12"');
-        addMarker(30.7951071, 46.575718, 'Днепропетровская дор., 94');
-        addMarker(30.72347, 46.400676, 'ул. Академика Королева, 33');
+        addMarker(30.730315, 46.43711, "@lang('main.office_admiralsky')");
+        addMarker(30.730281, 46.482146, "@lang('main.office_soborka')");
+        addMarker(30.7951071, 46.575718, "@lang('main.office_dneprodoroga')");
+        addMarker(30.72347, 46.400676, "@lang('main.office_koroleva')");
     </script>
     <div class="content-page">
     {!! $page->content !!}
