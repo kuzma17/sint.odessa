@@ -55,7 +55,7 @@ class MenuController extends Controller
 		                        <span class="bootstrap-switch-handle-off bootstrap-switch-danger" style="width: 40px;">OFF</span>
                                 </div>';
                 }
-                return "{$branch['id']} - {$branch['title_ru']} <span style='position:absolute;right:50%'> {$branch['url']} </span> {$swith}";
+                return "{$branch['id']} - {$branch['title_ru']} ({$branch['title_ua']}) <span style='position:absolute;right:50%'> {$branch['url']} </span> {$swith}";
             });
         });
     }
