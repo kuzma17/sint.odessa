@@ -16,13 +16,16 @@ class SearchController extends Controller
             $this->validate($request, ['search' => 'required|min:4'] );
 
             $query = $request->input('search');
-            $page = json_decode(Page::search($query)->get());
-            $news = json_decode(News::search($query)->get());
-            $post = json_decode(Post::search($query)->get());
+            $page = Page::active()->search($query)->get();
+            $news = News::active()->search($query)->get();
+           // $post = json_decode(Post::search($query)->get());
 
-            $results = array_merge($page, $news, $post);
 
-            return view('search', ['query' => $query, 'results' => $results]);
+           $result = collect();
+           $result = $result->merge($page)->merge($news);
+
+            return view('search', ['query' => $query, 'results' => $result]);
         }
     }
+
 }

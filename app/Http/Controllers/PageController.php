@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\News;
 use App\Page;
 use App\Slider;
@@ -12,8 +13,6 @@ use Mail;
 class PageController extends Controller
 {
     public function home(){
-       // app()->setLocale('ua');
-       // dd(app()->getLocale());
         $slider = Slider::where('active', 1)->orderBy('weight', 'asc')->get();
         $page = Page::where('url', '/')->first();
         $news = News::where('published', 1)->limit(3)->orderBy('published_at', 'desc')->get();
