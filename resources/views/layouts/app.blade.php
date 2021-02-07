@@ -233,7 +233,7 @@
 
 <!-- New Year -->
 <script src="{{ asset('js/snow.js') }}"></script>
-<script src="{{ asset('js/newyear.js') }}"></script>
+<!--<script src="{{ asset('js/newyear.js') }}"></script>-->
 <!-- End New Year -->
 
 @if(URL::current() == url('/user/order-modal'))
