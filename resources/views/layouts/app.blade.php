@@ -43,8 +43,8 @@
         <div class="rcol-sm-12 col-md-12 col-lg-4">
             <div class="logo">
                 <a href="{{route('home')}}">
-                    <!--<img src="/images/{{app()->getLocale()}}_logo.jpg">-->
-                    <img src="/images/{{app()->getLocale()}}_logo_snow.jpg">
+                    <img src="/images/{{app()->getLocale()}}_logo.jpg">
+                    <!--<img src="/images/{{app()->getLocale()}}_logo_snow.jpg">-->
                 </a>
             </div>
         </div>
@@ -93,7 +93,7 @@
         <div class="container">
         @include('layouts.menu')
         <!-- New Year -->
-        @include('layouts.newyear')
+        <!--@include('layouts.newyear')-->
         <!-- end New Year -->
         </div>
     </div>
