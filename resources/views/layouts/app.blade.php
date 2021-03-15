@@ -16,7 +16,7 @@
     <link href="/css/style.css" rel="stylesheet"/>
 
     <!-- New Year -->
-    <link href="/css/newyear.css" rel="stylesheet"/>
+    <!--<link href="/css/newyear.css" rel="stylesheet"/>-->
     <!-- End New Year -->
 
     <script>
@@ -232,7 +232,7 @@
 <script src="{{ asset('js/script.js') }}"></script>
 
 <!-- New Year -->
-<script src="{{ asset('js/snow.js') }}"></script>
+<!--<script src="{{ asset('js/snow.js') }}"></script>-->
 <!--<script src="{{ asset('js/newyear.js') }}"></script>-->
 <!-- End New Year -->
 
