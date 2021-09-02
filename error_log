@@ -38,3 +38,4 @@ Stack trace:
 #5 [internal function]: Symfony\Component\Process\Process->__destruct()
 #6 {main}
   thrown in phar:///home/cboyezmz/composer/vendor/symfony/process/Process.php on line 1283
+[26-Jun-2021 23:19:54 Europe/Helsinki] PHP Fatal error:  Class UpdateHelper\ComposerPlugin contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Composer\Plugin\PluginInterface::deactivate, Composer\Plugin\PluginInterface::uninstall) in /home/cboyezmz/public_html/vendor/kylekatarnls/update-helper/src/UpdateHelper/ComposerPlugin.php on line 11
