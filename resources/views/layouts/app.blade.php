@@ -86,8 +86,8 @@
         @else
             <!--<a href="#" class="btn btn-success btn-top" @if(URL::current() != url('/order')) data-toggle="modal" data-target="#orderModal" @endif><i class="glyphicon glyphicon-plus"></i> Сделать заказ </a>-->
             @endif
-            <a href="http://sint-market.com" class="btn  btn-warning btn-top" target="_blank"><i
-                        class="glyphicon glyphicon-shopping-cart"></i> Перейти в магазин</a>
+{{--            <a href="http://sint-market.com" class="btn  btn-warning btn-top" target="_blank"><i--}}
+{{--                        class="glyphicon glyphicon-shopping-cart"></i> Перейти в магазин</a>--}}
         </div>
         <div class="clear"></div>
         <div class="container">
