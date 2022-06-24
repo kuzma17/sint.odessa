@@ -36,22 +36,22 @@
 	<div class="content-page">
     <h3>{{ $page->title }}</h3>
     {!! $page->content !!}
-    @if(count($news) > 0)
-        <h4 style="color: royalblue" ><i class="fa fa-newspaper-o" aria-hidden="true"></i> @lang('main.news')</h4>
-        <div style="background-color: #f2f2f2; padding: 10px">
-        @foreach($news as $new)
-            <div>
-                <a href="/news/{{ $new->id }}">{{ $new->title }}</a></br>
-            <span style="float: right; font-weight: normal; color: orangered; font-size: 12px; margin-top: -20px">[ {{ date('d.m.Y', strtotime($new->published_at))}} ]</span>
-                @if($new->image)
-                    <img class="news_image_list" src="{{ url('/upload/'.$new->image) }}">
-                @endif
-                {!! \Illuminate\Support\Str::words($new->content, 50) !!}
-                <a href="{{ url('/news/'.$new->id) }}">@lang('main.more_details')</a>
-				<div class="clear"></div><br>
-            </div>
-        @endforeach
-            </div>
-    @endif
+{{--    @if(count($news) > 0)--}}
+{{--        <h4 style="color: royalblue" ><i class="fa fa-newspaper-o" aria-hidden="true"></i> @lang('main.news')</h4>--}}
+{{--        <div style="background-color: #f2f2f2; padding: 10px">--}}
+{{--        @foreach($news as $new)--}}
+{{--            <div>--}}
+{{--                <a href="/news/{{ $new->id }}">{{ $new->title }}</a></br>--}}
+{{--            <span style="float: right; font-weight: normal; color: orangered; font-size: 12px; margin-top: -20px">[ {{ date('d.m.Y', strtotime($new->published_at))}} ]</span>--}}
+{{--                @if($new->image)--}}
+{{--                    <img class="news_image_list" src="{{ url('/upload/'.$new->image) }}">--}}
+{{--                @endif--}}
+{{--                {!! \Illuminate\Support\Str::words($new->content, 50) !!}--}}
+{{--                <a href="{{ url('/news/'.$new->id) }}">@lang('main.more_details')</a>--}}
+{{--				<div class="clear"></div><br>--}}
+{{--            </div>--}}
+{{--        @endforeach--}}
+{{--            </div>--}}
+{{--    @endif--}}
 	</div>
 @endsection
