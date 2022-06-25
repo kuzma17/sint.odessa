@@ -16,7 +16,7 @@
     <link href="/css/style.css" rel="stylesheet"/>
 
     <!-- New Year -->
-    <link href="/css/newyear.css" rel="stylesheet"/>
+{{--    <link href="/css/newyear.css" rel="stylesheet"/>--}}
     <!-- End New Year -->
 
     <script>
@@ -30,7 +30,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-100689059-1');
     </script>
 </head>
@@ -211,7 +210,6 @@
                         <a href="http://top100.rambler.ru/navi/3145247/">
                             <img src="http://counter.rambler.ru/top100.cnt?3145247" alt="Rambler's Top100" border="0"/>
                         </a>
-
                     </noscript>
                     <!-- end of Top100 code -->
                 </div>
