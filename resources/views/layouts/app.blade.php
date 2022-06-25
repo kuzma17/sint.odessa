@@ -16,7 +16,7 @@
     <link href="/css/style.css" rel="stylesheet"/>
 
     <!-- New Year -->
-    <link href="/css/newyear.css" rel="stylesheet"/>
+{{--    <link href="/css/newyear.css" rel="stylesheet"/>--}}
     <!-- End New Year -->
 
     <script>
@@ -30,7 +30,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-100689059-1');
     </script>
 </head>
@@ -173,17 +172,17 @@
                     <div data-background-alpha="1.0" data-buttons-color="#ffffff" data-counter-background-color="#ffffff" data-share-counter-size="12" data-top-button="false" data-share-counter-type="disable" data-share-style="1" data-mode="share" data-like-text-enable="false" data-hover-effect="rotate-cw" data-mobile-view="true" data-icon-color="#ffffff" data-orientation="horizontal" data-text-color="#000000" data-share-shape="round" data-sn-ids="vk.tw.fb.ok." data-share-size="40" data-background-color="#33363b" data-preview-mobile="false" data-mobile-sn-ids="fb.vk.tw.wh.ok.vb." data-pid="1612300" data-counter-background-alpha="1.0" data-following-enable="false" data-exclude-show-more="true" data-selection-enable="false" class="uptolike-buttons" ></div>
                     -->
                     <h4></h4>
-                    <!--LiveInternet counter-->
-                    <script type="text/javascript"><!--
-                        document.write("<a href='http://www.liveinternet.ru/click' " +
-                            "target=_blank><img src='http://counter.yadro.ru/hit?t14.11;r" +
-                            escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
-                                ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
-                            ";" + Math.random() +
-                            "' alt='' title='LiveInternet: показано число просмотров за 24" +
-                            " часа, посетителей за 24 часа и за сегодня' " +
-                            "border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->
+{{--                    <!--LiveInternet counter-->--}}
+{{--                    <script type="text/javascript"><!----}}
+{{--                        document.write("<a href='http://www.liveinternet.ru/click' " +--}}
+{{--                            "target=_blank><img src='http://counter.yadro.ru/hit?t14.11;r" +--}}
+{{--                            escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :--}}
+{{--                                ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?--}}
+{{--                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +--}}
+{{--                            ";" + Math.random() +--}}
+{{--                            "' alt='' title='LiveInternet: показано число просмотров за 24" +--}}
+{{--                            " часа, посетителей за 24 часа и за сегодня' " +--}}
+{{--                            "border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->--}}
 
                     <!-- I.UA counter --><a href="http://www.i.ua/" target="_blank"
                                             onclick="this.href='http://i.ua/r.php?198771';" title="Rated by I.UA">
@@ -211,7 +210,6 @@
                         <a href="http://top100.rambler.ru/navi/3145247/">
                             <img src="http://counter.rambler.ru/top100.cnt?3145247" alt="Rambler's Top100" border="0"/>
                         </a>
-
                     </noscript>
                     <!-- end of Top100 code -->
                 </div>
@@ -243,10 +241,10 @@
 @endif
 
 <!-- BEGIN JIVOSITE CODE {literal} -->
-<script type='text/javascript'>
-    (function(){ var widget_id = 'zu8O4tOtH7';var d=document;var w=window;function l(){
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-</script>
+{{--<script type='text/javascript'>--}}
+{{--    (function(){ var widget_id = 'zu8O4tOtH7';var d=document;var w=window;function l(){--}}
+{{--        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();--}}
+{{--</script>--}}
 <!-- {/literal} END JIVOSITE CODE -->
 </body>
 </html>
