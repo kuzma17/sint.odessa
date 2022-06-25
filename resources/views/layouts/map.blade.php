@@ -1,5 +1,4 @@
 @if(Request::path() != 'contacts')
-    <p>
     <div id="mapdiv" class="map"></div>
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script>
@@ -53,5 +52,5 @@
         addMarker(30.7951071, 46.575718, "@lang('main.office_dneprodoroga')");
         addMarker(30.72347, 46.400676, "@lang('main.office_koroleva')");
     </script>
-    </p>
+    <p></p>
 @endif
