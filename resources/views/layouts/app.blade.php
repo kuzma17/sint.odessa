@@ -112,12 +112,10 @@
                 <h4>@lang('main.contacts')</h4>
 
                 <ul class="address-bottom">
-                    <li><i class="glyphicon glyphicon-phone"></i> +38(050)392-392-5</li>
+             
                     <li><i class="glyphicon glyphicon-envelope"></i> info@sint.odessa.ua</li>
                     <li><a href="http://sint.odessa.ua"><i class="glyphicon glyphicon-globe"></i> http://sint.odessa.ua</a>
                     </li>
-                    <li><a href="http://sint-market.com"><i class="glyphicon glyphicon-shopping-cart"></i>
-                            http://sint-market.com</a></li>
                 </ul>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 border_right">
