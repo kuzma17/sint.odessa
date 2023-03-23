@@ -7,7 +7,7 @@
 
         var pois = new OpenLayers.Layer.Text("My Points",
             {
-                location: "./textfile.txt",
+                // location: "./textfile.txt",
                 projection: map.displayProjection
             });
         map.addLayer(pois);

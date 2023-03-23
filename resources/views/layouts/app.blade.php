@@ -11,7 +11,6 @@
           content="{{ \App\Settings::first()->keywords }}@if(isset($page) && $page->keywords != ''), {{ $page->keywords }}@endif">
 
     <link href="/css/app.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-social.css"/>
     <link rel="stylesheet" href="/css/lightbox.min.css">
     <link href="/css/style.css" rel="stylesheet"/>
 
@@ -182,33 +181,33 @@
 {{--                            " часа, посетителей за 24 часа и за сегодня' " +--}}
 {{--                            "border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->--}}
 
-                    <!-- I.UA counter --><a href="http://www.i.ua/" target="_blank"
-                                            onclick="this.href='http://i.ua/r.php?198771';" title="Rated by I.UA">
-                        <script type="text/javascript"><!--
-                            iS = 'http' + (window.location.protocol == 'https:' ? 's' : '') +
-                                '://r.i.ua/s?u198771&p104&n' + Math.random();
-                            iD = document;
-                            if (!iD.cookie)iD.cookie = "b=b; path=/";
-                            if (iD.cookie)iS += '&c1';
-                            iS += '&d' + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)
-                                + "&w" + screen.width + '&h' + screen.height;
-                            iT = iR = iD.referrer.replace(iP = /^[a-z]*:\/\//, '');
-                            iH = window.location.href.replace(iP, '');
-                            ((iI = iT.indexOf('/')) != -1) ? (iT = iT.substring(0, iI)) : (iI = iT.length);
-                            if (iT != iH.substring(0, iI))iS += '&f' + escape(iR);
-                            iS += '&r' + escape(iH);
-                            iD.write('<img src="' + iS + '" border="0" width="88" height="31" />');
-                            //--></script>
-                    </a><!-- End of I.UA counter -->
+{{--                    <!-- I.UA counter --><a href="http://www.i.ua/" target="_blank"--}}
+{{--                                            onclick="this.href='http://i.ua/r.php?198771';" title="Rated by I.UA">--}}
+{{--                        <script type="text/javascript"><!----}}
+{{--                            iS = 'http' + (window.location.protocol == 'https:' ? 's' : '') +--}}
+{{--                                '://r.i.ua/s?u198771&p104&n' + Math.random();--}}
+{{--                            iD = document;--}}
+{{--                            if (!iD.cookie)iD.cookie = "b=b; path=/";--}}
+{{--                            if (iD.cookie)iS += '&c1';--}}
+{{--                            iS += '&d' + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)--}}
+{{--                                + "&w" + screen.width + '&h' + screen.height;--}}
+{{--                            iT = iR = iD.referrer.replace(iP = /^[a-z]*:\/\//, '');--}}
+{{--                            iH = window.location.href.replace(iP, '');--}}
+{{--                            ((iI = iT.indexOf('/')) != -1) ? (iT = iT.substring(0, iI)) : (iI = iT.length);--}}
+{{--                            if (iT != iH.substring(0, iI))iS += '&f' + escape(iR);--}}
+{{--                            iS += '&r' + escape(iH);--}}
+{{--                            iD.write('<img src="' + iS + '" border="0" width="88" height="31" />');--}}
+{{--                            //--></script>--}}
+{{--                    </a><!-- End of I.UA counter -->--}}
                     <!-- begin of Top100 code -->
 
                     <script id="top100Counter" type="text/javascript"
                             src="http://counter.rambler.ru/top100.jcn?3145247"></script>
-                    <noscript>
-                        <a href="http://top100.rambler.ru/navi/3145247/">
-                            <img src="http://counter.rambler.ru/top100.cnt?3145247" alt="Rambler's Top100" border="0"/>
-                        </a>
-                    </noscript>
+{{--                    <noscript>--}}
+{{--                        <a href="http://top100.rambler.ru/navi/3145247/">--}}
+{{--                            <img src="http://counter.rambler.ru/top100.cnt?3145247" alt="Rambler's Top100" border="0"/>--}}
+{{--                        </a>--}}
+{{--                    </noscript>--}}
                     <!-- end of Top100 code -->
                 </div>
             </div>

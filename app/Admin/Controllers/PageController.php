@@ -94,7 +94,7 @@ class PageController extends Controller
             $form->display('id', 'ID');
             $form->text('title_ru', 'Название ru')->rules('required');
             $form->text('title_ua', 'Название ua')->rules('required');
-            $form->text('keywords', 'Ключевые слова')->rules('required');;
+            $form->text('keywords', 'Ключевые слова');
             $form->ckeditor('content_ru', 'Текст страници ru')->rules('required');
             $form->ckeditor('content_ua', 'Текст страници ua')->rules('required');
             $form->text('url', 'url');
