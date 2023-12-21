@@ -122,16 +122,16 @@
 
                 <ul class="address-bottom">
                     <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_admiralsky')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(0482)333-767
+                        <i class="glyphicon glyphicon-earphone"></i> +38(067)557-65-67
                     </li>
                     <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_soborka')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(048)777-16-85
+                        <i class="glyphicon glyphicon-earphone"></i> +38(067)488-04-83
                     </li>
                     <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_dneprodoroga')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(0482)379-141
+                        <i class="glyphicon glyphicon-earphone"></i> +38(066)290-50-02
                     </li>
                     <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_koroleva')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(0482)323-505
+                        <i class="glyphicon glyphicon-earphone"></i> +38(098)879-30-48
                     </li>
                 </ul>
             </div>

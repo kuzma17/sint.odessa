@@ -12,7 +12,7 @@ return[
     'office_admiralsky' => 'Гл. офіс: Адміральський пр-т. 33А',
     'office_soborka' => 'Соборна пл. 12',
     'office_dneprodoroga' => 'Дніпропетровська дор. 94',
-    'office_koroleva' => 'Ак. Корольова 33',
+    'office_koroleva' => 'Ак. Корольова 70',
 
     'you_mail_send' => 'Ваш лист успішно відправлено, і буде рассмот найближчим часом',
     'write_to_use' => 'Написати нам',
