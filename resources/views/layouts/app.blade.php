@@ -15,7 +15,7 @@
     <link href="/css/style.css" rel="stylesheet"/>
 
     <!-- New Year -->
-   <!-- <link href="/css/newyear.css" rel="stylesheet"/> -->
+   <link href="/css/newyear.css" rel="stylesheet"/>
     <!-- End New Year -->
 
     <script>
@@ -36,8 +36,8 @@
         <div class="rcol-sm-12 col-md-12 col-lg-4">
             <div class="logo">
                 <a href="{{route('home')}}">
-                    <img src="/images/{{app()->getLocale()}}_logo.jpg">
-                    <!-- <img src="/images/{{app()->getLocale()}}_logo_snow.jpg"> -->
+                    <!-- <img src="/images/{{app()->getLocale()}}_logo.jpg"> -->
+                    <img src="/images/{{app()->getLocale()}}_logo_snow.jpg">
                 </a>
             </div>
         </div>
@@ -87,7 +87,7 @@
         <div class="container">
         @include('layouts.menu')
         <!-- New Year -->
-        <!-- @include('layouts.newyear') -->
+         @include('layouts.newyear')
         <!-- end New Year -->
         </div>
     </div>
@@ -223,8 +223,8 @@
 <script src="{{ asset('js/script.js') }}"></script>
 
 <!-- New Year -->
-<!-- <script src="{{ asset('js/snow.js') }}"></script> -->
-<!-- <script src="{{ asset('js/newyear.js') }}"></script> -->
+ <script src="{{ asset('js/snow.js') }}"></script>
+ <script src="{{ asset('js/newyear.js') }}"></script>
 <!-- End New Year -->
 
 @if(URL::current() == url('/user/order-modal'))
