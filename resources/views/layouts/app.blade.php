@@ -15,7 +15,7 @@
     <link href="/css/style.css" rel="stylesheet"/>
 
     <!-- New Year -->
-{{--    <link href="/css/newyear.css" rel="stylesheet"/>--}}
+   <!-- <link href="/css/newyear.css" rel="stylesheet"/> -->
     <!-- End New Year -->
 
     <script>
@@ -25,12 +25,7 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100689059-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-100689059-1');
-    </script>
+    
 </head>
 <body>
 <div class="top-wrapper">
@@ -42,7 +37,7 @@
             <div class="logo">
                 <a href="{{route('home')}}">
                     <img src="/images/{{app()->getLocale()}}_logo.jpg">
-{{--                    <img src="/images/{{app()->getLocale()}}_logo_snow.jpg">--}}
+                    <!-- <img src="/images/{{app()->getLocale()}}_logo_snow.jpg"> -->
                 </a>
             </div>
         </div>
@@ -84,14 +79,15 @@
         @else
             <!--<a href="#" class="btn btn-success btn-top" @if(URL::current() != url('/order')) data-toggle="modal" data-target="#orderModal" @endif><i class="glyphicon glyphicon-plus"></i> Сделать заказ </a>-->
             @endif
-{{--            <a href="http://sint-market.com" class="btn  btn-warning btn-top" target="_blank"><i--}}
-{{--                        class="glyphicon glyphicon-shopping-cart"></i> Перейти в магазин</a>--}}
+            <a href="https://sint-shop.com" class="btn  btn-warning btn-top" target="_blank">
+            <i class="glyphicon glyphicon-shopping-cart"></i> Перейти в магазин
+            </a>
         </div>
         <div class="clear"></div>
         <div class="container">
         @include('layouts.menu')
         <!-- New Year -->
-{{--        @include('layouts.newyear')--}}
+        <!-- @include('layouts.newyear') -->
         <!-- end New Year -->
         </div>
     </div>
@@ -201,8 +197,8 @@
 {{--                    </a><!-- End of I.UA counter -->--}}
                     <!-- begin of Top100 code -->
 
-                    <script id="top100Counter" type="text/javascript"
-                            src="http://counter.rambler.ru/top100.jcn?3145247"></script>
+                    <!-- <script id="top100Counter" type="text/javascript"
+                            src="http://counter.rambler.ru/top100.jcn?3145247"></script> -->
 {{--                    <noscript>--}}
 {{--                        <a href="http://top100.rambler.ru/navi/3145247/">--}}
 {{--                            <img src="http://counter.rambler.ru/top100.cnt?3145247" alt="Rambler's Top100" border="0"/>--}}
@@ -227,8 +223,8 @@
 <script src="{{ asset('js/script.js') }}"></script>
 
 <!-- New Year -->
-{{--<script src="{{ asset('js/snow.js') }}"></script>--}}
-{{--<script src="{{ asset('js/newyear.js') }}"></script>--}}
+<!-- <script src="{{ asset('js/snow.js') }}"></script> -->
+<!-- <script src="{{ asset('js/newyear.js') }}"></script> -->
 <!-- End New Year -->
 
 @if(URL::current() == url('/user/order-modal'))

@@ -22,7 +22,7 @@
                 <?php $s++; ?>
             @endforeach
         </div>
-        <div class="carousel-slogan"></div>
+        <!-- <div class="carousel-slogan"></div> -->
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
