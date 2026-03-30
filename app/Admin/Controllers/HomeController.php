@@ -11,8 +11,8 @@ use Encore\Admin\Layout\Row;
 use Encore\Admin\Widgets\Box;
 use Encore\Admin\Widgets\InfoBox;
 
-use Analytics;
-use Spatie\Analytics\Period;
+//use Analytics;
+//use Spatie\Analytics\Period;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -35,8 +35,10 @@ class HomeController extends Controller
 
                 $row->column(6, function (Column $column) {
 
-                    $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(30));
-                    $arr_ = json_decode($analyticsData);
+                  //  $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(30));
+                    $analyticsData = [];
+                    //$arr_ = json_decode($analyticsData);
+                    $arr_ = [];
                     $arr_date = [];
                     $arr_visitors = [];
                     $arr_views = [];
@@ -59,9 +61,11 @@ class HomeController extends Controller
 
                 $row->column(6, function (Column $column) {
 
-                    $analyticsData = Analytics::fetchTopReferrers(Period::days(30), 50);
+                   // $analyticsData = Analytics::fetchTopReferrers(Period::days(30), 50);
+                    $analyticsData = [];
                     //dd($analyticsData);
-                    $arr_ = json_decode($analyticsData);
+                   // $arr_ = json_decode($analyticsData);
+                    $arr_ = [];
                     $arr_url = [];
                     $arr_views = [];
                     $_2gis_views = 0;
@@ -100,9 +104,12 @@ class HomeController extends Controller
             $content->row(function (Row $row) {
 
                 $row->column(6, function (Column $column){
-                    $analyticsData = Analytics::fetchMostVisitedPages(Period::days(30), 5);
+                    //$analyticsData = Analytics::fetchMostVisitedPages(Period::days(30), 5);
 
-                    $arr_ = json_decode($analyticsData);
+                    $analyticsData = [];
+
+                    //$arr_ = json_decode($analyticsData);
+                    $arr_ = [];
                     $arr_url = [];
                     $arr_views = [];
 
