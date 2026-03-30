@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/lightbox.min.css">
     <link href="/css/style.css" rel="stylesheet"/>
 
-    <!-- New Year 
+    <!-- New Year
    <link href="/css/newyear.css" rel="stylesheet"/>
      End New Year -->
 
@@ -86,7 +86,7 @@
         <div class="clear"></div>
         <div class="container">
         @include('layouts.menu')
-        <!-- New Year 
+        <!-- New Year
          @include('layouts.newyear')
          end New Year -->
         </div>
@@ -107,7 +107,7 @@
                 <h4>@lang('main.contacts')</h4>
 
                 <ul class="address-bottom">
-             
+
                     <li><i class="glyphicon glyphicon-envelope"></i> info@sint.odessa.ua</li>
                     <li><a href="http://sint.odessa.ua"><i class="glyphicon glyphicon-globe"></i> http://sint.odessa.ua</a>
                     </li>
