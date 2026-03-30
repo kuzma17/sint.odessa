@@ -24,13 +24,13 @@
         ]); ?>
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100689059-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-100689059-1');
-    </script>
+{{--    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100689059-1"></script>--}}
+{{--    <script>--}}
+{{--        window.dataLayer = window.dataLayer || [];--}}
+{{--        function gtag(){dataLayer.push(arguments);}--}}
+{{--        gtag('js', new Date());--}}
+{{--        gtag('config', 'UA-100689059-1');--}}
+{{--    </script>--}}
 </head>
 <body>
 <div class="top-wrapper">
@@ -201,8 +201,8 @@
 {{--                    </a><!-- End of I.UA counter -->--}}
                     <!-- begin of Top100 code -->
 
-                    <script id="top100Counter" type="text/javascript"
-                            src="http://counter.rambler.ru/top100.jcn?3145247"></script>
+{{--                    <script id="top100Counter" type="text/javascript"--}}
+{{--                            src="http://counter.rambler.ru/top100.jcn?3145247"></script>--}}
 {{--                    <noscript>--}}
 {{--                        <a href="http://top100.rambler.ru/navi/3145247/">--}}
 {{--                            <img src="http://counter.rambler.ru/top100.cnt?3145247" alt="Rambler's Top100" border="0"/>--}}
@@ -237,11 +237,11 @@
     </script>
 @endif
 
-<!-- BEGIN JIVOSITE CODE {literal} -->
-<script type='text/javascript'>
-    (function(){ var widget_id = 'zu8O4tOtH7';var d=document;var w=window;function l(){
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-</script>
+{{--<!-- BEGIN JIVOSITE CODE {literal} -->--}}
+{{--<script type='text/javascript'>--}}
+{{--    (function(){ var widget_id = 'zu8O4tOtH7';var d=document;var w=window;function l(){--}}
+{{--        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();--}}
+{{--</script>--}}
 <!-- {/literal} END JIVOSITE CODE -->
 
 <!-- Begin of Chaport Live Chat code -->
