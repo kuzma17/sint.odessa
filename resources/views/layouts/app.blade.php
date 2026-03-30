@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="/css/lightbox.min.css">
     <link href="/css/style.css" rel="stylesheet"/>
 
-    <!-- New Year -->
+    <!-- New Year 
    <link href="/css/newyear.css" rel="stylesheet"/>
-    <!-- End New Year -->
+     End New Year -->
 
     <script>
         window.Laravel = <?php echo json_encode([
@@ -36,8 +36,8 @@
         <div class="rcol-sm-12 col-md-12 col-lg-4">
             <div class="logo">
                 <a href="{{route('home')}}">
-                    <!-- <img src="/images/{{app()->getLocale()}}_logo.jpg"> -->
-                    <img src="/images/{{app()->getLocale()}}_logo_snow.jpg">
+	    	   <img src="/images/{{app()->getLocale()}}_logo.jpg">
+                   <!-- <img src="/images/{{app()->getLocale()}}_logo_snow.jpg"> -->
                 </a>
             </div>
         </div>
@@ -86,9 +86,9 @@
         <div class="clear"></div>
         <div class="container">
         @include('layouts.menu')
-        <!-- New Year -->
+        <!-- New Year 
          @include('layouts.newyear')
-        <!-- end New Year -->
+         end New Year -->
         </div>
     </div>
 
@@ -223,8 +223,8 @@
 <script src="{{ asset('js/script.js') }}"></script>
 
 <!-- New Year -->
- <script src="{{ asset('js/snow.js') }}"></script>
- <script src="{{ asset('js/newyear.js') }}"></script>
+<!-- <script src="{{ asset('js/snow.js') }}"></script> -->
+<!-- <script src="{{ asset('js/newyear.js') }}"></script> -->
 <!-- End New Year -->
 
 @if(URL::current() == url('/user/order-modal'))
