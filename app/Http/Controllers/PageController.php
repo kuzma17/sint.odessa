@@ -16,7 +16,7 @@ class PageController extends Controller
         $slider = Slider::where('active', 1)->orderBy('weight', 'asc')->get();
         $page = Page::where('url', '/')->first();
         $news = News::where('published', 1)->limit(3)->orderBy('published_at', 'desc')->get();
-        return view('home', ['slider' => $slider, 'page' => $page, 'news' => $news]);
+        return view('pages/home', ['slider' => $slider, 'page' => $page, 'news' => $news]);
     }
 
     public function contacts(){

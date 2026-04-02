@@ -9,6 +9,8 @@
         map = new google.maps.Map(document.getElementById("mapdiv"), {
             center: { lat: 46.499583, lng: 30.7426 },
             zoom: 11,
+            // heading: 90,  // Поворот
+            // tilt: 45,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 

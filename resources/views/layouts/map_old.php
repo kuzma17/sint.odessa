@@ -1,0 +1,83 @@
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script>
+            map = new OpenLayers.Map("mapdiv");
+            map.addLayer(new OpenLayers.Layer.OSM());
+
+            var pois = new OpenLayers.Layer.Text("My Points",
+                {
+                        // location: "./textfile.txt",
+                            projection: map.displayProjection
+                        });
+                    map.addLayer(pois);
+                    // create layer switcher widget in top right corner of map.
+                        //var layer_switcher= new OpenLayers.Control.LayerSwitcher({});
+                        // map.addControl(layer_switcher);
+                        //Set start centrepoint and zoom
+                        var lonLat = new OpenLayers.LonLat(30.7426, 46.499583)
+                            .transform(
+                                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                                    map.getProjectionObject() // to Spherical Mercator Projection
+                                );
+                            var zoom = 11;
+                            map.setCenter(lonLat, zoom);
+
+                            function addMarker(x, y, title) {
+                                    var size = new OpenLayers.Size(23, 25);
+                                    var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
+                                    var icon = new OpenLayers.Icon('/images/logo_icon.gif', size, offset);
+
+                                    var layer = new OpenLayers.Layer.Markers("Markers");
+                                    map.addLayer(layer);
+
+                                    var marker = new OpenLayers.LonLat(x, y).transform(
+                                        new OpenLayers.Projection("EPSG:4326"),
+                                        map.getProjectionObject()
+                                    );
+
+                                    layer.addMarker(new OpenLayers.Marker(marker, icon));
+
+                                    layer.events.register('mouseover', marker, function () {
+                                            var popup = new OpenLayers.Popup.FramedCloud("Popup", marker, null, title, null, true);
+                                            map.addPopup(popup, false);
+                                            layer.events.register('mouseout', marker, setTimeout(function () {
+                                                    popup.destroy();
+                                                }, 4000));
+                                        });
+                                }
+
+                            addMarker(30.730315, 46.43711, "@lang('main.office_admiralsky')");
+                            addMarker(30.730281, 46.482146, "@lang('main.office_soborka')");
+                            addMarker(30.7951071, 46.575718, "@lang('main.office_dneprodoroga')");
+                            addMarker(30.72347, 46.400676, "@lang('main.office_koroleva')");
+                        </script>
+
+
+
+///============== New version
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <div id="mapdiv" class="map"></div>
+
+    <script>
+            const map = L.map('mapdiv').setView([46.499583, 30.7426], 11);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+            function addMarker(lng, lat, title) {
+                    const marker = L.marker([lat, lng]).addTo(map);
+                    marker.bindTooltip(title, { permanent: false, direction: 'top' });
+
+                    marker.on('mouseover', () => marker.openTooltip());
+                    marker.on('mouseout', () => marker.closeTooltip());
+                }
+
+            addMarker(30.730315, 46.43711, "@lang('main.office_admiralsky')");
+            addMarker(30.730281, 46.482146, "@lang('main.office_soborka')");
+            addMarker(30.7951071, 46.575718, "@lang('main.office_dneprodoroga')");
+            addMarker(30.72347, 46.400676, "@lang('main.office_koroleva')");
+        </script>

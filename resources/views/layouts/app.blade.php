@@ -10,7 +10,9 @@
     <meta name="keywords"
           content="{{ \App\Settings::first()->keywords }}@if(isset($page) && $page->keywords != ''), {{ $page->keywords }}@endif">
 
-    <link href="/css/app.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+{{--    <link href="/css/app.css" rel="stylesheet"/>--}}
     <link rel="stylesheet" href="/css/lightbox.min.css">
     <link href="/css/style.css" rel="stylesheet"/>
 
