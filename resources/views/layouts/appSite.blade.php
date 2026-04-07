@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="{{ asset('css/service.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('css/repair.css') }}">
+
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {

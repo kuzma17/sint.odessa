@@ -21,6 +21,7 @@ Route::middleware(['set_locale'])->group(function () {
 
 
     Route::get('/services', ['uses' => 'PageController@services'])->name('services');
+    Route::get('/services/regenerate-cartridge', ['uses' => 'PageController@regenerateCartridge'])->name('services.regenerate_cartridge');
 
 
     Route::post('/register_client', ['as' => 'register.client', 'uses' => 'Auth\RegisterController@createClient']);

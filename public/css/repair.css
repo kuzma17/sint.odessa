@@ -1,0 +1,249 @@
+
+/*.service-hero{*/
+/*    padding:80px 0;*/
+/*    background:#f8fafc;*/
+/*    text-align:center;*/
+/*}*/
+
+/*.service-hero h1{*/
+/*    font-size:40px;*/
+/*    font-weight:700;*/
+/*    margin-bottom:20px;*/
+/*}*/
+
+/*.service-hero p{*/
+/*    max-width:650px;*/
+/*    margin:auto;*/
+/*    font-size:18px;*/
+/*    color:#6b7280;*/
+/*}*/
+
+/*.service-about{*/
+/*    padding:80px 0;*/
+/*}*/
+
+/*.service-image{*/
+/*    border-radius:12px;*/
+/*    box-shadow:0 15px 40px rgba(0,0,0,0.08);*/
+/*}*/
+
+/*.service-steps{*/
+/*    padding:80px 0;*/
+/*    background:#f9fafb;*/
+/*}*/
+
+/*.step-box{*/
+/*    background:#fff;*/
+/*    padding:30px;*/
+/*    border-radius:12px;*/
+/*    text-align:center;*/
+/*    border:1px solid #eee;*/
+/*}*/
+
+/*.step-number{*/
+/*    width:40px;*/
+/*    height:40px;*/
+/*    border-radius:50%;*/
+/*    background:#2563eb;*/
+/*    color:white;*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:center;*/
+/*    margin:auto;*/
+/*    margin-bottom:15px;*/
+/*    font-weight:700;*/
+/*}*/
+
+/*.service-brands{*/
+/*    padding:80px 0;*/
+/*    text-align:center;*/
+/*}*/
+
+/*.brands{*/
+/*    display:flex;*/
+/*    justify-content:center;*/
+/*    flex-wrap:wrap;*/
+/*    gap:20px;*/
+/*}*/
+
+/*.brands span{*/
+/*    padding:10px 20px;*/
+/*    border-radius:30px;*/
+/*    background:#f1f5f9;*/
+/*    font-weight:600;*/
+/*}*/
+
+/*.service-cta{*/
+/*    padding:80px 0;*/
+/*    background:#f1f5f9;*/
+/*}*/
+
+/*.cta-box{*/
+/*    background:white;*/
+/*    padding:40px;*/
+/*    border-radius:12px;*/
+/*    text-align:center;*/
+/*    box-shadow:0 10px 30px rgba(0,0,0,0.06);*/
+/*}*/
+
+/*.cta-box h2{*/
+/*    margin-bottom:15px;*/
+/*}*/
+
+/*.service-signs{*/
+/*    padding:80px 0;*/
+/*    background:#f9fafb;*/
+/*}*/
+
+/*.sign-box{*/
+/*    background:#fff;*/
+/*    padding:25px;*/
+/*    border-radius:10px;*/
+/*    text-align:center;*/
+/*    border:1px solid #eee;*/
+/*}*/
+
+.service-hero{
+    padding:80px 0;
+    background:#f8fafc;
+    text-align:center;
+}
+
+.service-hero h1{
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.service-hero p{
+    max-width:650px;
+    margin:auto;
+    font-size:18px;
+    color:#6b7280;
+}
+
+
+.service-about{
+    padding:80px 0;
+}
+
+.service-image{
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+
+.service-signs{
+    padding:80px 0;
+    background:#f9fafb;
+}
+
+.sign-box{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid #eee;
+}
+
+
+.service-process{
+    padding:80px 0;
+}
+
+.process-box{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid #eee;
+}
+
+.process-number{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#2563eb;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+
+.service-benefits{
+    padding:80px 0;
+    background:#f9fafb;
+}
+
+.benefit-box{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid #eee;
+}
+
+.benefit-box h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+
+.service-brands{
+    padding:80px 0;
+    text-align:center;
+}
+
+.brands{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.brands span{
+    padding:10px 20px;
+    background:#f1f5f9;
+    border-radius:30px;
+    font-weight:600;
+}
+
+
+.service-price{
+    padding:80px 0;
+    background:#f9fafb;
+}
+
+.price-box{
+    max-width:600px;
+    margin:auto;
+    text-align:center;
+}
+
+.price-box ul{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+
+.price-box li{
+    margin-bottom:10px;
+}
+
+
+.service-cta{
+    padding:80px 0;
+    background:#f1f5f9;
+}
+
+.cta-box{
+    background:#fff;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}

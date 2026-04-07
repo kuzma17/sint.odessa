@@ -31,6 +31,7 @@
 /*    z-index: 2;*/
 /*}*/
 
+
 .services-hero h1{
     font-size:42px;
     font-weight:700;
@@ -45,103 +46,8 @@
 
 }
 
-
 /*!*Services*!*/
 
-/*.service-box{*/
-
-/*    display:block;*/
-/*    background:#fff;*/
-/*    border-radius:14px;*/
-/*    overflow:hidden;*/
-/*    box-shadow:0 15px 35px rgba(0,0,0,0.07);*/
-/*    transition:0.3s;*/
-/*    text-decoration:none;*/
-/*    color:#111;*/
-/*    height:100%;*/
-
-/*}*/
-
-/*.service-box img{*/
-
-/*    width:100%;*/
-/*    height:240px;*/
-/*    object-fit:cover;*/
-/*    transition:0.4s;*/
-
-/*}*/
-
-/*.service-info{*/
-
-/*    padding:25px;*/
-
-/*}*/
-
-/*.service-info h3{*/
-
-/*    font-size:20px;*/
-/*    margin-bottom:5px;*/
-
-/*}*/
-
-/*.service-info p{*/
-
-/*    color:#6b7280;*/
-/*    font-size:14px;*/
-
-/*}*/
-
-/*.service-box:hover{*/
-
-/*    transform:translateY(-6px);*/
-/*    box-shadow:0 25px 50px rgba(0,0,0,0.12);*/
-
-/*}*/
-
-/*.service-box:hover img{*/
-
-/*    transform:scale(1.05);*/
-
-/*}*/
-
-
-/**/
-
-/*.extra-card{*/
-/*    background:#fff;*/
-/*    padding:30px;*/
-/*    border-radius:14px;*/
-/*    box-shadow:0 10px 25px rgba(0,0,0,0.08);*/
-/*    transition:0.3s;*/
-/*    height:100%;*/
-/*}*/
-
-/*.extra-card i{*/
-/*    font-size:32px;*/
-/*    color:#2563eb;*/
-/*    margin-bottom:15px;*/
-/*}*/
-
-/*.extra-card h4{*/
-/*    font-size:18px;*/
-/*    margin-bottom:10px;*/
-/*}*/
-
-/*.extra-card p{*/
-/*    font-size:14px;*/
-/*    color:#666;*/
-/*}*/
-
-/*.extra-card:hover{*/
-/*    transform:translateY(-5px);*/
-/*    box-shadow:0 20px 35px rgba(0,0,0,0.12);*/
-/*}*/
-
-/* CTA section */
-
-/*.cta-section{*/
-/*    padding:90px 0;*/
-/*}*/
 
 
 /* карточка */
@@ -164,22 +70,6 @@
 
 }
 
-
-/* текст */
-
-/*.cta-text h2{*/
-
-/*    font-size:32px;*/
-/*    margin-bottom:10px;*/
-
-/*}*/
-
-/*.cta-text p{*/
-
-/*    color:#6b7280;*/
-/*    font-size:16px;*/
-
-/*}*/
 
 
 /* кнопка */
@@ -207,16 +97,5 @@
 
 }
 
-/*.service-card{*/
-/*    display:block;*/
-/*    overflow:hidden;*/
-/*    border-radius:12px;*/
-/*    box-shadow:0 12px 30px rgba(0,0,0,0.08);*/
-/*    transition:0.3s;*/
-/*}*/
 
-/*.service-card:hover{*/
-/*    transform:translateY(-6px);*/
-/*    box-shadow:0 20px 50px rgba(0,0,0,0.12);*/
-/*}*/
 

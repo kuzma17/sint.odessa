@@ -24,6 +24,11 @@ class PageController extends Controller
        return view('pages/services');
     }
 
+    public function regenerateCartridge()
+    {
+        return view('pages/regenerate-cartridge');
+    }
+
     public function contacts(){
        $page = Page::where('url', 'contacts')->first();
         return view('contacts', ['page' => $page]);
