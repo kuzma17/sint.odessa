@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class="services-hero">
+    <section class="page-hero">
 
         <div class="container">
 

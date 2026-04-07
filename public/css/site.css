@@ -1,3 +1,33 @@
+/* ===== Base layout ===== */
+
+.section{
+    padding:100px 0;
+}
+
+.section-sm{
+    padding:70px 0;
+}
+
+.section-light{
+    background:#f8fafc;
+}
+
+.section-white{
+    background:#ffffff;
+}
+
+.section-center{
+    text-align:center;
+}
+
+.section-divider{
+    width:80px;
+    height:4px;
+    background:#2563eb;
+    margin:20px auto 40px;
+    border-radius:2px;
+}
+
 
 /* fonts and body */
 body {
@@ -919,6 +949,47 @@ section {
 /*    margin-bottom:20px;*/
 /*    opacity:0.9;*/
 /*}*/
+
+/* ===== Inner page hero ===== */
+
+.page-hero{
+    padding:140px 0 80px;
+    background:#f8fafc;
+    text-align:center;
+}
+
+.page-hero h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.page-hero p{
+    max-width:650px;
+    margin:auto;
+    font-size:18px;
+    color:#6b7280;
+}
+
+/* ===== CTA ===== */
+
+.cta-section{
+    /*background:#2563eb;*/
+    /*color:#fff;*/
+    text-align:center;
+}
+
+.cta-section h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.cta-section p{
+    opacity:0.9;
+    margin-bottom:25px;
+}
+
+
 
 
 
