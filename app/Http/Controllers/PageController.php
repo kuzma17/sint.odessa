@@ -19,6 +19,11 @@ class PageController extends Controller
         return view('pages/home', ['slider' => $slider, 'page' => $page, 'news' => $news]);
     }
 
+    public function services()
+    {
+       return view('pages/services');
+    }
+
     public function contacts(){
        $page = Page::where('url', 'contacts')->first();
         return view('contacts', ['page' => $page]);

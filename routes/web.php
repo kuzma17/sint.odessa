@@ -19,6 +19,10 @@ Route::middleware(['set_locale'])->group(function () {
     Route::get('/', ['as'=>'home', 'uses'=>'PageController@home']);
    // Route::get('/home', ['as' => 'home', 'uses' => 'PageController@home']);
 
+
+    Route::get('/services', ['uses' => 'PageController@services'])->name('services');
+
+
     Route::post('/register_client', ['as' => 'register.client', 'uses' => 'Auth\RegisterController@createClient']);
 
     Route::get('/social/{provider}', 'SocialController@login');
@@ -57,6 +61,7 @@ Route::middleware(['set_locale'])->group(function () {
     }]);
 
     Route::get('/{url}', ['as' => 'page', 'uses' => 'PageController@page']);
+
 });
 
 Route::post('upload-image', ['as' => 'upload_image', 'uses' => 'FileUploadController@uploader']);
