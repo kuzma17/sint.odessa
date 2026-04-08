@@ -21,33 +21,6 @@
 
                     <h2>Профессиональный ремонт принтеров</h2>
 
-{{--                    <p>--}}
-{{--                        Наш сервисный центр выполняет профессиональный ремонт принтеров любой сложности.--}}
-{{--                        Мы обслуживаем лазерные и струйные принтеры, многофункциональные устройства (МФУ),--}}
-{{--                        а также плоттеры различных производителей.--}}
-{{--                    </p>--}}
-
-{{--                    <p>--}}
-{{--                        Наши специалисты имеют более 20 лет опыта работы с офисной и печатной техникой.--}}
-{{--                        Благодаря большому практическому опыту большинство неисправностей удаётся выявить и устранить в кратчайшие сроки.--}}
-{{--                    </p>--}}
-{{--                    <p>--}}
-{{--                        Мы выполняем диагностику, ремонт, обслуживание и профилактику оборудования,--}}
-{{--                        используем качественные комплектующие и профессиональные расходные материалы.--}}
-{{--                    </p>--}}
-{{--                    <p>--}}
-{{--                        В нашем сервисе можно устранить такие проблемы как:--}}
-{{--                    </p>--}}
-{{--                        <ul>--}}
-{{--                        <li>принтер не печатает</li>--}}
-{{--                        <li>появляются полосы на печати</li>--}}
-{{--                        <li>зажёвывает бумагу</li>--}}
-{{--                        <li>возникают ошибки картриджа</li>--}}
-{{--                        <li>устройство не включается</li>--}}
-{{--                    </ul>--}}
-{{--                    <p>--}}
-{{--                        После ремонта техника проходит проверку, и мы предоставляем гарантию на выполненные работы.--}}
-{{--                    </p>--}}
                     <p>
                         Наш сервисный центр выполняет <strong>ремонт принтеров в Одессе</strong> любой сложности.
                         Мы обслуживаем лазерные и струйные принтеры, многофункциональные устройства (МФУ),
@@ -103,135 +76,143 @@
         </div>
     </section>
 
-{{--    <section class="section">--}}
+    <section class="section">
+        <div class="container">
+
+            <h2 class="text-center mb-5">Какие устройства мы ремонтируем</h2>
+            <div class="section-divider"></div>
+
+            <div class="row g-4">
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>Лазерные принтеры</h3>
+                        <p>
+                            Ремонт лазерных принтеров всех популярных производителей.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>Струйные принтеры</h3>
+                        <p>
+                            Обслуживание и ремонт струйных принтеров и систем СНПЧ.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>МФУ</h3>
+                        <p>
+                            Ремонт многофункциональных устройств: печать, сканирование, копирование.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>Плоттеры</h3>
+                        <p>
+                            Ремонт широкоформатных плоттеров для печати чертежей и графики.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+{{--    <section class="section-light">--}}
 {{--        <div class="container">--}}
 
-{{--            <h2 class="text-center mb-5">Какие устройства мы ремонтируем</h2>--}}
+{{--            <h2 class="text-center mb-5">Частые неисправности</h2>--}}
 {{--            <div class="section-divider"></div>--}}
 
-{{--            <div class="row g-4 text-center">--}}
+{{--            <div class="row g-4 service-card">--}}
 
-{{--                <div class="col-md-4">--}}
-{{--                    <div class="service-card">--}}
-{{--                        <h3>Принтеры</h3>--}}
-{{--                        <p>Лазерные и струйные модели</p>--}}
-{{--                    </div>--}}
+{{--                <div class="col-md-6">--}}
+
+{{--                    <ul class="service-list">--}}
+{{--                        <li>Принтер не включается</li>--}}
+{{--                        <li>Не захватывает бумагу</li>--}}
+{{--                        <li>Печатает полосами</li>--}}
+{{--                        <li>Замятие бумаги</li>--}}
+{{--                    </ul>--}}
+
 {{--                </div>--}}
 
-{{--                <div class="col-md-4">--}}
-{{--                    <div class="service-card">--}}
-{{--                        <h3>МФУ</h3>--}}
-{{--                        <p>Принтер, сканер и копир в одном устройстве</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+{{--                <div class="col-md-6">--}}
 
-{{--                <div class="col-md-4">--}}
-{{--                    <div class="service-card">--}}
-{{--                        <h3>Плоттеры</h3>--}}
-{{--                        <p>Ремонт широкоформатных устройств</p>--}}
-{{--                    </div>--}}
+{{--                    <ul class="service-list">--}}
+{{--                        <li>Ошибка картриджа</li>--}}
+{{--                        <li>Не печатает по сети</li>--}}
+{{--                        <li>Плохое качество печати</li>--}}
+{{--                        <li>Не определяется компьютером</li>--}}
+{{--                    </ul>--}}
+
 {{--                </div>--}}
 
 {{--            </div>--}}
-            <section class="devices">
-                <div class="container">
-
-                    <h2 class="text-center mb-5">Какие устройства мы ремонтируем</h2>
-                    <div class="section-divider"></div>
-
-                    <div class="row g-4">
-
-                        <div class="col-md-3">
-                            <div class="service-card">
-                                <h3>Лазерные принтеры</h3>
-                                <p>
-                                    Ремонт лазерных принтеров всех популярных производителей.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="service-card">
-                                <h3>Струйные принтеры</h3>
-                                <p>
-                                    Обслуживание и ремонт струйных принтеров и систем СНПЧ.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="service-card">
-                                <h3>МФУ</h3>
-                                <p>
-                                    Ремонт многофункциональных устройств: печать, сканирование, копирование.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="service-card">
-                                <h3>Плоттеры</h3>
-                                <p>
-                                    Ремонт широкоформатных плоттеров для печати чертежей и графики.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
 
 {{--        </div>--}}
 {{--    </section>--}}
 
-    <section class="brands bg-light py-4 fade-in">
-        <div class="container text-center">
-            <h2 class="text-center mb-5">Ми ремонтуємо техніку всіх популярних брендів</h2>
-            <div class="section-divider"></div>
-            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
-
-                <img src="/images/brands/hp.jpg" alt="HP" class="brand-logo" width="110">
-                <img src="/images/brands/epson.jpg" alt="Epson" class="brand-logo" width="130">
-                <img src="/images/brands/canon.jpg" alt="Canon" class="brand-logo" width="140">
-                <img src="/images/brands/brother.jpg" alt="Brother" class="brand-logo" width="140">
-                <img src="/images/brands/xerox.jpg" alt="Xerox" class="brand-logo" width="140">
-                <img src="/images/brands/samsung.jpg" alt="Samsung" class="brand-logo" width="140">
-                <img src="/images/brands/kyocera.jpg" alt="Kyocera" class="brand-logo" width="140">
-                <img src="/images/brands/panasonic.jpg" alt="Panasonic" class="brand-logo" width="160">
-
-            </div>
-        </div>
-    </section>
-
-    <section class="section-light">
+    <section class="problems">
         <div class="container">
 
-            <h2 class="text-center mb-5">Частые неисправности</h2>
+            <h2 class="text-center mb-5">Типичные неисправности</h2>
             <div class="section-divider"></div>
 
-            <div class="row g-4 service-card">
+            <div class="row g-4 justify-content-center">
 
-                <div class="col-md-6">
-
-                    <ul class="service-list">
-                        <li>Принтер не включается</li>
-                        <li>Не захватывает бумагу</li>
-                        <li>Печатает полосами</li>
-                        <li>Замятие бумаги</li>
-                    </ul>
-
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Принтер не включается
+                    </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Не захватывает бумагу
+                    </div>
+                </div>
 
-                    <ul class="service-list">
-                        <li>Ошибка картриджа</li>
-                        <li>Не печатает по сети</li>
-                        <li>Плохое качество печати</li>
-                        <li>Не определяется компьютером</li>
-                    </ul>
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Печатает полосами
+                    </div>
+                </div>
 
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Замятие бумаги
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Ошибка картриджа
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Не печатает по сети
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Плохое качество печати
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="problem-card">
+                        Не определяется компьютером
+                    </div>
                 </div>
 
             </div>
@@ -239,27 +220,27 @@
         </div>
     </section>
 
-{{--    <section class="advantages">--}}
+{{--    <section class="section">--}}
 {{--        <div class="container">--}}
 {{--            <h2 class="text-center mb-5">Наши преимущества</h2>--}}
 {{--            <div class="row g-4">--}}
 {{--                <div class="col-md-4">--}}
 {{--                    <div class="adv-card">--}}
-{{--                        <img src="/images/icons/experience.svg" alt="Опыт">--}}
+{{--                        <i class="fas fa-tools fa-3x mb-3"></i>--}}
 {{--                        <h3>Более 20 лет опыта</h3>--}}
 {{--                        <p>Наши специалисты имеют большой опыт в ремонте принтеров и МФУ.</p>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--                <div class="col-md-4">--}}
 {{--                    <div class="adv-card">--}}
-{{--                        <img src="/images/icons/fast.svg" alt="Скорость">--}}
+{{--                        <i class="fas fa-bolt fa-3x mb-3"></i>--}}
 {{--                        <h3>Быстрое обслуживание</h3>--}}
 {{--                        <p>Большинство неисправностей устраняется в кратчайшие сроки.</p>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--                <div class="col-md-4">--}}
 {{--                    <div class="adv-card">--}}
-{{--                        <img src="/images/icons/guarantee.svg" alt="Гарантия">--}}
+{{--                        <i class="fas fa-shield-alt fa-3x mb-3"></i>--}}
 {{--                        <h3>Гарантия на ремонт</h3>--}}
 {{--                        <p>Мы предоставляем официальную гарантию на все выполненные работы.</p>--}}
 {{--                    </div>--}}
@@ -267,35 +248,6 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center mb-5">Наши преимущества</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="adv-card">
-                        <i class="fas fa-tools fa-3x mb-3"></i>
-                        <h3>Более 20 лет опыта</h3>
-                        <p>Наши специалисты имеют большой опыт в ремонте принтеров и МФУ.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="adv-card">
-                        <i class="fas fa-bolt fa-3x mb-3"></i>
-                        <h3>Быстрое обслуживание</h3>
-                        <p>Большинство неисправностей устраняется в кратчайшие сроки.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="adv-card">
-                        <i class="fas fa-shield-alt fa-3x mb-3"></i>
-                        <h3>Гарантия на ремонт</h3>
-                        <p>Мы предоставляем официальную гарантию на все выполненные работы.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="workflow fade-in">
         <div class="container">
@@ -339,7 +291,56 @@
         </div>
     </section>
 
-    <section class="faq-section py-5 bg-light fade-in section-light">
+    <section class="section">
+        <div class="container">
+
+            <h2 class="text-center mb-5">Стоимость ремонта</h2>
+            <div class="section-divider"></div>
+
+            <div class="row g-4">
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>Диагностика</h3>
+                        <p>
+                            от 200 грн.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>Ремонт принтера</h3>
+                        <p>
+                            от 400 грн.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>Ремонт МФУ</h3>
+                        <p>
+                            от 500 грн.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <h3>Ремонт плоттера</h3>
+                        <p>
+                            от 800 грн.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section py-5 bg-light fade-in">
         <div class="container">
 
             <h2 class="text-center mb-5">Частые вопросы</h2>
@@ -376,11 +377,12 @@
                     </div>
                 </div>
 
+                <div class="text-center mt-4">
+                    <a href="/faq" class="btn btn-blue">Все вопросы →</a>
+                </div>
+
             </div>
 
-            <div class="text-center mt-4">
-                <a href="/faq" class="btn btn-primary">Все вопросы →</a>
-            </div>
 
         </div>
     </section>

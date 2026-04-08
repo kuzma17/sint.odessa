@@ -30,27 +30,27 @@
     padding:80px 0;
 }
 
-.process-box{
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    border:1px solid #eee;
-}
+/*.process-box{*/
+/*    background:#fff;*/
+/*    padding:25px;*/
+/*    border-radius:10px;*/
+/*    text-align:center;*/
+/*    border:1px solid #eee;*/
+/*}*/
 
-.process-number{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:#2563eb;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    margin-bottom:15px;
-    font-weight:700;
-}
+/*.process-number{*/
+/*    width:40px;*/
+/*    height:40px;*/
+/*    border-radius:50%;*/
+/*    background:#2563eb;*/
+/*    color:#fff;*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:center;*/
+/*    margin:auto;*/
+/*    margin-bottom:15px;*/
+/*    font-weight:700;*/
+/*}*/
 
 
 .service-benefits{
@@ -72,24 +72,7 @@
 }
 
 
-.service-brands{
-    padding:80px 0;
-    text-align:center;
-}
 
-.brands{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.brands span{
-    padding:10px 20px;
-    background:#f1f5f9;
-    border-radius:30px;
-    font-weight:600;
-}
 
 
 /*.service-price{*/
@@ -118,47 +101,47 @@
 /*    margin-bottom:10px;*/
 /*}*/
 
-.prices-section{
-    padding:100px 0;
-}
+/*.prices-section{*/
+/*    padding:100px 0;*/
+/*}*/
 
-.price-card{
-    background:#fff;
-    border-radius:16px;
-    padding:40px 30px;
-    text-align:center;
-    box-shadow:0 15px 35px rgba(0,0,0,0.08);
-    transition:0.3s;
-    height:100%;
-}
+/*.price-card{*/
+/*    background:#fff;*/
+/*    border-radius:16px;*/
+/*    padding:40px 30px;*/
+/*    text-align:center;*/
+/*    box-shadow:0 15px 35px rgba(0,0,0,0.08);*/
+/*    transition:0.3s;*/
+/*    height:100%;*/
+/*}*/
 
-.price-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 25px 50px rgba(0,0,0,0.15);
-}
+/*.price-card:hover{*/
+/*    transform:translateY(-6px);*/
+/*    box-shadow:0 25px 50px rgba(0,0,0,0.15);*/
+/*}*/
 
-.price-card h3{
-    font-size:24px;
-    margin-bottom:10px;
-}
+/*.price-card h3{*/
+/*    font-size:24px;*/
+/*    margin-bottom:10px;*/
+/*}*/
 
-.price{
-    font-size:32px;
-    font-weight:700;
-    color:#1e88c8;
-    margin-bottom:20px;
-}
+/*.price{*/
+/*    font-size:32px;*/
+/*    font-weight:700;*/
+/*    color:#1e88c8;*/
+/*    margin-bottom:20px;*/
+/*}*/
 
-.price-card ul{
-    list-style:none;
-    padding:0;
-    margin-bottom:25px;
-}
+/*.price-card ul{*/
+/*    list-style:none;*/
+/*    padding:0;*/
+/*    margin-bottom:25px;*/
+/*}*/
 
-.price-card ul li{
-    padding:6px 0;
-    color:#555;
-}
+/*.price-card ul li{*/
+/*    padding:6px 0;*/
+/*    color:#555;*/
+/*}*/
 
 .service-card{
     background:#fff;
@@ -213,3 +196,29 @@
     color:#6b7280;
 }
 
+
+
+/*problems*/
+.problems{
+    background:#f8fafc;
+}
+
+.problem-card{
+
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:500;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s;
+
+}
+
+.problem-card:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+
+}

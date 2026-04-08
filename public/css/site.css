@@ -423,6 +423,13 @@ header {
 
 
 /*FAQ*/
+.faq-list{
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08)
+}
+
 .faq-item {
     cursor: pointer;
     border-radius: 10px;
@@ -735,8 +742,9 @@ header {
     background: #01ACF1;
     color: #ffff;
 }
-.btn-modern:hover{
-    background: #047ac2;
+.btn-blue:hover{
+    background: #17bafd;
+    color: #ffff;
 
 }
 
