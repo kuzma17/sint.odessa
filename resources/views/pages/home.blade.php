@@ -13,7 +13,7 @@
                         <div class="slide-content">
                             <h1>Ремонт принтерів та заправка картриджів в Одесі</h1>
                             <p>Професійна діагностика та сервіс</p>
-                            <a href="#contact" class="btn-modern btn-primary-modern">Залишити заявку</a>
+                            <a href="#contact" class="btn btn-blue">Залишити заявку</a>
                         </div>
                     </div>
 
@@ -45,53 +45,6 @@
             </div>
         </section>
 
-
-{{--    <section class="services fade-in">--}}
-{{--        <div class="container">--}}
-{{--            <h2 class="text-center mb-5">Наші послуги</h2>--}}
-{{--            <div class="section-divider"></div>--}}
-{{--            <div class="row g-4">--}}
-{{--                <!-- Карточка 1 -->--}}
-{{--                <div class="col-md-4">--}}
-{{--                    <div class="service-card">--}}
-{{--                        <img src="/images/services/cartridge.webp" alt="Заправка картриджів">--}}
-{{--                        <div class="service-overlay">--}}
-{{--                            <div class="service-text">--}}
-{{--                                <h3>Заправка картриджів</h3>--}}
-{{--                                <p>HP, Canon, Epson</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <!-- Карточка 2 -->--}}
-{{--                <div class="col-md-4">--}}
-{{--                    <div class="service-card">--}}
-{{--                        <img src="/images/services/printer.webp" alt="Ремонт принтерів">--}}
-{{--                        <div class="service-overlay">--}}
-{{--                            <div class="service-text">--}}
-{{--                                <h3>Ремонт принтерів</h3>--}}
-{{--                                <p>Лазерні та струменеві</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <!-- Карточка 3 -->--}}
-{{--                <div class="col-md-4">--}}
-{{--                    <div class="service-card">--}}
-{{--                        <img src="/images/services/repair.webp" alt="Ремонт ПК">--}}
-{{--                        <div class="service-overlay">--}}
-{{--                            <div class="service-text">--}}
-{{--                                <h3>Ремонт ПК</h3>--}}
-{{--                                <p>Діагностика та ремонт</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
 
         <section class="services fade-in">
             <div class="container">

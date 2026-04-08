@@ -3,27 +3,20 @@
 @section('content')
 
     <section class="page-hero">
-
         <div class="container">
-
             <h1>Наші послуги</h1>
-
             <p>
-                Професійний ремонт техніки та обслуговування
-                принтерів, комп'ютерів і картриджів в Одесі
+                Професійний ремонт техніки та обслуговування принтерів, комп'ютерів і картриджів в Одесі
             </p>
-
         </div>
-
     </section>
-
 
     <section class="services fade-in">
         <div class="container">
             <h2 class="text-center mb-5">Наши основные услуги</h2>
             <div class="row g-4">
                 <div class="col-md-4 justify-content-center">
-                    <a href="/services/cartridge-refill" class="service-box">
+                    <a href="{{route('services.cartridge-refill')}}" class="service-box">
                         <img src="/images/services/cartridge.webp">
                         <div class="service-info">
                             <h3>Заправка картриджів</h3>
@@ -34,7 +27,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="/services/printer-repair" class="service-box">
+                    <a href="{{route('services.printer-repair')}}" class="service-box">
                         <img src="/images/services/printer.webp">
                         <div class="service-info">
                             <h3>Ремонт принтерів</h3>
@@ -45,7 +38,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="/services/pc-repair" class="service-box">
+                    <a href="{{route('services.pc-repair')}}" class="service-box">
                         <img src="/images/services/repair.webp">
                         <div class="service-info">
                             <h3>Ремонт ПК</h3>
@@ -91,34 +84,22 @@
     </section>
 
     <section class="cta-section">
-
         <div class="container">
-
             <div class="cta-card">
-
                 <div class="cta-text">
-
                     <h2>Потрібен ремонт техніки?</h2>
-
                     <p>
                         Залиште заявку і наш менеджер зв'яжеться з вами
                         протягом декількох хвилин
                     </p>
-
                 </div>
-
                 <div class="cta-action">
-
-                    <a href="/contacts" class="btn btn-primary-modern">
+                    <a href="/contacts" class="btn btn-blue">
                         Залишити заявку
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
 @endsection

@@ -24,9 +24,19 @@ class PageController extends Controller
        return view('pages/services');
     }
 
-    public function regenerateCartridge()
+    public function cartridgeRefill()
     {
-        return view('pages/regenerate-cartridge');
+        return view('pages/cartridge-refill');
+    }
+
+    public function printerRepair()
+    {
+        return view('pages/printer-repair');
+    }
+
+    public function pcRepair()
+    {
+        return view('pages/pc-repair');
     }
 
     public function contacts(){

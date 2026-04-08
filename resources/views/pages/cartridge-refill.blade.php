@@ -13,15 +13,11 @@
 </section>
 
 
-<section class="service-about">
+<section class="service-text">
     <div class="container">
-
-        <div class="row align-items-center g-5">
-
+        <div class="row align-items-center g-5" >
             <div class="col-lg-6">
-
                 <h2>Профессиональная заправка картриджей</h2>
-
                 <p>
                     Заправка картриджей — это экономичный способ восстановить
                     работоспособность принтера без необходимости покупки нового
@@ -30,14 +26,12 @@
                     принтеров популярных брендов: HP, Canon, Brother,
                     Samsung, Epson, Xerox и других.
                 </p>
-
                 <p>
                     Мы выполняем заправку картриджей для различной техники:
                     принтеров, МФУ и плоттеров. Используются качественные
                     тонеры и чернила, что позволяет сохранить стабильное
                     качество печати и продлить срок службы картриджа.
                 </p>
-
                 <p>
                     Процедура обслуживания включает диагностику картриджа,
                     разборку и очистку от остатков старого тонера или чернил,
@@ -49,12 +43,9 @@
             </div>
 
             <div class="col-lg-6">
-
-                <img
-                        src="/images/pages/cartridge_regenerate2.webp"
+                <img src="/images/pages/cartridge_regenerate2.webp"
                         class="img-fluid service-image"
                         alt="Заправка картриджа">
-
             </div>
 
         </div>
@@ -202,76 +193,122 @@
 {{--</section>--}}
 
 
-<section class="service-price">
+{{--<section class="service-price">--}}
+{{--    <div class="container">--}}
+{{--        <h2 class="text-center mb-5">Стоимость заправки</h2>--}}
+{{--        <div class="price-box">--}}
+{{--            <p>--}}
+{{--                Цена заправки зависит от модели картриджа и его состояния.--}}
+{{--                Точную стоимость можно узнать после диагностики.--}}
+{{--            </p>--}}
+{{--            <ul>--}}
+{{--                <li>Заправка лазерного картриджа — от 250 грн</li>--}}
+{{--                <li>Заправка струйного картриджа — от 200 грн</li>--}}
+{{--                <li>Замена чипа — от 150 грн</li>--}}
+{{--            </ul>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
+
+<section class="prices-section">
     <div class="container">
 
         <h2 class="text-center mb-5">Стоимость заправки</h2>
+        <div class="section-divider"></div>
 
-        <div class="price-box">
+{{--        <div class="row g-4">--}}
 
-            <p>
-                Цена заправки зависит от модели картриджа и его состояния.
-                Точную стоимость можно узнать после диагностики.
-            </p>
+{{--            <div class="col-md-4">--}}
+{{--                <div class="price-card">--}}
+{{--                    <h3>HP</h3>--}}
+{{--                    <p class="price">от 200 грн</p>--}}
+{{--                    <ul>--}}
+{{--                        <li>Заправка картриджа</li>--}}
+{{--                        <li>Очистка</li>--}}
+{{--                        <li>Проверка печати</li>--}}
+{{--                    </ul>--}}
+{{--                    <a href="#contact" class="btn-modern btn-primary-modern">--}}
+{{--                        Заказать--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <ul>
-                <li>Заправка лазерного картриджа — от 250 грн</li>
-                <li>Заправка струйного картриджа — от 200 грн</li>
-                <li>Замена чипа — от 150 грн</li>
-            </ul>
+{{--            <div class="col-md-4">--}}
+{{--                <div class="price-card">--}}
+{{--                    <h3>Canon</h3>--}}
+{{--                    <p class="price">от 200 грн</p>--}}
+{{--                    <ul>--}}
+{{--                        <li>Заправка картриджа</li>--}}
+{{--                        <li>Очистка</li>--}}
+{{--                        <li>Проверка печати</li>--}}
+{{--                    </ul>--}}
+{{--                    <a href="#contact" class="btn-modern btn-primary-modern">--}}
+{{--                        Заказать--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-        </div>
+{{--            <div class="col-md-4">--}}
+{{--                <div class="price-card">--}}
+{{--                    <h3>Epson</h3>--}}
+{{--                    <p class="price">от 250 грн</p>--}}
+{{--                    <ul>--}}
+{{--                        <li>Заправка картриджа</li>--}}
+{{--                        <li>Очистка</li>--}}
+{{--                        <li>Проверка печати</li>--}}
+{{--                    </ul>--}}
+{{--                    <a href="#contact" class="btn-modern btn-primary-modern">--}}
+{{--                        Заказать--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
+{{--        </div>--}}
+        <table class="table price-table" style="width: 50%">
+            <thead>
+            <tr>
+                <th>Модель</th>
+                <th>Цена</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>HP LaserJet</td>
+                <td>200 грн</td>
+            </tr>
+
+            <tr>
+                <td>Canon</td>
+                <td>200 грн</td>
+            </tr>
+
+            <tr>
+                <td>Epson</td>
+                <td>250 грн</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
 
-{{--<section class="section cta-section">--}}
-
-{{--    <div class="container">--}}
-
-{{--        <h2>Нужно заправить картридж?</h2>--}}
-
-{{--        <p>--}}
-{{--            Залиште заявку і наш менеджер зв'яжеться з вами.--}}
-{{--        </p>--}}
-
-{{--        <a href="/contacts" class="btn btn-light btn-modern">--}}
-{{--            Залишити заявку--}}
-{{--        </a>--}}
-
-{{--    </div>--}}
-
-{{--</section>--}}
-
 <section class="cta-section">
-
     <div class="container">
-
         <div class="cta-card">
-
             <div class="cta-text">
-
                 <h2>Потрібен ремонт техніки?</h2>
-
                 <p>
                     Залиште заявку і наш менеджер зв'яжеться з вами
                     протягом декількох хвилин
                 </p>
-
             </div>
-
             <div class="cta-action">
-
-                <a href="/contacts" class="btn btn-primary-modern">
+                <a href="/contacts" class="btn btn-blue">
                     Залишити заявку
                 </a>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 @endsection
