@@ -54,7 +54,7 @@
 </section>
 
 
-<section class="service-signs">
+<section class="section">
     <div class="container">
 
         <h2 class="text-center mb-5">Когда требуется заправка картриджа</h2>
@@ -62,25 +62,25 @@
         <div class="row g-4">
 
             <div class="col-md-3">
-                <div class="sign-box">
+                <div class="problem-card">
                     <p>Принтер печатает бледно</p>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="sign-box">
+                <div class="problem-card">
                     <p>Появляются полосы на листе</p>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="sign-box">
+                <div class="problem-card">
                     <p>Сообщение о низком уровне тонера</p>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="sign-box">
+                <div class="problem-card">
                     <p>Печать стала неравномерной</p>
                 </div>
             </div>
@@ -91,43 +91,85 @@
 </section>
 
 
-<section class="service-process">
+{{--<section class="service-process">--}}
+{{--    <div class="container">--}}
+
+{{--        <h2 class="text-center mb-5">Как выполняется заправка</h2>--}}
+
+{{--        <div class="row g-4">--}}
+
+{{--            <div class="col-md-3">--}}
+{{--                <div class="process-box">--}}
+{{--                    <div class="process-number">1</div>--}}
+{{--                    <p>Диагностика картриджа</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--            <div class="col-md-3">--}}
+{{--                <div class="process-box">--}}
+{{--                    <div class="process-number">2</div>--}}
+{{--                    <p>Очистка от старого тонера</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--            <div class="col-md-3">--}}
+{{--                <div class="process-box">--}}
+{{--                    <div class="process-number">3</div>--}}
+{{--                    <p>Заправка новым тонером или чернилами</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--            <div class="col-md-3">--}}
+{{--                <div class="process-box">--}}
+{{--                    <div class="process-number">4</div>--}}
+{{--                    <p>Тестовая печать</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--        </div>--}}
+
+{{--    </div>--}}
+{{--</section>--}}
+
+<section class="workflow fade-in">
     <div class="container">
-
         <h2 class="text-center mb-5">Как выполняется заправка</h2>
+        <div class="section-divider"></div>
+        <div class="workflow-row">
 
-        <div class="row g-4">
-
-            <div class="col-md-3">
-                <div class="process-box">
-                    <div class="process-number">1</div>
-                    <p>Диагностика картриджа</p>
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <div class="step-card">
+                    <h4>Диагностика</h4>
+                    <p>Определяем причину неисправности и оцениваем стоимость ремонта.</p>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="process-box">
-                    <div class="process-number">2</div>
-                    <p>Очистка от старого тонера</p>
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <div class="step-card">
+                    <h4>Чистка</h4>
+                    <p>Очистка от старого тонера.</p>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="process-box">
-                    <div class="process-number">3</div>
-                    <p>Заправка новым тонером или чернилами</p>
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <div class="step-card">
+                    <h4>Заправка</h4>
+                    <p>Заправка новым тонером или чернилами.</p>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="process-box">
-                    <div class="process-number">4</div>
-                    <p>Тестовая печать</p>
+            <div class="workflow-step">
+                <div class="step-number">4</div>
+                <div class="step-card">
+                    <h4>Тестирование и выдача</h4>
+                    <p>Тестовая печать и возвращаем картридж с гарантией.</p>
                 </div>
             </div>
 
         </div>
-
     </div>
 </section>
 

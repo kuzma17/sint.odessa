@@ -39,6 +39,16 @@ class PageController extends Controller
         return view('pages/pc-repair');
     }
 
+    public function delivery()
+    {
+        return view('pages/delivery');
+    }
+
+    public function about()
+    {
+        return view('pages/about');
+    }
+
     public function contacts(){
        $page = Page::where('url', 'contacts')->first();
         return view('contacts', ['page' => $page]);

@@ -160,7 +160,7 @@
 {{--        </div>--}}
 {{--    </section>--}}
 
-    <section class="problems">
+    <section class="section">
         <div class="container">
 
             <h2 class="text-center mb-5">Типичные неисправности</h2>

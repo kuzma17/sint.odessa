@@ -24,6 +24,8 @@ Route::middleware(['set_locale'])->group(function () {
     Route::get('/services/cartridge-refill', ['uses' => 'PageController@cartridgeRefill'])->name('services.cartridge-refill');
     Route::get('/services/printer-repair', ['uses' => 'PageController@printerRepair'])->name('services.printer-repair');
     Route::get('/services/pc-repair', ['uses' => 'PageController@pcRepair'])->name('services.pc-repair');
+    Route::get('/services/delivery', ['uses' => 'PageController@delivery'])->name('services.delivery');
+    Route::get('/about', ['uses' => 'PageController@about'])->name('about');
 
 
     Route::post('/register_client', ['as' => 'register.client', 'uses' => 'Auth\RegisterController@createClient']);
