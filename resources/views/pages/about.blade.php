@@ -232,7 +232,7 @@
 
                 <div class="timeline-row right">
                     <div class="timeline-card">
-                        <span class="year">207</span>
+                        <span class="year">2007</span>
                         <h4>Открытие офиса на Черемушках</h4>
                         <p>відкриття офісу на Адміральському проспекті, 33 а</p>
                     </div>
