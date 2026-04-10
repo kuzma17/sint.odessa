@@ -135,15 +135,15 @@
 
                 <div class="col-md-3">
                     <div class="adv-card-circle-modern">
-                        <div class="adv-number" data-target="1000"><span class="num">0</span><span class="unit"></span></div>
+                        <div class="adv-number" data-target="5000"><span class="num">0</span><span class="unit">+</span></div>
                         <p>Клієнтів</p>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="adv-card-circle-modern">
-                        <div class="adv-number" data-target="24"><span class="num">0</span><span class="unit">ч</span></div>
-                        <p>Реакція на заявку</p>
+                        <div class="adv-number" data-target="4"><span class="num">0</span><span class="unit"></span></div>
+                        <p>Офиса</p>
                     </div>
                 </div>
 
@@ -241,7 +241,7 @@
                 <div class="timeline-row left">
                     <div class="timeline-card">
                         <span class="year">2009</span>
-                        <h4>Открытие офиса на пос. таирово</h4>
+                        <h4>Открытие офиса на Таирово</h4>
                         <p>відкриття офісу на Королева, 33</p>
                     </div>
                 </div>
@@ -281,9 +281,9 @@
             <h2 class="text-center mb-5">Почему выбирают наш сервис</h2>
             <div class="section-divider"></div>
 
-            <div class="row g-4 text-center">
+            <div class="row g-4 text-center justify-content-center">
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="adv-card">
                         <i class="fa-solid fa-user-tie"></i>
                         <h4>Опытные инженеры</h4>
@@ -291,7 +291,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="adv-card">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                         <h4>Современное оборудование</h4>
@@ -299,7 +299,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="adv-card">
                         <i class="fa-solid fa-truck"></i>
                         <h4>Быстрая доставка</h4>
@@ -307,7 +307,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="adv-card">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h4>Гарантия на работы</h4>
