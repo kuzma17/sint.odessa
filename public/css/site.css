@@ -486,16 +486,31 @@ header {
 .office-list{
     display:flex;
     flex-direction:column;
-    gap:15px;
+    gap:9px;
 }
 
 .office-card{
     background:#fff;
-    padding:10px 20px;
+    padding:20px;
     border-radius:10px;
     cursor:pointer;
     transition:0.3s;
     box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+.office-card h5{
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.office-card p{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+.office-card i{
+    color:#2563eb;
 }
 
 .office-card:hover{

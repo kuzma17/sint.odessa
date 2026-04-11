@@ -21,6 +21,8 @@
 
     <link rel="stylesheet" href="{{ asset('css/repair.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -157,13 +159,26 @@
         }
 
         function focusOffice(lat, lng) {
+
+            // перемещаем карту
             map.panTo({ lat: lat, lng: lng });
             map.setZoom(15);
 
-            // Подсветка карточки
+            // прокрутка страницы к карте
+            const mapBlock = document.getElementById("mapdiv");
+            mapBlock.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            // подсветка карточки
             document.querySelectorAll(".office-card").forEach(card => {
                 card.classList.remove("active");
-                if (parseFloat(card.dataset.lat) === lat && parseFloat(card.dataset.lng) === lng) {
+
+                if (
+                    parseFloat(card.dataset.lat) === lat &&
+                    parseFloat(card.dataset.lng) === lng
+                ) {
                     card.classList.add("active");
                 }
             });

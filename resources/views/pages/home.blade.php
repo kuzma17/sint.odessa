@@ -375,42 +375,71 @@
         </div>
     </section>
 
-    <section class="offices-section fade-in">
-        <div class="container">
+        <section class="offices-section fade-in">
+            <div class="container">
 
-            <h2 class="text-center mb-5">Наші офіси</h2>
-            <div class="section-divider"></div>
+                <h2 class="text-center mb-5">Наши офисы на карте</h2>
 
-            <div class="row">
+                <div class="row">
 
-                <!-- КАРТА -->
-                <div class="col-md-9">
-                    <div id="mapdiv" class="map"></div>
-                </div>
+                    <!-- КАРТА -->
+                    <div class="col-md-9">
+                        <div id="mapdiv" class="map"></div>
+                    </div>
 
-                <!-- СПИСОК ОФИСОВ -->
-                <div class="col-md-3">
+                    <!-- СПИСОК ОФИСОВ -->
+                    <div class="col-md-3">
 
-                    <div class="office-list">
+                        <div class="office-list">
 
-                        <div class="office-card" data-lat="46.43711" data-lng="30.730315">
-                            <h5>Адміральський</h5>
-                            <p>Одеса</p>
-                        </div>
+                            <div class="office-card" data-lat="46.482146" data-lng="30.730281">
+                                <h5>Центр (Соборка)</h5>
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Соборная площадь, 12
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-phone"></i>
+                                    +38 (048) XXX-XX-XX
+                                </p>
+                            </div>
 
-                        <div class="office-card" data-lat="46.482146" data-lng="30.730281">
-                            <h5>Соборка</h5>
-                            <p>Одеса</p>
-                        </div>
+                            <div class="office-card" data-lat="46.43711" data-lng="30.730315">
+                                <h5>Адміральський</h5>
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Адмиральский проспект, 33а
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-phone"></i>
+                                    +38 (048) XXX-XX-XX
+                                </p>
+                            </div>
 
-                        <div class="office-card" data-lat="46.575718" data-lng="30.7951071">
-                            <h5>Дніпродорога</h5>
-                            <p>Одеса</p>
-                        </div>
+                            <div class="office-card" data-lat="46.575718" data-lng="30.7951071">
+                                <h5>пос. Котовского</h5>
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    ул. Семена Палия, 94
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-phone"></i>
+                                    +38 (048) XXX-XX-XX
+                                </p>
+                            </div>
 
-                        <div class="office-card" data-lat="46.400676" data-lng="30.72347">
-                            <h5>Корольова</h5>
-                            <p>Одеса</p>
+                            <div class="office-card" data-lat="46.400676" data-lng="30.72347">
+                                <h5>Таирово</h5>
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    ул. Королева, 33
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-phone"></i>
+                                    +38 (048) XXX-XX-XX
+                                </p>
+                            </div>
+
                         </div>
 
                     </div>
@@ -418,8 +447,6 @@
                 </div>
 
             </div>
-
-        </div>
-    </section>
+        </section>
 
 @endsection

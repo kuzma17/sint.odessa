@@ -43,7 +43,9 @@
                         <li>почистить пк, ноутбук</li>
                         <li>заменить батарею в УПС</li>
                         <li>замена матрицы в мониторе, ноутбуке</li>
-                        <li>установка лицунзионного ПО, драйверов</li>
+                        <li>установка лицензионного ПО, драйверов</li>
+                        <li>чистка системы, оптимизаци работы ОС</li>
+                        <li>другие работы</li>
                     </ul>
 
                     <p>
@@ -54,7 +56,7 @@
 
                 <div class="col-lg-6">
 
-                    <img src="/images/pages/pc-repair.webp"
+                    <img src="/images/pages/pc-repair5.webp"
                          class="img-fluid service-image"
                          alt="Ремонт компьютеров">
 
@@ -136,40 +138,6 @@
         </div>
     </section>
 
-{{--    <section class="section-light">--}}
-{{--        <div class="container">--}}
-
-{{--            <h2 class="text-center mb-5">Частые неисправности</h2>--}}
-{{--            <div class="section-divider"></div>--}}
-
-{{--            <div class="row g-4 service-card">--}}
-
-{{--                <div class="col-md-6">--}}
-
-{{--                    <ul class="service-list">--}}
-{{--                        <li>Принтер не включается</li>--}}
-{{--                        <li>Не захватывает бумагу</li>--}}
-{{--                        <li>Печатает полосами</li>--}}
-{{--                        <li>Замятие бумаги</li>--}}
-{{--                    </ul>--}}
-
-{{--                </div>--}}
-
-{{--                <div class="col-md-6">--}}
-
-{{--                    <ul class="service-list">--}}
-{{--                        <li>Ошибка картриджа</li>--}}
-{{--                        <li>Не печатает по сети</li>--}}
-{{--                        <li>Плохое качество печати</li>--}}
-{{--                        <li>Не определяется компьютером</li>--}}
-{{--                    </ul>--}}
-
-{{--                </div>--}}
-
-{{--            </div>--}}
-
-{{--        </div>--}}
-{{--    </section>--}}
     <section class="problems">
         <div class="container">
 
@@ -361,6 +329,65 @@
                 </div>
 
             </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <h2 class="text-center mb-5">Стоимость ремонта</h2>
+            <div class="section-divider"></div>
+
+            <div class="price-list">
+
+                <div class="price-item">
+                    <span class="service">Диагностика</span>
+                    <span class="dots"></span>
+                    <span class="price">от 200 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт компьютера</span>
+                    <span class="dots"></span>
+                    <span class="price">от 400 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт ноутбука</span>
+                    <span class="dots"></span>
+                    <span class="price">от 500 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт монитора</span>
+                    <span class="dots"></span>
+                    <span class="price">от 400 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт УПС</span>
+                    <span class="dots"></span>
+                    <span class="price">от 300 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Чистка ноутбука</span>
+                    <span class="dots"></span>
+                    <span class="price">от 1000 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Установка ПО</span>
+                    <span class="dots"></span>
+                    <span class="price">от 1000 грн</span>
+                </div>
+
+            </div>
+
+            <p class="text-center mt-4">
+                * Точная стоимость ремонта определяется после диагностики устройства
+            </p>
 
         </div>
     </section>

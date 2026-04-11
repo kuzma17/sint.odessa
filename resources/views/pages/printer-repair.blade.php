@@ -340,6 +340,53 @@
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+
+            <h2 class="text-center mb-5">Стоимость ремонта</h2>
+            <div class="section-divider"></div>
+
+            <div class="price-list">
+
+                <div class="price-item">
+                    <span class="service">Диагностика</span>
+                    <span class="dots"></span>
+                    <span class="price">от 200 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт принтера</span>
+                    <span class="dots"></span>
+                    <span class="price">от 400 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт МФУ</span>
+                    <span class="dots"></span>
+                    <span class="price">от 500 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт плотера</span>
+                    <span class="dots"></span>
+                    <span class="price">от 800 грн</span>
+                </div>
+
+                <div class="price-item">
+                    <span class="service">Ремонт УПС</span>
+                    <span class="dots"></span>
+                    <span class="price">от 300 грн</span>
+                </div>
+
+            </div>
+
+            <p class="text-center mt-4">
+                * Точная стоимость ремонта определяется после диагностики устройства
+            </p>
+
+        </div>
+    </section>
+
     <section class="section py-5 bg-light fade-in">
         <div class="container">
 

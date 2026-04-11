@@ -49,7 +49,12 @@ class PageController extends Controller
         return view('pages/about');
     }
 
-    public function contacts(){
+    public function contacts()
+    {
+        return view('pages/contacts');
+    }
+
+    public function contacts_(){
        $page = Page::where('url', 'contacts')->first();
         return view('contacts', ['page' => $page]);
     }

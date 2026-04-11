@@ -90,47 +90,6 @@
     </div>
 </section>
 
-
-{{--<section class="service-process">--}}
-{{--    <div class="container">--}}
-
-{{--        <h2 class="text-center mb-5">Как выполняется заправка</h2>--}}
-
-{{--        <div class="row g-4">--}}
-
-{{--            <div class="col-md-3">--}}
-{{--                <div class="process-box">--}}
-{{--                    <div class="process-number">1</div>--}}
-{{--                    <p>Диагностика картриджа</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="col-md-3">--}}
-{{--                <div class="process-box">--}}
-{{--                    <div class="process-number">2</div>--}}
-{{--                    <p>Очистка от старого тонера</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="col-md-3">--}}
-{{--                <div class="process-box">--}}
-{{--                    <div class="process-number">3</div>--}}
-{{--                    <p>Заправка новым тонером или чернилами</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="col-md-3">--}}
-{{--                <div class="process-box">--}}
-{{--                    <div class="process-number">4</div>--}}
-{{--                    <p>Тестовая печать</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--        </div>--}}
-
-{{--    </div>--}}
-{{--</section>--}}
-
 <section class="workflow fade-in">
     <div class="container">
         <h2 class="text-center mb-5">Как выполняется заправка</h2>
@@ -214,123 +173,50 @@
     </div>
 </section>
 
-
-{{--<section class="service-brands">--}}
-{{--    <div class="container">--}}
-
-{{--        <h2 class="text-center mb-5">Заправляем картриджи для принтеров</h2>--}}
-
-{{--        <div class="brands">--}}
-
-{{--            <span>HP</span>--}}
-{{--            <span>Canon</span>--}}
-{{--            <span>Brother</span>--}}
-{{--            <span>Samsung</span>--}}
-{{--            <span>Epson</span>--}}
-{{--            <span>Xerox</span>--}}
-
-{{--        </div>--}}
-
-{{--    </div>--}}
-{{--</section>--}}
-
-
-{{--<section class="service-price">--}}
-{{--    <div class="container">--}}
-{{--        <h2 class="text-center mb-5">Стоимость заправки</h2>--}}
-{{--        <div class="price-box">--}}
-{{--            <p>--}}
-{{--                Цена заправки зависит от модели картриджа и его состояния.--}}
-{{--                Точную стоимость можно узнать после диагностики.--}}
-{{--            </p>--}}
-{{--            <ul>--}}
-{{--                <li>Заправка лазерного картриджа — от 250 грн</li>--}}
-{{--                <li>Заправка струйного картриджа — от 200 грн</li>--}}
-{{--                <li>Замена чипа — от 150 грн</li>--}}
-{{--            </ul>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
-
-<section class="prices-section">
+<section class="section">
     <div class="container">
 
-        <h2 class="text-center mb-5">Стоимость заправки</h2>
+        <h2 class="text-center mb-5">Стоимость ремонта</h2>
         <div class="section-divider"></div>
 
-{{--        <div class="row g-4">--}}
+        <div class="price-list">
 
-{{--            <div class="col-md-4">--}}
-{{--                <div class="price-card">--}}
-{{--                    <h3>HP</h3>--}}
-{{--                    <p class="price">от 200 грн</p>--}}
-{{--                    <ul>--}}
-{{--                        <li>Заправка картриджа</li>--}}
-{{--                        <li>Очистка</li>--}}
-{{--                        <li>Проверка печати</li>--}}
-{{--                    </ul>--}}
-{{--                    <a href="#contact" class="btn-modern btn-primary-modern">--}}
-{{--                        Заказать--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="price-item">
+                <span class="service">Картридж струйный</span>
+                <span class="dots"></span>
+                <span class="price">от 200 грн</span>
+            </div>
 
-{{--            <div class="col-md-4">--}}
-{{--                <div class="price-card">--}}
-{{--                    <h3>Canon</h3>--}}
-{{--                    <p class="price">от 200 грн</p>--}}
-{{--                    <ul>--}}
-{{--                        <li>Заправка картриджа</li>--}}
-{{--                        <li>Очистка</li>--}}
-{{--                        <li>Проверка печати</li>--}}
-{{--                    </ul>--}}
-{{--                    <a href="#contact" class="btn-modern btn-primary-modern">--}}
-{{--                        Заказать--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="price-item">
+                <span class="service">Картридж струйный цветной</span>
+                <span class="dots"></span>
+                <span class="price">от 200 грн</span>
+            </div>
 
-{{--            <div class="col-md-4">--}}
-{{--                <div class="price-card">--}}
-{{--                    <h3>Epson</h3>--}}
-{{--                    <p class="price">от 250 грн</p>--}}
-{{--                    <ul>--}}
-{{--                        <li>Заправка картриджа</li>--}}
-{{--                        <li>Очистка</li>--}}
-{{--                        <li>Проверка печати</li>--}}
-{{--                    </ul>--}}
-{{--                    <a href="#contact" class="btn-modern btn-primary-modern">--}}
-{{--                        Заказать--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="price-item">
+                <span class="service">Картридж лазерный</span>
+                <span class="dots"></span>
+                <span class="price">от 250 грн</span>
+            </div>
 
-{{--        </div>--}}
-        <table class="table price-table" style="width: 50%">
-            <thead>
-            <tr>
-                <th>Модель</th>
-                <th>Цена</th>
-            </tr>
-            </thead>
+            <div class="price-item">
+                <span class="service">Картридж лазерный цветной</span>
+                <span class="dots"></span>
+                <span class="price">от 300 грн</span>
+            </div>
 
-            <tbody>
-            <tr>
-                <td>HP LaserJet</td>
-                <td>200 грн</td>
-            </tr>
+            <div class="price-item">
+                <span class="service">Картридж плотера</span>
+                <span class="dots"></span>
+                <span class="price">от 1000 грн</span>
+            </div>
 
-            <tr>
-                <td>Canon</td>
-                <td>200 грн</td>
-            </tr>
+        </div>
 
-            <tr>
-                <td>Epson</td>
-                <td>250 грн</td>
-            </tr>
-            </tbody>
-        </table>
+        <p class="text-center mt-4">
+            * Точная стоимость заправки определяется после диагностики картриджа
+        </p>
+
     </div>
 </section>
 

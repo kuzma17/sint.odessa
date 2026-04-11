@@ -26,6 +26,7 @@ Route::middleware(['set_locale'])->group(function () {
     Route::get('/services/pc-repair', ['uses' => 'PageController@pcRepair'])->name('services.pc-repair');
     Route::get('/services/delivery', ['uses' => 'PageController@delivery'])->name('services.delivery');
     Route::get('/about', ['uses' => 'PageController@about'])->name('about');
+    Route::get('/contacts', ['uses' => 'PageController@contacts'])->name('contacts');
 
 
     Route::post('/register_client', ['as' => 'register.client', 'uses' => 'Auth\RegisterController@createClient']);
@@ -52,7 +53,7 @@ Route::middleware(['set_locale'])->group(function () {
 
     Route::post('/user/order/repair_save', ['as' => 'order.repair.save', 'middleware' => 'client', 'uses' => 'OrderController@user_consent']);
 
-    Route::get('/contacts', ['as' => 'contacts', 'uses' => 'PageController@contacts']);
+//    Route::get('/contacts', ['as' => 'contacts', 'uses' => 'PageController@contacts']);
     Route::get('/mail', ['as' => 'mail', 'uses' => 'PageController@mail']);
     Route::post('/mail', ['as' => 'send.mail', 'uses' => 'PageController@send_mail']);
     Route::get('/stock', ['as' => 'stock.list', 'uses' => 'StockController@listStock']);

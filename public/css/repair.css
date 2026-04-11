@@ -83,235 +83,125 @@
 }
 
 
-/*!* ===== HISTORY / TIMELINE ===== *!*/
-
-/*.history-section{*/
-/*    padding:100px 0;*/
-/*    background:#fff;*/
-/*}*/
-
-/*.timeline{*/
-/*    position:relative;*/
-/*    margin:0 auto;*/
-/*    padding-left:40px;*/
-/*}*/
-
-/*!* вертикальная линия *!*/
-
-/*.timeline::before{*/
-/*    content:"";*/
-/*    position:absolute;*/
-/*    left:15px;*/
-/*    top:0;*/
-/*    width:3px;*/
-/*    height:100%;*/
-/*    background:#e5e7eb;*/
-/*}*/
-
-/*!* элемент *!*/
-
-/*.timeline-item{*/
-/*    position:relative;*/
-/*    margin-bottom:40px;*/
-/*}*/
-
-/*!* точка *!*/
-
-/*.timeline-item::before{*/
-/*    content:"";*/
-/*    position:absolute;*/
-/*    left:-28px;*/
-/*    top:5px;*/
-/*    width:14px;*/
-/*    height:14px;*/
-/*    border-radius:50%;*/
-/*    background:#2563eb;*/
-/*}*/
-
-/*!* год *!*/
-
-/*.timeline-year{*/
-/*    font-size:20px;*/
-/*    font-weight:700;*/
-/*    color:#2563eb;*/
-/*    margin-bottom:5px;*/
-/*}*/
-
-/*!* карточка *!*/
-
-/*.timeline-content{*/
-/*    background:#f8fafc;*/
-/*    padding:18px 22px;*/
-/*    border-radius:10px;*/
-/*    box-shadow:0 6px 16px rgba(0,0,0,0.05);*/
-/*}*/
-
-/*.timeline-content h4{*/
-/*    font-size:18px;*/
-/*    margin-bottom:5px;*/
-/*}*/
-
-/*.timeline-content p{*/
-/*    font-size:14px;*/
-/*    color:#6b7280;*/
-/*}*/
-
-/*!* mobile *!*/
-
-/*@media (max-width:768px){*/
-
-/*    .timeline{*/
-/*        padding-left:30px;*/
-/*    }*/
-
-/*    .timeline-item::before{*/
-/*        left:-22px;*/
-/*    }*/
-
-/*}*/
-
-/*.service-signs{*/
-/*    padding:80px 0;*/
-/*    background:#f9fafb;*/
-/*}*/
-
-/*.sign-box{*/
-/*    background:#fff;*/
-/*    padding:25px;*/
-/*    border-radius:10px;*/
-/*    text-align:center;*/
-/*    border:1px solid #eee;*/
-/*}*/
 
 
-/*.service-process{*/
-/*    padding:80px 0;*/
-/*}*/
+/* ===== Contact offices ===== */
 
-/*.process-box{*/
-/*    background:#fff;*/
-/*    padding:25px;*/
-/*    border-radius:10px;*/
-/*    text-align:center;*/
-/*    border:1px solid #eee;*/
-/*}*/
+.contact-office-card{
 
-/*.process-number{*/
-/*    width:40px;*/
-/*    height:40px;*/
-/*    border-radius:50%;*/
-/*    background:#2563eb;*/
-/*    color:#fff;*/
-/*    display:flex;*/
-/*    align-items:center;*/
-/*    justify-content:center;*/
-/*    margin:auto;*/
-/*    margin-bottom:15px;*/
-/*    font-weight:700;*/
-/*}*/
-
-/* ===== PREMIUM TIMELINE ===== */
-
-.timeline-advanced{
-    position:relative;
-    margin-top:40px;
-}
-
-/* центральная линия */
-
-.timeline-advanced::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:0;
-    transform:translateX(-50%);
-    width:3px;
-    height:100%;
-    background:#e5e7eb;
-}
-
-/* строка */
-
-.timeline-row{
-    display:flex;
-    width:100%;
-    margin-bottom:40px;
-    position:relative;
-}
-
-/* левая сторона */
-
-.timeline-row.left{
-    justify-content:flex-start;
-}
-
-/* правая сторона */
-
-.timeline-row.right{
-    justify-content:flex-end;
-}
-
-/* карточка */
-
-.timeline-card{
-    width:45%;
     background:#fff;
-    padding:14px;
+    padding:25px;
     border-radius:14px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.07);
-    position:relative;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+
     transition:0.3s;
+
+    height:100%;
+
 }
 
-.timeline-card:hover{
+.contact-office-card:hover{
+
     transform:translateY(-5px);
-    box-shadow:0 20px 50px rgba(0,0,0,0.12);
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+
 }
 
-/* год */
+.contact-office-card h4{
 
-.timeline-card .year{
-    display:inline-block;
+    font-size:18px;
+    margin-bottom:15px;
+
+}
+
+.contact-office-card p{
+
     margin-bottom:10px;
+    color:#4b5563;
+
+}
+
+.contact-office-card i{
+
+    color:#2563eb;
+    margin-right:8px;
+
+}
+
+
+/* ===== Worktime block ===== */
+
+.worktime-card{
+    background:#fff;
+    border-radius:14px;
+    padding:35px 40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.07);
+}
+
+.worktime-row{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:18px 0;
+    border-bottom:1px solid #f1f5f9;
+}
+
+.worktime-row:last-child{
+    border-bottom:none;
+}
+
+.worktime-row i{
+    font-size:24px;
+    color:#2563eb;
+    width:30px;
+}
+
+.worktime-row strong{
+    display:block;
+    font-size:16px;
+}
+
+.worktime-row span{
+    color:#6b7280;
+    font-size:15px;
+}
+
+
+/* ===== Price table ===== */
+
+.price-list{
+    background:#fff;
+    border-radius:14px;
+    padding:35px 40px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.07);
+}
+
+.price-item{
+    display:flex;
+    align-items:center;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+.price-item:last-child{
+    margin-bottom:0;
+}
+
+.service{
+    white-space:nowrap;
+    font-weight:500;
+}
+
+.dots{
+    flex:1;
+    border-bottom:2px dotted #e5e7eb;
+    margin:0 15px;
+}
+
+.price{
     font-weight:700;
     color:#2563eb;
-    font-size:18px;
-}
-
-/* точка */
-
-.timeline-row::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:20px;
-    transform:translateX(-50%);
-    width:14px;
-    height:14px;
-    border-radius:50%;
-    background:#2563eb;
-    z-index:2;
-}
-
-/* адаптив */
-
-@media (max-width: 768px){
-
-    .timeline-advanced::before{
-        left:20px;
-    }
-
-    .timeline-row{
-        justify-content:flex-start !important;
-        padding-left:40px;
-    }
-
-    .timeline-row::before{
-        left:20px;
-    }
-
-    .timeline-card{
-        width:100%;
-    }
-
+    white-space:nowrap;
 }
