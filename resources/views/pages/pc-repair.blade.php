@@ -57,7 +57,7 @@
 
                 <div class="col-lg-6">
 
-                    <img src="/images/pages/pc-repair5.webp"
+                    <img src="/images/pages/pc-repair2.webp"
                          class="img-fluid service-image"
                          alt="Ремонт компьютеров">
 
