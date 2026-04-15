@@ -1,7 +1,8 @@
-@extends('layouts.appSite')
+@extends('layouts.app')
+
+@section('style', asset('/css/about.css'))
 
 @section('content')
-
     <section class="page-hero">
         <div class="container">
             <h1>О компании</h1>
@@ -207,7 +208,7 @@
             <div class="timeline-advanced">
 
                 <div class="timeline-row left">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">1999</span>
                         <h4>Основание компании</h4>
                         <p>Начало работы сервисного центра по ремонту офисной техники.</p>
@@ -215,7 +216,7 @@
                 </div>
 
                 <div class="timeline-row right">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">2002</span>
                         <h4>Открытие первоого офиса</h4>
                         <p>Відкриття офісу на Соборній площі,12</p>
@@ -223,7 +224,7 @@
                 </div>
 
                 <div class="timeline-row left">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">2005</span>
                         <h4>Открытие офиса на пос. Котовского</h4>
                         <p>відкриття офісу на Семена Палія, 94</p>
@@ -231,7 +232,7 @@
                 </div>
 
                 <div class="timeline-row right">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">2007</span>
                         <h4>Открытие офиса на Черемушках</h4>
                         <p>відкриття офісу на Адміральському проспекті, 33 а</p>
@@ -239,7 +240,7 @@
                 </div>
 
                 <div class="timeline-row left">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">2009</span>
                         <h4>Открытие офиса на Таирово</h4>
                         <p>відкриття офісу на Королева, 33</p>
@@ -247,7 +248,7 @@
                 </div>
 
                 <div class="timeline-row right">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">2010</span>
                         <h4>Работа с корпоративными клиентами</h4>
                         <p>Более 50-ти корпоративних клієнтів по Україні</p>
@@ -255,7 +256,7 @@
                 </div>
 
                 <div class="timeline-row left">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">2015</span>
                         <h4>Развитие новых направлений</h4>
                         <p>Развитие новых направлений, ремонт ноутбуків та планшетів,  ремонт поліграфічного обладнання</p>
@@ -263,7 +264,7 @@
                 </div>
 
                 <div class="timeline-row right">
-                    <div class="timeline-card">
+                    <div class="card-box timeline-card">
                         <span class="year">2020</span>
                         <h4>Cервісний центр EPSON</h4>
                         <p>Стали официальным авторизований сервісним центром EPSON.</p>
@@ -281,10 +282,10 @@
             <h2 class="text-center mb-5">Почему выбирают наш сервис</h2>
             <div class="section-divider"></div>
 
-            <div class="row g-4 text-center justify-content-center">
+            <div class="row g-4 justify-content-center">
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-user-tie"></i>
                         <h4>Опытные инженеры</h4>
                         <p>Специалисты с опытом более 20 лет</p>
@@ -292,7 +293,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                         <h4>Современное оборудование</h4>
                         <p>Используем профессиональные инструменты</p>
@@ -300,7 +301,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-truck"></i>
                         <h4>Быстрая доставка</h4>
                         <p>Заберем и вернем технику после ремонта</p>
@@ -308,7 +309,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h4>Гарантия на работы</h4>
                         <p>Гарантия на ремонт и обслуживание</p>

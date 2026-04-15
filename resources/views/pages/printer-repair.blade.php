@@ -1,8 +1,9 @@
-@extends('layouts.appSite')
+@extends('layouts.app')
+
+@section('style', asset('/css/services.css'))
 
 @section('content')
-
-    <section class="page-hero">
+    <section class="page-hero fade-in">
         <div class="container">
             <h1>Ремонт принтеров в Одессе</h1>
             <p>
@@ -12,7 +13,7 @@
         </div>
     </section>
 
-    <section class="service-text">
+    <section class="service-text fade-in">
         <div class="container">
 
             <div class="row align-items-center g-5">
@@ -76,7 +77,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section fade-in">
         <div class="container">
 
             <h2 class="text-center mb-5">Какие устройства мы ремонтируем</h2>
@@ -85,7 +86,7 @@
             <div class="row g-4">
 
                 <div class="col-md-3">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Лазерные принтеры</h3>
                         <p>
                             Ремонт лазерных принтеров всех популярных производителей.
@@ -94,7 +95,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Струйные принтеры</h3>
                         <p>
                             Обслуживание и ремонт струйных принтеров и систем СНПЧ.
@@ -103,7 +104,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>МФУ</h3>
                         <p>
                             Ремонт многофункциональных устройств: печать, сканирование, копирование.
@@ -112,7 +113,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Плоттеры</h3>
                         <p>
                             Ремонт широкоформатных плоттеров для печати чертежей и графики.
@@ -125,42 +126,7 @@
         </div>
     </section>
 
-{{--    <section class="section-light">--}}
-{{--        <div class="container">--}}
-
-{{--            <h2 class="text-center mb-5">Частые неисправности</h2>--}}
-{{--            <div class="section-divider"></div>--}}
-
-{{--            <div class="row g-4 service-card">--}}
-
-{{--                <div class="col-md-6">--}}
-
-{{--                    <ul class="service-list">--}}
-{{--                        <li>Принтер не включается</li>--}}
-{{--                        <li>Не захватывает бумагу</li>--}}
-{{--                        <li>Печатает полосами</li>--}}
-{{--                        <li>Замятие бумаги</li>--}}
-{{--                    </ul>--}}
-
-{{--                </div>--}}
-
-{{--                <div class="col-md-6">--}}
-
-{{--                    <ul class="service-list">--}}
-{{--                        <li>Ошибка картриджа</li>--}}
-{{--                        <li>Не печатает по сети</li>--}}
-{{--                        <li>Плохое качество печати</li>--}}
-{{--                        <li>Не определяется компьютером</li>--}}
-{{--                    </ul>--}}
-
-{{--                </div>--}}
-
-{{--            </div>--}}
-
-{{--        </div>--}}
-{{--    </section>--}}
-
-    <section class="section">
+    <section class="section fade-in">
         <div class="container">
 
             <h2 class="text-center mb-5">Типичные неисправности</h2>
@@ -169,48 +135,48 @@
             <div class="row g-4 justify-content-center">
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Принтер не включается
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Не захватывает бумагу
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Печатает полосами
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Замятие бумаги
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Ошибка картриджа
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Не печатает по сети
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Плохое качество печати
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Не определяется компьютером
                     </div>
                 </div>
@@ -291,56 +257,56 @@
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
+{{--    <section class="section">--}}
+{{--        <div class="container">--}}
 
-            <h2 class="text-center mb-5">Стоимость ремонта</h2>
-            <div class="section-divider"></div>
+{{--            <h2 class="text-center mb-5">Стоимость ремонта</h2>--}}
+{{--            <div class="section-divider"></div>--}}
 
-            <div class="row g-4">
+{{--            <div class="row g-4">--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Диагностика</h3>
-                        <p>
-                            от 200 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Диагностика</h3>--}}
+{{--                        <p>--}}
+{{--                            от 200 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Ремонт принтера</h3>
-                        <p>
-                            от 400 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Ремонт принтера</h3>--}}
+{{--                        <p>--}}
+{{--                            от 400 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Ремонт МФУ</h3>
-                        <p>
-                            от 500 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Ремонт МФУ</h3>--}}
+{{--                        <p>--}}
+{{--                            от 500 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Ремонт плоттера</h3>
-                        <p>
-                            от 800 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Ремонт плоттера</h3>--}}
+{{--                        <p>--}}
+{{--                            от 800 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
-    </section>
+{{--        </div>--}}
+{{--    </section>--}}
 
-    <section class="section">
+    <section class="section fade-in">
         <div class="container">
 
             <h2 class="text-center mb-5">Стоимость ремонта</h2>

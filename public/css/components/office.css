@@ -1,0 +1,20 @@
+/*office card*/
+
+.contact-office-card{
+    padding:25px;
+}
+
+.contact-office-card h4{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.contact-office-card p{
+    margin-bottom:10px;
+    color:#4b5563;
+}
+
+.contact-office-card i{
+    color:#2563eb;
+    margin-right:8px;
+}

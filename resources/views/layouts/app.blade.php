@@ -1,257 +1,225 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="uk">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ \App\Settings::first()->title }}</title>
-    <meta name="keywords"
-          content="{{ \App\Settings::first()->keywords }}@if(isset($page) && $page->keywords != ''), {{ $page->keywords }}@endif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СИНТ-Мастер — Ремонт принтерів та картриджів</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CDN -->
+{{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">--}}
 
-{{--    <link href="/css/app.css" rel="stylesheet"/>--}}
-    <link rel="stylesheet" href="/css/lightbox.min.css">
-    <link href="/css/style.css" rel="stylesheet"/>
+{{--    <!-- FontAwesome -->--}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <!-- New Year
-   <link href="/css/newyear.css" rel="stylesheet"/>
-     End New Year -->
+{{--    <!-- Google Fonts -->--}}
+{{--    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">--}}
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100689059-1"></script>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+    <!-- Ваш CSS -->
+{{--    <link rel="stylesheet" href="{{ asset('css/site.css') }}">--}}
+
+{{--    <link rel="stylesheet" href="{{ asset('css/service.css') }}">--}}
+
+{{--    <link rel="stylesheet" href="{{ asset('css/repair.css') }}">--}}
+
+{{--    <link rel="stylesheet" href="{{ asset('css/about.css') }}">--}}
+
+    <link rel="stylesheet" href="@yield('style')">
+
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-100689059-1');
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            let slider = document.querySelector('#heroCarousel');
+
+            if(!slider) return;
+
+            slider.addEventListener('slide.bs.carousel', function () {
+
+                document.querySelectorAll('.slide-content h1, .slide-content p, .slide-content a')
+                    .forEach(el => {
+
+                        el.style.animation = 'none';
+                        el.offsetHeight; // reflow
+                        el.style.animation = '';
+
+                    });
+
+            });
+
+        });
+
     </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', function() {
+                    if(!answer) return;
+
+                    item.classList.toggle('open');
+                });
+            });
+
+        });
+    </script>
+
+    <script>
+
+        window.addEventListener('scroll', function(){
+
+            let header = document.querySelector('.site-header');
+
+            if(window.scrollY > 50){
+                header.classList.add('scrolled');
+            }else{
+                header.classList.remove('scrolled');
+            }
+
+        });
+
+    </script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); // один раз
+                    }
+                });
+            }, {threshold: 0.1});
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+        });
+
+    </script>
+
+{{--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBVVcWv1BhicBJlD8xidprjt39Z_ZO2pU&callback=initMap" async defer></script>--}}
+
+{{--    <script async--}}
+{{--            defer--}}
+{{--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBVVcWv1BhicBJlD8xidprjt39Z_ZO2pU&callback=initMap&v=weekly&libraries=marker"--}}
+{{--    ></script>--}}
+
+{{--    <script>--}}
+{{--        let map;--}}
+{{--        let markers = [];--}}
+{{--        let bounds;--}}
+
+{{--        function initMap() {--}}
+{{--            map = new google.maps.Map(document.getElementById("mapdiv"), {--}}
+{{--                center: { lat: 46.48, lng: 30.73 },--}}
+{{--                zoom: 11--}}
+{{--            });--}}
+
+{{--            bounds = new google.maps.LatLngBounds();--}}
+
+{{--            // Добавляем офисы--}}
+{{--            addMarker(46.43711, 30.730315, "Адміральський");--}}
+{{--            addMarker(46.482146, 30.730281, "Соборка");--}}
+{{--            addMarker(46.575718, 30.7951071, "Дніпродорога");--}}
+{{--            addMarker(46.400676, 30.72347, "Корольова");--}}
+
+{{--            map.fitBounds(bounds);--}}
+{{--        }--}}
+
+{{--        function addMarker(lat, lng, title) {--}}
+{{--            const position = { lat: lat, lng: lng };--}}
+
+{{--            const marker = new google.maps.Marker({--}}
+{{--                position: position,--}}
+{{--                map: map,--}}
+{{--                title: title,--}}
+{{--                icon: {--}}
+{{--                    url: '/images/marker.svg',--}}
+{{--                    scaledSize: new google.maps.Size(40, 40)--}}
+{{--                }--}}
+{{--            });--}}
+
+{{--            const infowindow = new google.maps.InfoWindow({--}}
+{{--                content: `<strong>${title}</strong>`--}}
+{{--            });--}}
+
+{{--            marker.addListener('mouseover', () => infowindow.open(map, marker));--}}
+{{--            marker.addListener('mouseout', () => infowindow.close());--}}
+
+{{--            marker.addListener('click', () => focusOffice(lat, lng));--}}
+
+{{--            markers.push(marker);--}}
+{{--            bounds.extend(position);--}}
+{{--        }--}}
+
+{{--        function focusOffice(lat, lng) {--}}
+
+{{--            // перемещаем карту--}}
+{{--            map.panTo({ lat: lat, lng: lng });--}}
+{{--            map.setZoom(15);--}}
+
+{{--            // прокрутка страницы к карте--}}
+{{--            const mapBlock = document.getElementById("mapdiv");--}}
+{{--            mapBlock.scrollIntoView({--}}
+{{--                behavior: "smooth",--}}
+{{--                block: "center"--}}
+{{--            });--}}
+
+{{--            // подсветка карточки--}}
+{{--            document.querySelectorAll(".office-card").forEach(card => {--}}
+{{--                card.classList.remove("active");--}}
+
+{{--                if (--}}
+{{--                    parseFloat(card.dataset.lat) === lat &&--}}
+{{--                    parseFloat(card.dataset.lng) === lng--}}
+{{--                ) {--}}
+{{--                    card.classList.add("active");--}}
+{{--                }--}}
+{{--            });--}}
+{{--        }--}}
+
+{{--        // Клик на карточку → карта фокус--}}
+{{--        document.addEventListener("DOMContentLoaded", () => {--}}
+{{--            document.querySelectorAll(".office-card").forEach(card => {--}}
+{{--                card.addEventListener("click", function () {--}}
+{{--                    const lat = parseFloat(this.dataset.lat);--}}
+{{--                    const lng = parseFloat(this.dataset.lng);--}}
+{{--                    focusOffice(lat, lng);--}}
+{{--                });--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
+
+
 </head>
+
 <body>
-<div class="top-wrapper">
-    @include('layouts.menuTop')
-</div>
-<div class="container">
-    <div class="row">
-        <div class="rcol-sm-12 col-md-12 col-lg-4">
-            <div class="logo">
-                <a href="{{route('home')}}">
-	    	   <img src="/images/{{app()->getLocale()}}_logo.jpg">
-                   <!-- <img src="/images/{{app()->getLocale()}}_logo_snow.jpg"> -->
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4"
-             style="padding-top: 10px; padding-left: 0px; color: #808080; font-family: 'Lato', sans-serif; font-size: 12px">
-            <div class="clear"></div>
-            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
-                @lang('main.office_admiralsky')
-            </div>
-            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
-                                                       style="color: orangered"></i> +38(067)557-65-67
-            </div>
-            <div class="clear"></div>
-            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
-                @lang('main.office_soborka')
-            </div>
-            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
-                                                       style="color: orangered"></i> +38(067)488-04-83
-            </div>
-            <div class="clear"></div>
-            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
-                @lang('main.office_dneprodoroga')
-            </div>
-            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
-                                                       style="color: orangered"></i> +38(066)290-50-02
-            </div>
-            <div class="clear"></div>
-            <div style="float: left; width: 240px"><i class="glyphicon glyphicon-map-marker" style="color: #107fbe"></i>
-                @lang('main.office_koroleva')
-            </div>
-            <div style="float: left; width: 160px;"><i class="glyphicon glyphicon-earphone"
-                                                       style="color: orangered"></i> +38(098)879-30-48
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4" style="padding-top: 15px">
-        @if (Auth::guest())
-            <!--<a href="{{ url('/user/order-modal') }}" class="btn btn-success btn-top" ><i class="glyphicon glyphicon-plus"></i> Заказать услугу </a>-->
-        @else
-            <!--<a href="#" class="btn btn-success btn-top" @if(URL::current() != url('/order')) data-toggle="modal" data-target="#orderModal" @endif><i class="glyphicon glyphicon-plus"></i> Сделать заказ </a>-->
-            @endif
-            <a href="https://sint-shop.com" class="btn  btn-warning btn-top" target="_blank">
-            <i class="glyphicon glyphicon-shopping-cart"></i> Перейти в магазин
-            </a>
-        </div>
-        <div class="clear"></div>
-        <div class="container">
-        @include('layouts.menu')
-        <!-- New Year
-         @include('layouts.newyear')
-         end New Year -->
-        </div>
-    </div>
+@include('layouts.header')
 
-    <div class="clear"></div>
-    <div class="container page">
-        <div class="row">
-            @yield('container')
+@yield('content')
 
-        </div>
-    </div>
-</div>
-<div class="bottom-wrapper">
-    <div class="container bottom">
-        <div class="row">
-            <div class="col-sm-12 col-md-3 col-lg-3 border_right">
-                <h4>@lang('main.contacts')</h4>
+@include('layouts.footer')
 
-                <ul class="address-bottom">
+{{--<script type="module" src="{{asset('/js/app.js')}}"></script>--}}
+{{--<script type="module" src="@yield('script')"></script>--}}
 
-                    <li><i class="glyphicon glyphicon-envelope"></i> info@sint.odessa.ua</li>
-                    <li><a href="http://sint.odessa.ua"><i class="glyphicon glyphicon-globe"></i> http://sint.odessa.ua</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4 border_right">
-                <h4>@lang('main.offices')</h4>
-
-                <ul class="address-bottom">
-                    <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_admiralsky')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(067)557-65-67
-                    </li>
-                    <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_soborka')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(067)488-04-83
-                    </li>
-                    <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_dneprodoroga')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(066)290-50-02
-                    </li>
-                    <li><i class="glyphicon glyphicon-map-marker"></i> @lang('main.office_koroleva')
-                        <i class="glyphicon glyphicon-earphone"></i> +38(098)879-30-48
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-3 col-lg-3 border_right">
-                <h4>@lang('main.navigation')</h4>
-                <?php
-                $menu = \App\Menu::root()->active()->order()->get();
-                $i = 0;
-                ?>
-                <ul class="menu-bottom">
-                    @foreach($menu as $link)
-                        @if($i == 5)
-                </ul>
-                <ul class="menu-bottom">
-                    @endif
-                    <li><a href="{{ $link->url }}">{{ $link->title }}</a></li>
-                    <?php $i++; ?>
-                    @endforeach
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-2 col-lg-2">
-                <div class="banner-bottom">
-                    <div class="clear"></div>
-                    <!--<h4>Мы в соцсетях</h4>
-                    <script type="text/javascript">(function(w,doc) {
-                            if (!w.__utlWdgt ) {
-                                w.__utlWdgt = true;
-                                var d = doc, s = d.createElement('script'), g = 'getElementsByTagName';
-                                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-                                s.src = ('https:' == w.location.protocol ? 'https' : 'http')  + '://w.uptolike.com/widgets/v1/uptolike.js';
-                                var h=d[g]('body')[0];
-                                h.appendChild(s);
-                            }})(window,document);
-                    </script>
-                    <div data-background-alpha="1.0" data-buttons-color="#ffffff" data-counter-background-color="#ffffff" data-share-counter-size="12" data-top-button="false" data-share-counter-type="disable" data-share-style="1" data-mode="share" data-like-text-enable="false" data-hover-effect="rotate-cw" data-mobile-view="true" data-icon-color="#ffffff" data-orientation="horizontal" data-text-color="#000000" data-share-shape="round" data-sn-ids="vk.tw.fb.ok." data-share-size="40" data-background-color="#33363b" data-preview-mobile="false" data-mobile-sn-ids="fb.vk.tw.wh.ok.vb." data-pid="1612300" data-counter-background-alpha="1.0" data-following-enable="false" data-exclude-show-more="true" data-selection-enable="false" class="uptolike-buttons" ></div>
-                    -->
-                    <h4></h4>
-{{--                    <!--LiveInternet counter-->--}}
-{{--                    <script type="text/javascript"><!----}}
-{{--                        document.write("<a href='http://www.liveinternet.ru/click' " +--}}
-{{--                            "target=_blank><img src='http://counter.yadro.ru/hit?t14.11;r" +--}}
-{{--                            escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :--}}
-{{--                                ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?--}}
-{{--                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +--}}
-{{--                            ";" + Math.random() +--}}
-{{--                            "' alt='' title='LiveInternet: показано число просмотров за 24" +--}}
-{{--                            " часа, посетителей за 24 часа и за сегодня' " +--}}
-{{--                            "border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->--}}
-
-{{--                    <!-- I.UA counter --><a href="http://www.i.ua/" target="_blank"--}}
-{{--                                            onclick="this.href='http://i.ua/r.php?198771';" title="Rated by I.UA">--}}
-{{--                        <script type="text/javascript"><!----}}
-{{--                            iS = 'http' + (window.location.protocol == 'https:' ? 's' : '') +--}}
-{{--                                '://r.i.ua/s?u198771&p104&n' + Math.random();--}}
-{{--                            iD = document;--}}
-{{--                            if (!iD.cookie)iD.cookie = "b=b; path=/";--}}
-{{--                            if (iD.cookie)iS += '&c1';--}}
-{{--                            iS += '&d' + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)--}}
-{{--                                + "&w" + screen.width + '&h' + screen.height;--}}
-{{--                            iT = iR = iD.referrer.replace(iP = /^[a-z]*:\/\//, '');--}}
-{{--                            iH = window.location.href.replace(iP, '');--}}
-{{--                            ((iI = iT.indexOf('/')) != -1) ? (iT = iT.substring(0, iI)) : (iI = iT.length);--}}
-{{--                            if (iT != iH.substring(0, iI))iS += '&f' + escape(iR);--}}
-{{--                            iS += '&r' + escape(iH);--}}
-{{--                            iD.write('<img src="' + iS + '" border="0" width="88" height="31" />');--}}
-{{--                            //--></script>--}}
-{{--                    </a><!-- End of I.UA counter -->--}}
-                    <!-- begin of Top100 code -->
-
-{{--                    <script id="top100Counter" type="text/javascript"--}}
-{{--                            src="http://counter.rambler.ru/top100.jcn?3145247"></script>--}}
-{{--                    <noscript>--}}
-{{--                        <a href="http://top100.rambler.ru/navi/3145247/">--}}
-{{--                            <img src="http://counter.rambler.ru/top100.cnt?3145247" alt="Rambler's Top100" border="0"/>--}}
-{{--                        </a>--}}
-{{--                    </noscript>--}}
-                    <!-- end of Top100 code -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="copyright-wrapper">
-    <div class="container">
-        <div class="copyright">Copyright 2017 @ Designed by <a href="mailto:v.kuzma@mail.ru">Kuzma</a></div>
-    </div>
-</div>
-
-@include('order.orderModal')
-
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/lightbox.min.js') }}"></script>
-<script src="{{ asset('js/script.js') }}"></script>
-
-<!-- New Year -->
-<!-- <script src="{{ asset('js/snow.js') }}"></script> -->
-<!-- <script src="{{ asset('js/newyear.js') }}"></script> -->
-<!-- End New Year -->
-
-@if(URL::current() == url('/user/order-modal'))
-    <script type="text/javascript">
-        $('#orderModal').modal('show');
-    </script>
-@endif
-
-{{--<!-- BEGIN JIVOSITE CODE {literal} -->--}}
-{{--<script type='text/javascript'>--}}
-{{--    (function(){ var widget_id = 'zu8O4tOtH7';var d=document;var w=window;function l(){--}}
-{{--        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();--}}
-{{--</script>--}}
-<!-- {/literal} END JIVOSITE CODE -->
-
-<!-- Begin of Chaport Live Chat code -->
-<script type="text/javascript">
-(function(w,d,v3){
-w.chaportConfig = {
-  appId : '646b6192a08b1725007c0b4b'
-};
-
-if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+<script>
+    window.pageModules = @yield('pageModules', '[]');
 </script>
-<!-- End of Chaport Live Chat code -->
 
+<script type="module" src="{{ asset('js/app.js') }}"></script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

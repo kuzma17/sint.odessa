@@ -1,0 +1,73 @@
+/* HERO SLIDER */
+.hero {
+    padding: 0;
+}
+
+.hero-slider {
+    height: 100vh;
+    position: relative;
+}
+
+/* фон слайдов */
+.slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 6s ease;
+}
+
+/* затемнение */
+.carousel-item::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
+}
+
+/* контент */
+.slide-content {
+    position: relative;
+    z-index: 2;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    padding-left: 10%;
+    max-width: 600px;
+}
+
+/* заголовок */
+.slide-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+/* текст */
+.slide-content p {
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards 0.3s;
+}
+
+/* кнопка */
+.slide-content a {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards 0.6s;
+}
+
+/* zoom эффект */
+.carousel-item.active .slide-bg {
+    transform: scale(1.08);
+}

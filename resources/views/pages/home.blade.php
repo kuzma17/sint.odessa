@@ -1,7 +1,16 @@
-@extends('layouts.appSite')
+@extends('layouts.app')
+
+@section('style', asset('/css/home.css'))
+
+{{--@section('pageModules', ["bootstrap","map"])--}}
+@section('pageModules')
+    [
+    "bootstrap",
+    "map"
+    ]
+@endsection
 
 @section('content')
-
         <!-- Hero Slider -->
         <section class="hero">
             <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -9,7 +18,7 @@
 
                     <!-- SLIDE 1 -->
                     <div class="carousel-item active">
-                        <div class="slide-bg" style="background-image:url('/images/slider/printer-repairs.webp')"></div>
+                        <div class="slide-bg" style="background-image:url('/images/slider/printer_repair.webp')"></div>
                         <div class="slide-content">
                             <h1>Ремонт принтерів та заправка картриджів в Одесі</h1>
                             <p>Професійна діагностика та сервіс</p>
@@ -52,7 +61,7 @@
                 <div class="section-divider"></div>
                 <div class="row g-4 justify-content-center">
                     <div class="col-md-4">
-                        <a href="/services/cartridge-refill" class="service-box">
+                        <a href="/services/cartridge-refill" class="card-box service-box">
                             <img src="/images/services/cartridge.webp">
                             <div class="service-info">
                                 <h3>Заправка картриджів</h3>
@@ -63,7 +72,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="/services/printer-repair" class="service-box">
+                        <a href="/services/printer-repair" class="card-box service-box">
                             <img src="/images/services/printer.webp">
                             <div class="service-info">
                                 <h3>Ремонт принтерів</h3>
@@ -74,7 +83,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="/services/pc-repair" class="service-box">
+                        <a href="/services/pc-repair" class="card-box service-box">
                             <img src="/images/services/repair.webp">
                             <div class="service-info">
                                 <h3>Ремонт ПК</h3>
@@ -175,7 +184,7 @@
 
                 <div class="workflow-step">
                     <div class="step-number">1</div>
-                    <div class="step-card">
+                    <div class="card-box step-card">
                         <h3>Залишаєте заявку</h3>
                         <p>Ми отримуємо вашу заявку і уточнюємо деталі</p>
                     </div>
@@ -183,7 +192,7 @@
 
                 <div class="workflow-step">
                     <div class="step-number">2</div>
-                    <div class="step-card">
+                    <div class="card-box step-card">
                         <h3>Зв'язується менеджер</h3>
                         <p>Менеджер уточнює деталі та планує візит</p>
                     </div>
@@ -191,7 +200,7 @@
 
                 <div class="workflow-step">
                     <div class="step-number">3</div>
-                    <div class="step-card">
+                    <div class="card-box step-card">
                         <h3>Діагностика</h3>
                         <p>Технік перевіряє обладнання і визначає проблему</p>
                     </div>
@@ -199,7 +208,7 @@
 
                 <div class="workflow-step">
                     <div class="step-number">4</div>
-                    <div class="step-card">
+                    <div class="card-box step-card">
                         <h3>Ремонт техніки</h3>
                         <p>Виправляємо проблему швидко та професійно</p>
                     </div>
@@ -207,7 +216,7 @@
 
                 <div class="workflow-step">
                     <div class="step-number">5</div>
-                    <div class="step-card">
+                    <div class="card-box step-card">
                         <h3>Доставка</h3>
                         <p>Готову техніку доставляємо назад до вас</p>
                     </div>
@@ -247,7 +256,7 @@
             <div class="row g-4">
 
                 <div class="col-md-4">
-                    <div class="review-card">
+                    <div class="card-box review-card">
 
                         <div class="review-stars">
                             ★★★★★
@@ -273,7 +282,7 @@
 
 
                 <div class="col-md-4">
-                    <div class="review-card">
+                    <div class="card-box review-card">
 
                         <div class="review-stars">
                             ★★★★★
@@ -299,7 +308,7 @@
 
 
                 <div class="col-md-4">
-                    <div class="review-card">
+                    <div class="card-box review-card">
 
                         <div class="review-stars">
                             ★★★★★
@@ -375,78 +384,80 @@
         </div>
     </section>
 
-        <section class="offices-section fade-in">
-            <div class="container">
+{{--        <section class="offices-section fade-in">--}}
+{{--            <div class="container">--}}
 
-                <h2 class="text-center mb-5">Наши офисы на карте</h2>
+{{--                <h2 class="text-center mb-5">Наши офисы на карте</h2>--}}
 
-                <div class="row">
+{{--                <div class="row">--}}
 
-                    <!-- КАРТА -->
-                    <div class="col-md-9">
-                        <div id="mapdiv" class="map"></div>
-                    </div>
+{{--                    <!-- КАРТА -->--}}
+{{--                    <div class="col-md-9">--}}
+{{--                        <div id="mapdiv" class="map"></div>--}}
+{{--                    </div>--}}
 
-                    <!-- СПИСОК ОФИСОВ -->
-                    <div class="col-md-3">
+{{--                    <!-- СПИСОК ОФИСОВ -->--}}
+{{--                    <div class="col-md-3">--}}
 
-                        <div class="office-list">
+{{--                        <div class="office-list">--}}
 
-                            <div class="office-card" data-lat="46.482146" data-lng="30.730281">
-                                <h5>Центр (Соборка)</h5>
-                                <p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    Соборная площадь, 12
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-phone"></i>
-                                    +38 (048) XXX-XX-XX
-                                </p>
-                            </div>
+{{--                            <div class="office-card" data-lat="46.482146" data-lng="30.730281">--}}
+{{--                                <h5>Центр (Соборка)</h5>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-location-dot"></i>--}}
+{{--                                    Соборная площадь, 12--}}
+{{--                                </p>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-phone"></i>--}}
+{{--                                    +38 (048) XXX-XX-XX--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
 
-                            <div class="office-card" data-lat="46.43711" data-lng="30.730315">
-                                <h5>Адміральський</h5>
-                                <p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    Адмиральский проспект, 33а
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-phone"></i>
-                                    +38 (048) XXX-XX-XX
-                                </p>
-                            </div>
+{{--                            <div class="office-card" data-lat="46.43711" data-lng="30.730315">--}}
+{{--                                <h5>Адміральський</h5>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-location-dot"></i>--}}
+{{--                                    Адмиральский проспект, 33а--}}
+{{--                                </p>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-phone"></i>--}}
+{{--                                    +38 (048) XXX-XX-XX--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
 
-                            <div class="office-card" data-lat="46.575718" data-lng="30.7951071">
-                                <h5>пос. Котовского</h5>
-                                <p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    ул. Семена Палия, 94
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-phone"></i>
-                                    +38 (048) XXX-XX-XX
-                                </p>
-                            </div>
+{{--                            <div class="office-card" data-lat="46.575718" data-lng="30.7951071">--}}
+{{--                                <h5>пос. Котовского</h5>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-location-dot"></i>--}}
+{{--                                    ул. Семена Палия, 94--}}
+{{--                                </p>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-phone"></i>--}}
+{{--                                    +38 (048) XXX-XX-XX--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
 
-                            <div class="office-card" data-lat="46.400676" data-lng="30.72347">
-                                <h5>Таирово</h5>
-                                <p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    ул. Королева, 33
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-phone"></i>
-                                    +38 (048) XXX-XX-XX
-                                </p>
-                            </div>
+{{--                            <div class="office-card" data-lat="46.400676" data-lng="30.72347">--}}
+{{--                                <h5>Таирово</h5>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-location-dot"></i>--}}
+{{--                                    ул. Королева, 33--}}
+{{--                                </p>--}}
+{{--                                <p>--}}
+{{--                                    <i class="fa-solid fa-phone"></i>--}}
+{{--                                    +38 (048) XXX-XX-XX--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
 
-                        </div>
+{{--                        </div>--}}
 
-                    </div>
+{{--                    </div>--}}
 
-                </div>
+{{--                </div>--}}
 
-            </div>
-        </section>
+{{--            </div>--}}
+{{--        </section>--}}
+
+    @include('layouts.map')
 
 @endsection

@@ -1,4 +1,6 @@
-@extends('layouts.appSite')
+@extends('layouts.app')
+
+@section('style', asset('/css/services.css'))
 
 @section('content')
 
@@ -19,7 +21,7 @@
             <h2 class="text-center mb-5">Наши услуги</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4 justify-content-center">
-                    <a href="{{route('services.cartridge-refill')}}" class="service-box">
+                    <a href="{{route('services.cartridge-refill')}}" class="card-box service-box">
                         <img src="/images/services/cartridge.webp">
                         <div class="service-info">
                             <h3>Заправка картриджів</h3>
@@ -30,7 +32,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="{{route('services.printer-repair')}}" class="service-box">
+                    <a href="{{route('services.printer-repair')}}" class="card-box service-box">
                         <img src="/images/services/printer.webp">
                         <div class="service-info">
                             <h3>Ремонт принтерів</h3>
@@ -41,7 +43,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="{{route('services.pc-repair')}}" class="service-box">
+                    <a href="{{route('services.pc-repair')}}" class="card-box service-box">
                         <img src="/images/services/repair.webp">
                         <div class="service-info">
                             <h3>Ремонт ПК</h3>
@@ -53,7 +55,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <a href="/services/pc-repair" class="service-box">
+                    <a href="{{route('services.delivery')}}" class="card-box service-box">
                         <img src="/images/dellivery_023.jpg">
                         <div class="service-info">
                             <h3>Доставка</h3>
@@ -77,7 +79,7 @@
             <div class="row g-4 text-center justify-content-center">
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-user-tie"></i>
                         <h4>Опытные инженеры</h4>
                         <p>Специалисты с опытом более 20 лет</p>
@@ -85,7 +87,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                         <h4>Современное оборудование</h4>
                         <p>Используем профессиональные инструменты</p>
@@ -93,7 +95,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-truck"></i>
                         <h4>Быстрая доставка</h4>
                         <p>Заберем и вернем технику после ремонта</p>
@@ -101,7 +103,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="adv-card">
+                    <div class="card-box adv-card">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h4>Гарантия на работы</h4>
                         <p>Гарантия на ремонт и обслуживание</p>

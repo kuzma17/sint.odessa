@@ -1,7 +1,8 @@
-@extends('layouts.appSite')
+@extends('layouts.app')
+
+@section('style', asset('/css/services.css'))
 
 @section('content')
-
     <section class="page-hero">
         <div class="container">
             <h1>Ремонт компьютеров и ноутбуков в Одессе</h1>
@@ -76,7 +77,7 @@
             <div class="row g-4 justify-content-center">
 
                 <div class="col-md-4">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Ноутбуки</h3>
                         <p>
                             Диагностика, ремонт и модернизация ноутбуков
@@ -86,7 +87,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Компьютеры</h3>
                         <p>
                             Ремонт системных блоков, замена комплектующих
@@ -96,7 +97,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Мониторы</h3>
                         <p>
                             Ремонт мониторов и диагностика неисправностей
@@ -106,7 +107,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Источники бесперебойного питания</h3>
                         <p>
                             Ремонт и обслуживание блоков бесперебойного
@@ -116,7 +117,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Программное обеспечение</h3>
                         <p>
                             Установка операционных систем, драйверов
@@ -125,7 +126,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card">
+                    <div class="card-box service-card">
                         <h3>Очистка ПК, ноутбуков</h3>
                         <p>
                             Очистка ПК, ноутбуков физически, а также програмно (вирусы, меделенная работа)
@@ -147,37 +148,37 @@
             <div class="row g-4 justify-content-center">
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Компьютер не включается
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Ноутбук сильно нагревается
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Медленно работает система
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Не работает монитор
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Не загружается Windows
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="problem-card">
+                    <div class="card-box problem-card">
                         Компьютер сам перезагружается
                     </div>
                 </div>
@@ -258,80 +259,80 @@
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
+{{--    <section class="section">--}}
+{{--        <div class="container">--}}
 
-            <h2 class="text-center mb-5">Стоимость ремонта</h2>
-            <div class="section-divider"></div>
+{{--            <h2 class="text-center mb-5">Стоимость ремонта</h2>--}}
+{{--            <div class="section-divider"></div>--}}
 
-            <div class="row g-4 justify-content-center">
+{{--            <div class="row g-4 justify-content-center">--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Диагностика</h3>
-                        <p>
-                            от 200 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Диагностика</h3>--}}
+{{--                        <p>--}}
+{{--                            от 200 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Ремонт компьютера</h3>
-                        <p>
-                            от 400 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Ремонт компьютера</h3>--}}
+{{--                        <p>--}}
+{{--                            от 400 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Ремонт ноутбука</h3>
-                        <p>
-                            от 500 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Ремонт ноутбука</h3>--}}
+{{--                        <p>--}}
+{{--                            от 500 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Ремонт монитора</h3>
-                        <p>
-                            от 400 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Ремонт монитора</h3>--}}
+{{--                        <p>--}}
+{{--                            от 400 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Ремонт УПС</h3>
-                        <p>
-                            от 300 грн.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Чистка ноутбука</h3>
-                        <p>
-                            от 1000 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Ремонт УПС</h3>--}}
+{{--                        <p>--}}
+{{--                            от 300 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Чистка ноутбука</h3>--}}
+{{--                        <p>--}}
+{{--                            от 1000 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-md-3">
-                    <div class="service-card">
-                        <h3>Установка ПО</h3>
-                        <p>
-                            от 1000 грн.
-                        </p>
-                    </div>
-                </div>
+{{--                <div class="col-md-3">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <h3>Установка ПО</h3>--}}
+{{--                        <p>--}}
+{{--                            от 1000 грн.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
-    </section>
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="section">
         <div class="container">
