@@ -161,24 +161,26 @@
         </div>
     </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <div class="card-box cta-card">
-                <div class="cta-text">
-                    <h2>Нужно забрать технику на ремонт?</h2>
-                    <p>
-                        Залиште заявку і наш менеджер зв'яжеться з вами
-                        протягом декількох хвилин
-                    </p>
-                </div>
-                <div class="cta-action">
-                    <a href="/contacts" class="btn btn-blue">
-                        Залишити заявку
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="cta-section">--}}
+{{--        <div class="container">--}}
+{{--            <div class="card-box cta-card">--}}
+{{--                <div class="cta-text">--}}
+{{--                    <h2>Нужно забрать технику на ремонт?</h2>--}}
+{{--                    <p>--}}
+{{--                        Залиште заявку і наш менеджер зв'яжеться з вами--}}
+{{--                        протягом декількох хвилин--}}
+{{--                    </p>--}}
+{{--                </div>--}}
+{{--                <div class="cta-action">--}}
+{{--                    <a href="/contacts" class="btn btn-blue">--}}
+{{--                        Залишити заявку--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
+
+    @include('layouts.cta')
 
 
 @endsection
