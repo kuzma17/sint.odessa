@@ -1,72 +1,220 @@
-<header class="site-header">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- ЛОГО -->
-            <a class="navbar-brand d-flex align-items-center logo" href="/">
-                <img src="/images/logo_sint-master.jpg" alt="СИНТ-Мастер">
-                {{--                    <span class="ms-2 fw-bold">СИНТ-Мастер</span>--}}
-            </a>
-            <!-- BURGER -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+{{--<header class="site-header">--}}
+{{--    <div class="container">--}}
+{{--        <nav class="navbar navbar-expand-lg navbar-light">--}}
+{{--            <!-- ЛОГО -->--}}
+{{--            <a class="navbar-brand d-flex align-items-center logo" href="/">--}}
+{{--                <img src="/images/logo_sint-master.jpg" alt="СИНТ-Мастер">--}}
+{{--                --}}{{--                    <span class="ms-2 fw-bold">СИНТ-Мастер</span>--}}
+{{--            </a>--}}
+{{--            <!-- BURGER -->--}}
+{{--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">--}}
+{{--                <span class="navbar-toggler-icon"></span>--}}
+{{--            </button>--}}
 
-            <!-- МЕНЮ -->
-            <div class="collapse navbar-collapse" id="mainMenu">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('about')}}">О нас</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('services')}}">Услуги</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/promo">Акции</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/faq">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('contacts')}}">Контакты</a>
-                    </li>
+{{--            <!-- МЕНЮ -->--}}
+{{--            <div class="collapse navbar-collapse" id="mainMenu">--}}
+{{--                <ul class="navbar-nav me-auto">--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="/">Главная</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="{{route('about')}}">О нас</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="{{route('services')}}">Услуги</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="/promo">Акции</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="/faq">FAQ</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="{{route('contacts')}}">Контакты</a>--}}
+{{--                    </li>--}}
 
-                </ul>
+{{--                </ul>--}}
 
-                {{--                    <!-- ПОИСК -->--}}
-                {{--                    <form class="d-flex me-3" action="/search">--}}
-                {{--                        <input class="form-control form-control-sm" type="search" placeholder="Поиск" name="q">--}}
-                {{--                    </form>--}}
+{{--                --}}{{--                    <!-- ПОИСК -->--}}
+{{--                --}}{{--                    <form class="d-flex me-3" action="/search">--}}
+{{--                --}}{{--                        <input class="form-control form-control-sm" type="search" placeholder="Поиск" name="q">--}}
+{{--                --}}{{--                    </form>--}}
 
 
-                <div class="header-lang me-3">
-                    <a href="/lang/ru" class="lang-link active">RU</a>
-                    <span>|</span>
-                    <a href="/lang/ua" class="lang-link">UA</a>
-                </div>
+{{--                <div class="header-lang me-3">--}}
+{{--                    <a href="/lang/ru" class="lang-link active">RU</a>--}}
+{{--                    <span>|</span>--}}
+{{--                    <a href="/lang/ua" class="lang-link">UA</a>--}}
+{{--                </div>--}}
+{{--                <div class="header-lang me-3">--}}
 
-                <!-- ТЕЛЕФОН -->
-                {{--                    <div class="header-phone me-3">--}}
-                {{--                        <a href="tel:+380000000000">📞 +38 (000) 000-00-00</a>--}}
-                {{--                    </div>--}}
-                <div class="header-phone me-3">
-                    <a href="tel:+380000000000">
-                        <i class="fa-solid fa-phone" style="color: rgb(29, 105, 165);"></i> +38 (000) 000-00-00
-                    </a>
-                </div>
-                <!-- КНОПКА -->
+{{--                    <a href="/lang/ru"--}}
+{{--                       class="lang-btn {{ app()->getLocale() == 'ru' ? 'active' : '' }}">--}}
+{{--                        RU--}}
+{{--                    </a>--}}
+
+{{--                    <a href="/lang/ua"--}}
+{{--                       class="lang-btn {{ app()->getLocale() == 'ua' ? 'active' : '' }}">--}}
+{{--                        UA--}}
+{{--                    </a>--}}
+
+{{--                </div>--}}
+
+{{--                <div class="header-lang me-3">--}}
+{{--                    <a href="/lang/ru" class="active">RU</a>--}}
+{{--                    <span>|</span>--}}
+{{--                    <a href="/lang/ua">UA</a>--}}
+{{--                </div>--}}
+
+{{--                <!-- ТЕЛЕФОН -->--}}
+{{--                --}}{{--                    <div class="header-phone me-3">--}}
+{{--                --}}{{--                        <a href="tel:+380000000000">📞 +38 (000) 000-00-00</a>--}}
+{{--                --}}{{--                    </div>--}}
+{{--                <div class="header-phone me-3">--}}
+{{--                    <a href="tel:+380000000000">--}}
+{{--                        <i class="fa-solid fa-phone" style="color: rgb(29, 105, 165);"></i> +38 (000) 000-00-00--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--                <!-- КНОПКА -->--}}
 {{--                <a href="#contact" class="btn btn-blue">--}}
 {{--                    Залишити заявку--}}
 {{--                </a>--}}
 
-                <button class="btn btn-blue"
-                        data-bs-toggle="modal"
-                        data-bs-target="#orderModal">
-                    Оставить заявку
-                </button>
+{{--                <button class="btn btn-blue"--}}
+{{--                        data-bs-toggle="modal"--}}
+{{--                        data-bs-target="#orderModal">--}}
+{{--                    Оставить заявку--}}
+{{--                </button>--}}
+
+{{--                <div class="header-lang">--}}
+{{--                    <a href="/lang/ru" class="lang-link active">RU</a>--}}
+{{--                    <span>|</span>--}}
+{{--                    <a href="/lang/ua" class="lang-link">UA</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </nav>--}}
+{{--    </div>--}}
+{{--</header>--}}
+
+<header class="site-header">
+
+    <div class="container">
+
+        <div class="header-grid">
+
+            <!-- LOGO -->
+
+            <div class="header-logo">
+                <a href="/">
+                    <img src="/images/logo_sint-master.jpg" alt="СИНТ-Мастер">
+                </a>
             </div>
-        </nav>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="header-right">
+
+                <!-- TOP LINE -->
+
+                <div class="header-topline">
+{{--                    <div class="header-info">--}}
+{{--                        <i class="fa-solid fa-award"></i>--}}
+{{--                        Авторизованный сервисный центр Epson--}}
+{{--                    </div>--}}
+                    <div class="header-info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        4 сервисных центра в Одессе
+                    </div>
+
+                    <div class="header-worktime">
+                        <i class="fa-regular fa-clock"></i>
+                        пн-пт 09:00 – 18:00, сб 10.00 - 16.00
+                    </div>
+
+                    <div class="header-lang">
+                        <a href="#" class="active">RU</a>
+                        <span>|</span>
+                        <a href="#">UA</a>
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM LINE -->
+
+                <div class="header-bottomline">
+
+                    <!-- MENU -->
+
+                    <nav class="header-menu">
+
+                        <a href="/">Главная</a>
+                        <a href="/about">О нас</a>
+                        <a href="/services">Услуги</a>
+                        <a href="/promo">Акции</a>
+                        <a href="/faq">FAQ</a>
+                        <a href="/contacts">Контакты</a>
+
+                    </nav>
+
+
+                    <!-- PHONE -->
+
+{{--                    <div class="header-phone">--}}
+{{--                        <i class="fa-solid fa-phone"></i>--}}
+{{--                        (048) 111-11-11--}}
+{{--                    </div>--}}
+
+                    <div class="header-phone-dropdown">
+
+                        <div class="phone-main">
+                            <i class="fa-solid fa-phone"></i>
+                            (048) 111-11-11
+                            <i class="fa-solid fa-chevron-down phone-arrow"></i>
+                        </div>
+
+                        <div class="phone-list">
+
+                            <a href="tel:+380481111111">
+                                <strong>Центр</strong>
+                                <span>(048) 111-11-11</span>
+                            </a>
+
+                            <a href="tel:+380482222222">
+                                <strong>Черёмушки</strong>
+                                <span>(048) 222-22-22</span>
+                            </a>
+
+                            <a href="tel:+380483333333">
+                                <strong>Таирово</strong>
+                                <span>(048) 333-33-33</span>
+                            </a>
+
+                            <a href="tel:+380484444444">
+                                <strong>пос.Котовського</strong>
+                                <span>(048) 444-44-44</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CTA -->
+
+                    <button class="btn btn-blue"
+                            data-bs-toggle="modal"
+                            data-bs-target="#orderModal">
+                        Оставить заявку
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+
 </header>

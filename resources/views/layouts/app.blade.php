@@ -27,6 +27,31 @@
 
     <link rel="stylesheet" href="@yield('style')">
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const phoneBlock = document.querySelector(".header-phone-dropdown");
+
+            if(!phoneBlock) return;
+
+            phoneBlock.addEventListener("click", () => {
+                phoneBlock.classList.toggle("open");
+            });
+
+            document.addEventListener("click", (e) => {
+
+                if(!phoneBlock.contains(e.target)){
+                    phoneBlock.classList.remove("open");
+                }
+
+            });
+
+        });
+
+    </script>
+
+
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -212,6 +237,14 @@
 
 {{--<script type="module" src="{{asset('/js/app.js')}}"></script>--}}
 {{--<script type="module" src="@yield('script')"></script>--}}
+
+{{--<div class="floating-cta"--}}
+{{--     data-bs-toggle="modal"--}}
+{{--     data-bs-target="#orderModal">--}}
+
+{{--    <i class="fa-solid fa-phone"></i>--}}
+
+{{--</div>--}}
 
 <script>
     window.pageModules = @yield('pageModules', '[]');

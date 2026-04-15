@@ -1,80 +1,320 @@
-/* Header */
-header {
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
+/*!* Header *!*/
+/*header {*/
+/*    background: #fff;*/
+/*    box-shadow: 0 2px 6px rgba(0,0,0,0.05);*/
+/*    position: sticky;*/
+/*    top: 0;*/
+/*    z-index: 999;*/
+/*}*/
 
-.phone-number{
-    font-size:16px;
-}
+/*.phone-number{*/
+/*    font-size:16px;*/
+/*}*/
+/*.site-header{*/
+/*    position:fixed;*/
+/*    top:0;*/
+/*    left:0;*/
+/*    width:100%;*/
+/*    background:#fff;*/
+/*    transition:all 0.3s;*/
+/*    z-index:1000;*/
+/*    box-shadow:0 2px 8px rgba(0,0,0,0.05);*/
+/*}*/
+/*.site-header.scrolled{*/
+/*    box-shadow:0 5px 20px rgba(0,0,0,0.08);*/
+/*    padding:5px 0;*/
+/*}*/
+
+/*.logo img{*/
+/*    height:70px;*/
+/*    transition:transform 0.3s ease;*/
+/*}*/
+
+/*.logo img:hover{*/
+/*    transform:scale(1.05);*/
+/*}*/
+
+/*.navbar-nav .nav-link{*/
+/*    font-weight:500;*/
+/*    padding-left:15px;*/
+/*    padding-right:15px;*/
+/*    font-size: 1.1rem;*/
+/*}*/
+
+/*.navbar-nav .nav-link:hover{*/
+/*    color:#2563eb;*/
+/*}*/
+
+/*.header-phone a{*/
+/*    text-decoration:none;*/
+/*    font-weight:600;*/
+/*    color:#333;*/
+/*    font-size: 1.4rem;*/
+/*}*/
+
+/*.header-phone a:hover{*/
+/*    color:#2563eb;*/
+/*}*/
+
+/*!*Lang*!*/
+/*!*.header-lang {*!*/
+/*!*    display:flex;*!*/
+/*!*    align-items:center;*!*/
+/*!*    font-weight:600;*!*/
+/*!*}*!*/
+
+/*!*.lang-link{*!*/
+/*!*    text-decoration:none;*!*/
+/*!*    color:#555;*!*/
+/*!*    padding:2px 6px;*!*/
+/*!*    transition:0.2s;*!*/
+/*!*}*!*/
+
+/*!*.lang-link:hover{*!*/
+/*!*    color:#1d69a5;*!*/
+/*!*}*!*/
+
+/*!*.lang-link.active{*!*/
+/*!*    color:#1d69a5;*!*/
+/*!*    font-weight:700;*!*/
+/*!*}*!*/
+
+/*!*.header-lang{*!*/
+/*!*    display:flex;*!*/
+/*!*    gap:4px;*!*/
+/*!*}*!*/
+
+/*!*.lang-btn{*!*/
+/*!*    font-size:13px;*!*/
+/*!*    padding:4px 8px;*!*/
+/*!*    border-radius:4px;*!*/
+/*!*    text-decoration:none;*!*/
+/*!*    color:#555;*!*/
+/*!*    border:1px solid #ddd;*!*/
+/*!*    transition:0.2s;*!*/
+/*!*}*!*/
+
+/*!*.lang-btn:hover{*!*/
+/*!*    border-color:#1d69a5;*!*/
+/*!*    color:#1d69a5;*!*/
+/*!*}*!*/
+
+/*!*.lang-btn.active{*!*/
+/*!*    background:#1d69a5;*!*/
+/*!*    color:white;*!*/
+/*!*    border-color:#1d69a5;*!*/
+/*!*}*!*/
+
+/*!*.header-lang{*!*/
+/*!*    display:flex;*!*/
+/*!*    align-items:center;*!*/
+/*!*    font-size:14px;*!*/
+/*!*    font-weight:600;*!*/
+/*!*}*!*/
+
+/*!*.header-lang a{*!*/
+/*!*    text-decoration:none;*!*/
+/*!*    color:#777;*!*/
+/*!*    padding:0 5px;*!*/
+/*!*}*!*/
+
+/*!*.header-lang a:hover{*!*/
+/*!*    color:#1d69a5;*!*/
+/*!*}*!*/
+
+/*!*.header-lang a.active{*!*/
+/*!*    color:#1d69a5;*!*/
+/*!*}*!*/
+/*.header-lang{*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    font-weight:600;*/
+/*    font-size:14px;*/
+/*    margin-left:10px;*/
+/*}*/
+
+/*.header-lang a{*/
+/*    text-decoration:none;*/
+/*    color:#666;*/
+/*    padding:0 4px;*/
+/*}*/
+
+/*.header-lang a.active{*/
+/*    color:#1d69a5;*/
+/*}*/
+
 .site-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
     background:#fff;
-    transition:all 0.3s;
-    z-index:1000;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
-}
-.site-header.scrolled{
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    padding:5px 0;
+    border-bottom:1px solid #eee;
 }
 
-.logo img{
-    height:70px;
-    transition:transform 0.3s ease;
-}
+/* GRID */
 
-.logo img:hover{
-    transform:scale(1.05);
-}
-
-.navbar-nav .nav-link{
-    font-weight:500;
-    padding-left:15px;
-    padding-right:15px;
-    font-size: 1.1rem;
-}
-
-.navbar-nav .nav-link:hover{
-    color:#2563eb;
-}
-
-.header-phone a{
-    text-decoration:none;
-    font-weight:600;
-    color:#333;
-    font-size: 1.4rem;
-}
-
-.header-phone a:hover{
-    color:#2563eb;
-}
-
-/*Lang*/
-.header-lang {
+.header-grid{
     display:flex;
     align-items:center;
+    justify-content:space-between;
+    padding:10px 0;
+}
+
+/* LOGO */
+
+.header-logo img{
+    height:75px;
+}
+
+/* RIGHT */
+
+.header-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+}
+
+/* TOP LINE */
+
+.header-topline{
+    display:flex;
+    gap:30px;
+    font-size:13px;
+    color:#667;
+    margin:0 10px 6px 0;
+
+}
+
+/* WORKTIME */
+
+.header-worktime i{
+    color:#1d69a5;
+    margin-right:5px;
+}
+
+/* LANG */
+
+.header-lang a{
+    text-decoration:none;
+    color:#667;
+    font-weight:600;
+    font-size: 14px;
+}
+
+.header-lang a.active{
+    color:#1d69a5;
+}
+
+/* BOTTOM LINE */
+
+.header-bottomline{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+/* MENU */
+
+.header-menu{
+    display:flex;
+    gap:20px;
+}
+
+.header-menu a{
+    text-decoration:none;
+    color:#667;
+    font-weight:500;
+    font-size: 18px;
+}
+
+.header-menu a:hover{
+    color:#1d69a5;
+}
+
+/* PHONE */
+
+/*.header-phone{*/
+/*    font-weight:600;*/
+/*    font-size: 24px;*/
+/*}*/
+
+.phone-main i{
+    color:#1d69a5;
+    margin-right:5px;
+}
+
+
+.header-info{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#667;
+    /*font-size:14px;*/
+}
+
+.header-info i{
+    color:#1d69a5;
+}
+
+/*phones*/
+.header-phone-dropdown{
+    position:relative;
+    cursor:pointer;
     font-weight:600;
 }
 
-.lang-link{
+.phone-main{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size: 24px;
+}
+
+.phone-arrow{
+    font-size:12px;
+}
+
+/* список */
+
+.phone-list{
+
+    position:absolute;
+    top:35px;
+    right:0;
+
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:8px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    padding:10px 0;
+
+    width:280px;
+
+    display:none;
+    z-index:1000;
+
+}
+
+/* пункт */
+
+.phone-list a{
+
+    display:flex;
+    justify-content:space-between;
+
+    padding:8px 14px;
+
     text-decoration:none;
-    color:#555;
-    padding:2px 6px;
-    transition:0.2s;
+    color:#333;
+    font-size:14px;
+
 }
 
-.lang-link:hover{
-    color:#1d69a5;
+.phone-list a:hover{
+    background:#f5f7fa;
 }
 
-.lang-link.active{
-    color:#1d69a5;
-    font-weight:700;
+/* активный */
+
+.header-phone-dropdown.open .phone-list{
+    display:block;
 }
