@@ -28,7 +28,22 @@
     <link rel="stylesheet" href="@yield('style')">
 
 
+{{--    Header--}}
     <script>
+        // window.addEventListener("scroll", () => {
+        //     const header = document.querySelector(".site-header");
+        //
+        //     if (!header) return;
+        //
+        //     if (window.scrollY > 10) {  // Когда прокрутили больше чем на 100px
+        //        // header.classList.add("fixed");
+        //         // document.body.classList.add("fixed-header");
+        //     } else {
+        //         //header.classList.remove("fixed");
+        //         // document.body.classList.remove("fixed-header");
+        //     }
+        // });
+
         document.addEventListener("DOMContentLoaded", () => {
 
             const phoneBlock = document.querySelector(".header-phone-dropdown");
@@ -47,6 +62,22 @@
 
             });
 
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.querySelector(".site-header");
+            const toggle = document.querySelector(".mobile-toggle");
+
+            if (!toggle || !header) {
+                console.log("burger elements not found");
+                return;
+            }
+
+            toggle.addEventListener("click", () => {
+                header.classList.toggle("open");  // Меняем класс, который откроет меню
+                console.log("burger clicked");
+            });
         });
 
     </script>
@@ -95,21 +126,21 @@
         });
     </script>
 
-    <script>
+{{--    <script>--}}
 
-        window.addEventListener('scroll', function(){
+{{--        window.addEventListener('scroll', function(){--}}
 
-            let header = document.querySelector('.site-header');
+{{--            let header = document.querySelector('.site-header');--}}
 
-            if(window.scrollY > 50){
-                header.classList.add('scrolled');
-            }else{
-                header.classList.remove('scrolled');
-            }
+{{--            if(window.scrollY > 50){--}}
+{{--                header.classList.add('scrolled');--}}
+{{--            }else{--}}
+{{--                header.classList.remove('scrolled');--}}
+{{--            }--}}
 
-        });
+{{--        });--}}
 
-    </script>
+{{--    </script>--}}
 
     <script>
 
