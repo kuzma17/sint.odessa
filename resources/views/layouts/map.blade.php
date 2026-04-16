@@ -1,8 +1,6 @@
 <section class="offices-section fade-in">
     <div class="container">
-
         <h2 class="text-center mb-5">Наши офисы на карте</h2>
-
         <div class="row">
 
             <!-- КАРТА -->
@@ -12,10 +10,8 @@
 
             <!-- СПИСОК ОФИСОВ -->
             <div class="col-md-3">
-
                 <div class="office-list">
-
-                    <div class="office-card" data-lat="46.482146" data-lng="30.730281">
+                    <div class="card-box office-card btn-office" data-lat="46.482146" data-lng="30.730281">
                         <h5>Центр (Соборка)</h5>
                         <p>
                             <i class="fa-solid fa-location-dot"></i>
@@ -27,7 +23,7 @@
                         </p>
                     </div>
 
-                    <div class="office-card" data-lat="46.43711" data-lng="30.730315">
+                    <div class="card-box office-card btn-office" data-lat="46.43711" data-lng="30.730315">
                         <h5>Адміральський</h5>
                         <p>
                             <i class="fa-solid fa-location-dot"></i>
@@ -38,8 +34,7 @@
                             +38 (048) XXX-XX-XX
                         </p>
                     </div>
-
-                    <div class="office-card" data-lat="46.575718" data-lng="30.7951071">
+                    <div class="card-box office-card btn-office" data-lat="46.575718" data-lng="30.7951071">
                         <h5>пос. Котовского</h5>
                         <p>
                             <i class="fa-solid fa-location-dot"></i>
@@ -50,8 +45,7 @@
                             +38 (048) XXX-XX-XX
                         </p>
                     </div>
-
-                    <div class="office-card" data-lat="46.400676" data-lng="30.72347">
+                    <div class="card-box office-card btn-office" data-lat="46.400676" data-lng="30.72347">
                         <h5>Таирово</h5>
                         <p>
                             <i class="fa-solid fa-location-dot"></i>
@@ -62,13 +56,9 @@
                             +38 (048) XXX-XX-XX
                         </p>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
 
@@ -139,7 +129,7 @@
         });
 
         // подсветка карточки
-        document.querySelectorAll(".office-card").forEach(card => {
+        document.querySelectorAll(".btn-office").forEach(card => {
             card.classList.remove("active");
 
             if (
@@ -153,7 +143,7 @@
 
     // Клик на карточку → карта фокус
     document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".office-card").forEach(card => {
+        document.querySelectorAll(".btn-office").forEach(card => {
             card.addEventListener("click", function () {
                 const lat = parseFloat(this.dataset.lat);
                 const lng = parseFloat(this.dataset.lng);

@@ -9,7 +9,6 @@ body {
     line-height: 1.6;
     color: #1f2937;
     background: #f8fafc;
-
 }
 
 section {
@@ -27,7 +26,6 @@ section {
 .btn-blue:hover{
     background: #17bafd;
     color: #ffff;
-
 }
 
 /*card box*/
@@ -39,6 +37,7 @@ section {
     /*text-align:center;*/
     box-shadow:0 10px 30px rgba(0,0,0,0.07);
     transition:all 0.3s ease;
+    border:1px solid #f0f0f0;
 }
 
 .card-box:hover{

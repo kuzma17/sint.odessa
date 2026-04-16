@@ -2,6 +2,10 @@
 
 .contact-office-card{
     padding:25px;
+
+    cursor:pointer;
+    transition:all .25s ease;
+    border:1px solid #f0f0f0;
 }
 
 .contact-office-card h4{
@@ -17,4 +21,7 @@
 .contact-office-card i{
     color:#2563eb;
     margin-right:8px;
+
 }
+
+
